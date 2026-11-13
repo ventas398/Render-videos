@@ -49,11 +49,20 @@ for (const d of dirs) {
   }
 }
 
-// 4. El audio: el 'join' de la nube le pega la pista al video. Se manda ya en aac
-//    (unos 15 MB en vez de 48) porque el mux final es aac de todas formas.
+// 4. El audio va por dos caminos:
+//    - las maquinas que renderizan video piden el wav que nombra la escena, pero
+//      rendering con --muted no usa el sonido: se les manda un wav MUDO de la misma
+//      duracion (unos 5 MB en vez de 48) solo para que el fichero exista.
+//    - el 'join' pega la pista buena al final, y se manda ya en aac (unos 12 MB).
+// Los nombres literales que aparezcan, mas los dos que arma la plantilla de v2.tsx
+// (`audio/${ep.id}-mix.wav`), que no se pueden encontrar leyendo el codigo.
+const refs = [...new Set([...[...textOwn.matchAll(/audio\/([\w.-]+\.wav)/g)].map((m) => m[1]),
+  `${COMP}.wav`, `${COMP}-mix.wav`])];
 const wav = ["-mix.wav", ".wav"].map((s) => path.join(STUDIO, "public/audio", COMP + s)).find(fs.existsSync);
 const m4a = path.join(REPO, "public/audio", `${COMP}.m4a`);
-let audioNote = wav ? `${path.basename(wav)} -> ${COMP}.m4a` : "SIN AUDIO en el proyecto";
+const mudos = refs.map((n) => ({ n, src: path.join(STUDIO, "public/audio", n) })).filter((x) => fs.existsSync(x.src));
+let audioNote = wav ? `${path.basename(wav)} -> ${COMP}.m4a; mudos: ${mudos.map((x) => x.n).join(" ") || "ninguno"}`
+  : "SIN AUDIO en el proyecto";
 
 const falta = picked.filter((p) => !fs.existsSync(path.join(REPO, "public", p.rel)));
 const mb = (n) => (n / 1048576).toFixed(1) + " MB";
@@ -71,5 +80,14 @@ for (const p of falta) {
 if (wav && !fs.existsSync(m4a)) {
   fs.mkdirSync(path.dirname(m4a), { recursive: true });
   execFileSync(FFMPEG, ["-y", "-v", "error", "-i", wav, "-c:a", "aac", "-b:a", "192k", m4a]);
+}
+for (const x of mudos) {
+  const dest = path.join(REPO, "public/audio", x.n);
+  if (fs.existsSync(dest)) continue;
+  fs.mkdirSync(path.dirname(dest), { recursive: true });
+  // volume=0 conserva la duracion exacta; 8 kHz mono de 8 bits pesa 10 veces menos.
+  execFileSync(FFMPEG, ["-y", "-v", "error", "-i", x.src, "-af", "volume=0",
+    "-c:a", "pcm_u8", "-ar", "8000", "-ac", "1", dest]);
+  console.log(`  mudo ${x.n} ${mb(fs.statSync(dest).size)}`);
 }
 console.log(`copiados ${falta.length} ficheros${wav ? ` + audio (${mb(fs.statSync(m4a).size)})` : ""}`);
