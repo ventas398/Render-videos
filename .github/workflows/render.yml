@@ -48,7 +48,7 @@ jobs:
           TOTAL=$(awk -v id="$COMP" '$1==id {print $4}' comps.txt)
           if [ -z "$TOTAL" ]; then
             # Los registros de un repo publico piden sesion; una anotacion se lee sin ella.
-            echo "::error::plan rc=$RC comp=$COMP :: $(tr '\n' ' ' < comps.txt | tail -c 800)"
+            echo "::error::plan rc=$RC comp=$COMP :: $(tr '\n' ' ' < comps.txt | head -c 500) ... $(tr '\n' ' ' < comps.txt | tail -c 300)"
             exit 1
           fi
           echo "::notice::plan ok: $COMP $TOTAL fotogramas en $N partes"
