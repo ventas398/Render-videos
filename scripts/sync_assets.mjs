@@ -36,8 +36,11 @@ const textShared = shared.map(read).join("\n");
 if (!textOwn.trim()) throw new Error(`no encuentro escenas de ${COMP} en src/compositions`);
 
 // 3. Candidatos: todo lo que puede pedir una escena.
-const dirs = ["illustrations", "images", "photos", "brandboard", "channelprop", "audio/sfx"];
-const picked = [];
+//    Los efectos de sonido van enteros (12 ficheros, medio MB): los nombres son
+//    cortos ('sw1') y no se encuentran leyendo el codigo.
+const dirs = ["illustrations", "images", "photos", "brandboard", "channelprop"];
+const picked = walk(path.join(STUDIO, "public/audio/sfx")).map((f) => ({
+  rel: "audio/sfx/" + path.basename(f), src: f, size: fs.statSync(f).size }));
 for (const d of dirs) {
   for (const f of walk(path.join(STUDIO, "public", d))) {
     const rel = path.relative(path.join(STUDIO, "public"), f).replaceAll("\\", "/");
