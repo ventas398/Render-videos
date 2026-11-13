@@ -7,8 +7,8 @@ on:
         description: "Composition id"
         default: "SHORT-08"
       chunks:
-        description: "Parallel parts (machines)"
-        default: "6"
+        description: "Parallel parts (vacio = automatico)"
+        default: ""
   # Empujar una etiqueta render-<COMP> lanza el render sin tocar el navegador.
   # Ejemplo: git tag render-SHORT-08 && git push origin render-SHORT-08
   push:
@@ -22,6 +22,7 @@ jobs:
       matrix: ${{ steps.p.outputs.matrix }}
       total: ${{ steps.p.outputs.total }}
       comp: ${{ steps.p.outputs.comp }}
+      bundle: ${{ steps.b.outputs.bundle }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -29,8 +30,30 @@ jobs:
       - run: npm ci
       - name: Sistema (chrome libs + fuentes)
         run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y -qq libnss3 libdbus-1-3 libatk1.0-0 libasound2t64 libxrandr2 libxkbcommon-dev libxfixes3 libxcomposite1 libxdamage1 libgbm-dev libcups2 libatk-bridge2.0-0 fontconfig
+          # El indice de paquetes de la imagen suele servir: 'apt-get update' solo si falla.
+          LIBS="libnss3 libdbus-1-3 libatk1.0-0 libasound2t64 libxrandr2 libxkbcommon-dev libxfixes3 libxcomposite1 libxdamage1 libgbm-dev libcups2 libatk-bridge2.0-0 fontconfig"
+          sudo apt-get install -y -qq --no-install-recommends $LIBS \
+            || { sudo apt-get update -qq && sudo apt-get install -y -qq --no-install-recommends $LIBS; }
+      - id: b
+        name: Compilar el proyecto UNA vez (lo reutilizan todas las maquinas)
+        run: |
+          set +e
+          npx remotion bundle src/index.ts --out-dir=bundle > bundle.log 2>&1
+          tail -5 bundle.log
+          set -e
+          if [ -f bundle/index.html ]; then
+            echo "bundle=si" >> "$GITHUB_OUTPUT"
+            echo "::notice::bundle ok ($(du -sh bundle | cut -f1))"
+          else
+            echo "bundle=no" >> "$GITHUB_OUTPUT"
+            echo "::notice::sin bundle, cada maquina compila :: $(tr '\n' ' ' < bundle.log | tail -c 300)"
+          fi
+      - uses: actions/upload-artifact@v4
+        if: steps.b.outputs.bundle == 'si'
+        with:
+          name: bundle
+          path: bundle
+          retention-days: 1
       - id: p
         name: Duracion y reparto en partes
         run: |
@@ -38,10 +61,11 @@ jobs:
           test -n "$COMP" || COMP="${GITHUB_REF_NAME#render-}"
           COMP="${COMP%%--*}"   # render-SHORT-08--2 = segundo intento de SHORT-08
           N="${{ inputs.chunks }}"
-          test -n "$N" || N=6
-          echo "composicion=$COMP partes=$N"
+          TARGET=src/index.ts
+          [ -f bundle/index.html ] && TARGET=bundle
+          echo "composicion=$COMP partes=${N:-automatico} desde=$TARGET"
           set +e
-          npx remotion compositions src/index.ts > comps.txt 2>&1
+          npx remotion compositions "$TARGET" > comps.txt 2>&1
           RC=$?
           set -e
           cat comps.txt
@@ -51,14 +75,17 @@ jobs:
             echo "::error::plan rc=$RC comp=$COMP :: $(tr '\n' ' ' < comps.txt | head -c 500) ... $(tr '\n' ' ' < comps.txt | tail -c 300)"
             exit 1
           fi
-          echo "::notice::plan ok: $COMP $TOTAL fotogramas en $N partes"
           echo "comp=$COMP" >> "$GITHUB_OUTPUT"
           node -e '
-            const total=+process.argv[1], n=+process.argv[2];
+            const total=+process.argv[1];
+            // Sin numero de partes: unos 300 fotogramas por maquina, tope 20 (limite del plan gratis).
+            let n=+process.argv[2];
+            if(!Number.isFinite(n)||n<1) n=Math.min(20,Math.max(1,Math.ceil(total/300)));
             const size=Math.ceil(total/n); const m=[];
             for(let i=0;i<n;i++){const a=i*size,b=Math.min(total-1,a+size-1); if(a<=b) m.push({i,a,b});}
             require("fs").appendFileSync(process.env.GITHUB_OUTPUT,"matrix="+JSON.stringify({include:m})+"\ntotal="+total+"\n");
-          ' "$TOTAL" "$N"
+            console.log("::notice::plan ok: "+process.argv[3]+" "+total+" fotogramas en "+m.length+" partes");
+          ' "$TOTAL" "$N" "$COMP"
 
   part:
     needs: plan
@@ -75,18 +102,25 @@ jobs:
       - run: npm ci
       - name: Sistema (chrome libs + fuentes)
         run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y -qq libnss3 libdbus-1-3 libatk1.0-0 libasound2t64 libxrandr2 libxkbcommon-dev libxfixes3 libxcomposite1 libxdamage1 libgbm-dev libcups2 libatk-bridge2.0-0 fontconfig
+          LIBS="libnss3 libdbus-1-3 libatk1.0-0 libasound2t64 libxrandr2 libxkbcommon-dev libxfixes3 libxcomposite1 libxdamage1 libgbm-dev libcups2 libatk-bridge2.0-0 fontconfig"
+          sudo apt-get install -y -qq --no-install-recommends $LIBS \
+            || { sudo apt-get update -qq && sudo apt-get install -y -qq --no-install-recommends $LIBS; }
           # Impact no existe en Linux: Anton (licencia OFL) hace de sustituta
           mkdir -p ~/.fonts ~/.config/fontconfig
           curl -fsSL -o ~/.fonts/Anton-Regular.ttf https://raw.githubusercontent.com/google/fonts/main/ofl/anton/Anton-Regular.ttf || true
           printf '<?xml version="1.0"?><fontconfig><alias binding="same"><family>Impact</family><prefer><family>Anton</family></prefer></alias></fontconfig>' > ~/.config/fontconfig/fonts.conf
           fc-cache -f
+      # El proyecto ya viene compilado desde 'plan': esta maquina no vuelve a compilarlo.
+      - uses: actions/download-artifact@v4
+        if: needs.plan.outputs.bundle == 'si'
+        with: { name: bundle, path: bundle }
       - name: Render parte ${{ matrix.i }} (frames ${{ matrix.a }}-${{ matrix.b }})
         run: |
           START=$(date +%s)
-          npx remotion render src/index.ts "$COMP" out/part-${{ matrix.i }}.mp4 --frames=${{ matrix.a }}-${{ matrix.b }} --muted --codec=h264
-          echo "parte ${{ matrix.i }}: $(( $(date +%s) - START )) s"
+          TARGET=src/index.ts
+          [ -f bundle/index.html ] && TARGET=bundle
+          npx remotion render "$TARGET" "$COMP" out/part-${{ matrix.i }}.mp4 --frames=${{ matrix.a }}-${{ matrix.b }} --muted --codec=h264
+          echo "parte ${{ matrix.i }} ($TARGET): $(( $(date +%s) - START )) s"
       - uses: actions/upload-artifact@v4
         with:
           name: part-${{ matrix.i }}
@@ -105,7 +139,7 @@ jobs:
       - uses: actions/download-artifact@v4
         with: { pattern: "part-*", path: parts, merge-multiple: true }
       - name: ffmpeg (no viene en la imagen ubuntu-24.04)
-        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+        run: sudo apt-get install -y -qq ffmpeg || { sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg; }
       - name: Unir partes y poner el audio
         run: |
           set +e
