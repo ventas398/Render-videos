@@ -46,7 +46,7 @@ jobs:
         with:
           path: hf
           key: kokoro-82M-v1
-      - name: Instalar Kokoro (torch de CPU, sin CUDA: 10 veces mas ligero)
+      - name: "Instalar Kokoro (torch de CPU, sin CUDA, 10 veces mas ligero)"
         run: |
           python -m pip install -q --upgrade pip
           python -m pip install -q torch --index-url https://download.pytorch.org/whl/cpu
