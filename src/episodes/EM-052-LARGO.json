@@ -1,0 +1,696 @@
+{
+  "id": "EM-052-LARGO",
+  "title": "The Power of Color: What It Really Does to a Scene",
+  "voice": "am_liam",
+  "speed": 1,
+  "pronounce": {},
+  "audio": "public/audio/EM-052-LARGO.wav",
+  "timing": "src/episodes/EM-052-LARGO.timing.json",
+  "chapters": [
+    0,
+    6,
+    11,
+    20,
+    28,
+    39,
+    51,
+    56,
+    67,
+    77,
+    85,
+    93,
+    102,
+    112
+  ],
+  "parts": [
+    "This is the same painting. Three times.",
+    "We changed one thing. Only the color.",
+    "In red, the rainy street feels tense.",
+    "In green, it goes quiet.",
+    "In yellow, it's almost a sunny afternoon.",
+    "Nobody moved. Nothing happened. And yet it's a different scene.",
+    "Painters have known this for centuries.",
+    "Scientists have spent decades trying to measure it.",
+    "Today: what color really does to a scene, and which of the famous claims about color and your mind actually hold up.",
+    "We'll test it on famous pictures. A cathedral, a café, a bedroom, a wave, a girl, a bridge.",
+    "Some you'll see as the painter left them. Some we changed on purpose, and we'll always tell you which.",
+    "In eighteen ninety two, Claude Monet rented a room across from the cathedral in Rouen.",
+    "He painted its front. Then he painted it again.",
+    "And again. About thirty times.",
+    "Morning. Noon. Grey weather. Full sun.",
+    "The stone never changed.",
+    "The light did, and the color with it.",
+    "In the morning views the stone turns blue. In full sun, it burns gold.",
+    "Twenty of them hung together in Paris in eighteen ninety five.",
+    "Same building, twenty different buildings.",
+    "In eighteen eighty eight, in the south of France, Vincent van Gogh painted a café at night.",
+    "Blood red walls. A green ceiling. A yellow lamp glow.",
+    "That week he wrote to his brother Theo.",
+    "He said he had tried to express, with red and green, the terrible passions of humanity.",
+    "That's not a scientist talking. It's a painter telling you exactly what he aimed for.",
+    "Watch what happens if we take his red away.",
+    "The same room turns cold. Almost calm.",
+    "Put the red back, and the tension returns.",
+    "Now go east. Japan, around eighteen thirty.",
+    "Katsushika Hokusai makes a print of a giant wave about to crash over three boats.",
+    "Look at the blue.",
+    "Part of it was an imported pigment, called Prussian blue.",
+    "Scientists at the Metropolitan Museum in New York studied the print with light.",
+    "The printers didn't just swap the old blue for the new one.",
+    "They layered it with indigo, the traditional, duller blue.",
+    "Now watch the same wave in red.",
+    "It stops being the sea. It looks like fire. Or a warning.",
+    "Back to blue, and it's water again.",
+    "Same lines. Same boats. Same mountain. The color tells you what the shape is.",
+    "Van Gogh collected Japanese prints like this one. And about five weeks after the café, he painted the opposite room.",
+    "His own bedroom, in Arles.",
+    "He described it to Theo, color by color.",
+    "Pale violet walls. Red tiles. A yellow bed. A scarlet blanket. A green window.",
+    "This time, he wrote, the color had to do the work.",
+    "He wanted the room to suggest rest, or sleep.",
+    "He even left out the shadows, he said, like in Japanese prints.",
+    "Two rooms. Same painter. Same year. One built for passion, one built for rest.",
+    "Did it work on you? That part, nobody can measure.",
+    "But watch the same bedroom with every wall painted red.",
+    "It stops looking like a place to sleep.",
+    "Put the violet back, and the room settles down.",
+    "Let's try it on something ordinary.",
+    "One umbrella. Red.",
+    "Now your eye goes straight to it.",
+    "Green, and it melts into the street.",
+    "Color doesn't just decorate a scene. It decides where you look first.",
+    "Some painters paid a fortune for one color.",
+    "In Delft, around sixteen sixty five, Johannes Vermeer painted a girl with a pearl earring.",
+    "Her headscarf is ultramarine.",
+    "In the seventeenth century, it was by far the most expensive blue a painter could buy.",
+    "It was made from a stone, lapis lazuli.",
+    "In twenty eighteen, a team at the Mauritshuis in The Hague scanned the painting.",
+    "They found Vermeer used that blue most generously in the headscarf.",
+    "And they found something else. The dark background holds a green glaze.",
+    "Today it looks almost black.",
+    "Here's a rough guess at it in green. Not a restoration. Just a test.",
+    "Same girl. Same pearl. A different room around her.",
+    "Two centuries later, in London, one painter put the color in the title.",
+    "James McNeill Whistler called them nocturnes. Nocturne in Blue and Gold. Nocturne in Black and Gold.",
+    "Not a bridge. Not fireworks. Colors first.",
+    "In eighteen seventy seven, the critic John Ruskin attacked the fireworks painting.",
+    "He wrote that Whistler was flinging a pot of paint in the public's face.",
+    "Whistler sued him for libel.",
+    "In eighteen seventy eight, he won. The damages: one farthing. A quarter of a penny.",
+    "A year later, he was bankrupt.",
+    "Now see his blue night in daylight colors.",
+    "The bridge is the same. The night is gone.",
+    "So is any of this measurable? The first real clue came from a factory.",
+    "In Paris, in the eighteen twenties, a chemist named Michel-Eugène Chevreul ran the dye works at the Gobelins tapestry factory.",
+    "The weavers complained. Some of his blacks looked weak.",
+    "He tested the dye. The dye was fine.",
+    "The problem was the colors next to it.",
+    "Look at this grey square. Same grey, on red and on green.",
+    "They look different. They're not.",
+    "Chevreul published that in eighteen thirty nine. A color changes depending on its neighbours.",
+    "That's about what you see. What about what you feel? Here the evidence gets thin.",
+    "Red helps you win fights? Only in close matches, and it faded once scoring went electronic.",
+    "Blue helps creative tasks? One two thousand nine study found it did.",
+    "Green relaxes you? Nature does. Nobody has separated the color from the trees.",
+    "Yellow is easier to see. Yellow taxis in Singapore had fewer accidents than blue ones.",
+    "Pink prison cells to calm aggression? A Swiss study found no difference at all.",
+    "And the famous percentage about color and brand recognition? Nobody can find the study.",
+    "Notice the pattern. What color does to your eyes is solid. What it does to your mood is mostly a story.",
+    "And that's exactly what the painters were using.",
+    "Van Gogh didn't need a study to know where your eye would land.",
+    "Monet didn't need one to show that light rewrites a wall.",
+    "Hokusai didn't need one to turn a shape into water.",
+    "Vermeer spent a fortune on blue, and put it where you'd look first.",
+    "Whistler simply wrote the colors on the label.",
+    "They weren't changing how you feel by magic.",
+    "They were changing what you notice, what stands out, what sinks.",
+    "Feelings follow from that. Sometimes.",
+    "Try it yourself.",
+    "Look at the red version again. Where did your eye go first?",
+    "Now the green one.",
+    "Now the yellow.",
+    "Same street. Same people. Same rain.",
+    "You just watched color change a scene without changing a single thing in it.",
+    "One more round. The wave. Blue. Then red.",
+    "Vermeer's girl. A dark room. Then a green one.",
+    "Whistler's bridge. Night. Then day.",
+    "Each time, nothing in the picture moved. Only the color did.",
+    "So color does have power.",
+    "Just not the power the posters promise.",
+    "It doesn't fix your mood. It directs your eyes.",
+    "A cathedral in blue and gold. A café in red and green. A bedroom in violet.",
+    "A wave in Prussian blue. A girl in ultramarine. A bridge at night.",
+    "None of these painters ran an experiment. Each one put the right color in the right place, and let your eyes do the rest.",
+    "Next time someone says a color will calm you down, ask which study.",
+    "Next time a painting grabs you, ask which color did it.",
+    "Symbols play the same trick. There's an eye on the dollar bill that people swear a secret society put there.",
+    "We followed the paper trail. That's the next video."
+  ],
+  "scenes": [
+    {
+      "id": "ch00",
+      "fromPart": 0,
+      "toPart": 5
+    },
+    {
+      "id": "ch01",
+      "fromPart": 6,
+      "toPart": 10
+    },
+    {
+      "id": "ch02",
+      "fromPart": 11,
+      "toPart": 19
+    },
+    {
+      "id": "ch03",
+      "fromPart": 20,
+      "toPart": 27
+    },
+    {
+      "id": "ch03b",
+      "fromPart": 28,
+      "toPart": 38
+    },
+    {
+      "id": "ch03c",
+      "fromPart": 39,
+      "toPart": 50
+    },
+    {
+      "id": "ch04",
+      "fromPart": 51,
+      "toPart": 55
+    },
+    {
+      "id": "ch04b",
+      "fromPart": 56,
+      "toPart": 66
+    },
+    {
+      "id": "ch04c",
+      "fromPart": 67,
+      "toPart": 76
+    },
+    {
+      "id": "ch05",
+      "fromPart": 77,
+      "toPart": 84
+    },
+    {
+      "id": "ch06",
+      "fromPart": 85,
+      "toPart": 92
+    },
+    {
+      "id": "ch07",
+      "fromPart": 93,
+      "toPart": 101
+    },
+    {
+      "id": "ch08",
+      "fromPart": 102,
+      "toPart": 111
+    },
+    {
+      "id": "ch09",
+      "fromPart": 112,
+      "toPart": 121
+    }
+  ],
+  "stamps": [
+    {
+      "part": 2,
+      "stamp": "OUR READING",
+      "facts": "8"
+    },
+    {
+      "part": 3,
+      "stamp": "OUR READING",
+      "facts": "8"
+    },
+    {
+      "part": 4,
+      "stamp": "OUR READING",
+      "facts": "8"
+    },
+    {
+      "part": 13,
+      "stamp": "DOCUMENTED",
+      "facts": "8"
+    },
+    {
+      "part": 18,
+      "stamp": "DOCUMENTED",
+      "facts": "8"
+    },
+    {
+      "part": 19,
+      "stamp": "OUR READING",
+      "facts": "8"
+    },
+    {
+      "part": 23,
+      "stamp": "DOCUMENTED",
+      "facts": "8"
+    },
+    {
+      "part": 26,
+      "stamp": "OUR READING",
+      "facts": "8"
+    },
+    {
+      "part": 27,
+      "stamp": "OUR READING",
+      "facts": "8"
+    },
+    {
+      "part": 29,
+      "stamp": "DOCUMENTED",
+      "facts": "9"
+    },
+    {
+      "part": 31,
+      "stamp": "DOCUMENTED",
+      "facts": "9"
+    },
+    {
+      "part": 34,
+      "stamp": "DOCUMENTED",
+      "facts": "9"
+    },
+    {
+      "part": 36,
+      "stamp": "OUR READING",
+      "facts": "9"
+    },
+    {
+      "part": 38,
+      "stamp": "OUR READING",
+      "facts": "9"
+    },
+    {
+      "part": 40,
+      "stamp": "DOCUMENTED",
+      "facts": "9"
+    },
+    {
+      "part": 41,
+      "stamp": "DOCUMENTED",
+      "facts": "9"
+    },
+    {
+      "part": 42,
+      "stamp": "DOCUMENTED",
+      "facts": "9"
+    },
+    {
+      "part": 43,
+      "stamp": "DOCUMENTED",
+      "facts": "9"
+    },
+    {
+      "part": 44,
+      "stamp": "DOCUMENTED",
+      "facts": "9"
+    },
+    {
+      "part": 45,
+      "stamp": "DOCUMENTED",
+      "facts": "9"
+    },
+    {
+      "part": 46,
+      "stamp": "DOCUMENTED",
+      "facts": "9"
+    },
+    {
+      "part": 47,
+      "stamp": "OUR READING",
+      "facts": "9"
+    },
+    {
+      "part": 49,
+      "stamp": "OUR READING",
+      "facts": "9"
+    },
+    {
+      "part": 50,
+      "stamp": "OUR READING",
+      "facts": "9"
+    },
+    {
+      "part": 53,
+      "stamp": "OUR READING",
+      "facts": "8"
+    },
+    {
+      "part": 54,
+      "stamp": "OUR READING",
+      "facts": "8"
+    },
+    {
+      "part": 55,
+      "stamp": "OUR READING",
+      "facts": "8"
+    },
+    {
+      "part": 57,
+      "stamp": "DOCUMENTED",
+      "facts": "9"
+    },
+    {
+      "part": 59,
+      "stamp": "DOCUMENTED",
+      "facts": "9"
+    },
+    {
+      "part": 62,
+      "stamp": "DOCUMENTED",
+      "facts": "9"
+    },
+    {
+      "part": 63,
+      "stamp": "DOCUMENTED",
+      "facts": "9"
+    },
+    {
+      "part": 65,
+      "stamp": "OUR READING",
+      "facts": "9"
+    },
+    {
+      "part": 66,
+      "stamp": "OUR READING",
+      "facts": "9"
+    },
+    {
+      "part": 68,
+      "stamp": "DOCUMENTED",
+      "facts": "9"
+    },
+    {
+      "part": 70,
+      "stamp": "DOCUMENTED",
+      "facts": "9"
+    },
+    {
+      "part": 71,
+      "stamp": "DOCUMENTED",
+      "facts": "9"
+    },
+    {
+      "part": 73,
+      "stamp": "DOCUMENTED",
+      "facts": "9"
+    },
+    {
+      "part": 74,
+      "stamp": "DOCUMENTED",
+      "facts": "9"
+    },
+    {
+      "part": 76,
+      "stamp": "OUR READING",
+      "facts": "9"
+    },
+    {
+      "part": 78,
+      "stamp": "DOCUMENTED",
+      "facts": "8"
+    },
+    {
+      "part": 82,
+      "stamp": "DOCUMENTED",
+      "facts": "8"
+    },
+    {
+      "part": 84,
+      "stamp": "DOCUMENTED",
+      "facts": "8"
+    },
+    {
+      "part": 86,
+      "stamp": "DISPUTED",
+      "facts": "1-7"
+    },
+    {
+      "part": 87,
+      "stamp": "DOCUMENTED",
+      "facts": "1-7"
+    },
+    {
+      "part": 88,
+      "stamp": "DISPUTED",
+      "facts": "1-7"
+    },
+    {
+      "part": 89,
+      "stamp": "DISPUTED",
+      "facts": "1-7"
+    },
+    {
+      "part": 90,
+      "stamp": "MYTH",
+      "facts": "1-7"
+    },
+    {
+      "part": 91,
+      "stamp": "MYTH",
+      "facts": "1-7"
+    },
+    {
+      "part": 92,
+      "stamp": "OUR READING",
+      "facts": "1-7"
+    },
+    {
+      "part": 97,
+      "stamp": "OUR READING",
+      "facts": "9"
+    },
+    {
+      "part": 100,
+      "stamp": "OUR READING",
+      "facts": "8"
+    },
+    {
+      "part": 101,
+      "stamp": "OUR READING",
+      "facts": "8"
+    },
+    {
+      "part": 111,
+      "stamp": "OUR READING",
+      "facts": "9"
+    },
+    {
+      "part": 114,
+      "stamp": "OUR READING",
+      "facts": "8"
+    },
+    {
+      "part": 117,
+      "stamp": "OUR READING",
+      "facts": "9"
+    }
+  ],
+  "screenText": [
+    {
+      "part": 1,
+      "text": "Color digitally altered"
+    },
+    {
+      "part": 18,
+      "text": "Durand-Ruel gallery, Paris, 1895"
+    },
+    {
+      "part": 23,
+      "text": "Letter 676, 8 September 1888"
+    },
+    {
+      "part": 25,
+      "text": "Color digitally altered"
+    },
+    {
+      "part": 31,
+      "text": "Prussian blue"
+    },
+    {
+      "part": 35,
+      "text": "Color digitally altered"
+    },
+    {
+      "part": 41,
+      "text": "Letter 705, 16 October 1888"
+    },
+    {
+      "part": 42,
+      "text": "Walls were violet. The red pigment faded."
+    },
+    {
+      "part": 48,
+      "text": "Color digitally altered"
+    },
+    {
+      "part": 52,
+      "text": "Color digitally altered"
+    },
+    {
+      "part": 61,
+      "text": "Mauritshuis, 2018"
+    },
+    {
+      "part": 65,
+      "text": "Color digitally altered"
+    },
+    {
+      "part": 71,
+      "text": "John Ruskin, 1877"
+    },
+    {
+      "part": 73,
+      "text": "1 farthing = 1/4 penny"
+    },
+    {
+      "part": 75,
+      "text": "Color digitally altered"
+    },
+    {
+      "part": 108,
+      "text": "Color digitally altered"
+    },
+    {
+      "part": 109,
+      "text": "Color digitally altered"
+    },
+    {
+      "part": 110,
+      "text": "Color digitally altered"
+    }
+  ],
+  "partIds": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "8a",
+    "8b",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23",
+    "24",
+    "25",
+    "25a",
+    "25b",
+    "25c",
+    "25d",
+    "25e",
+    "25f",
+    "25g",
+    "25h",
+    "25i",
+    "25j",
+    "25k",
+    "25l",
+    "25m",
+    "25n",
+    "25o",
+    "25p",
+    "25q",
+    "25r",
+    "25s",
+    "25t",
+    "25u",
+    "25v",
+    "25w",
+    "26",
+    "27",
+    "28",
+    "29",
+    "30",
+    "30a",
+    "30b",
+    "30c",
+    "30d",
+    "30e",
+    "30f",
+    "30g",
+    "30h",
+    "30i",
+    "30j",
+    "30k",
+    "30l",
+    "30m",
+    "30n",
+    "30o",
+    "30p",
+    "30q",
+    "30r",
+    "30s",
+    "30t",
+    "30u",
+    "31",
+    "32",
+    "33",
+    "34",
+    "35",
+    "36",
+    "37",
+    "38",
+    "39",
+    "40",
+    "41",
+    "42",
+    "43",
+    "44",
+    "45",
+    "46",
+    "47",
+    "48",
+    "49",
+    "49a",
+    "49b",
+    "49c",
+    "50",
+    "51",
+    "52",
+    "53",
+    "54",
+    "55",
+    "56",
+    "57",
+    "58",
+    "58a",
+    "58b",
+    "58c",
+    "58d",
+    "59",
+    "60",
+    "61",
+    "61a",
+    "61b",
+    "61c",
+    "62",
+    "63",
+    "64",
+    "65"
+  ]
+}

@@ -1,0 +1,414 @@
+{
+ "id": "IDEA-75G",
+ "title": "How long is a billion seconds?",
+ "voice": "am_liam",
+ "speed": 1.0,
+ "music": "em-curious",
+ "words": true,
+ "audio": "public/audio/IDEA-75G.wav",
+ "timing": "src/episodes/IDEA-75G.timing.json",
+ "pronounce": {},
+ "fin": {
+  "img": "tt075-05",
+  "big": "Illustrative images. Years of 365.25 days.",
+  "small": "Sources: arithmetic (86,400 seconds per day); NIST, SI prefixes; CDC/NCHS, life expectancy 2024; Wikipedia: Last Glacial Period, Woolly mammoth, History of writing"
+ },
+ "parts": [
+  "Iff you're under thirty-one, you haven't lived a billion seconds yet.",
+  "A million seconds is just under twelve days.",
+  "So how long is a billion?",
+  "That's almost thirty-two years.",
+  "Here's the math.",
+  "There are eighty-six thousand, four hundred seconds in a day.",
+  "Divide a billion by that.",
+  "Eleven thousand, five hundred seventy-four days.",
+  "An average American life is only about two and a half billion seconds.",
+  "Now try dollars.",
+  "Spend one dollar every second.",
+  "A million dollars is gone in under twelve days.",
+  "A billion dollars lasts nearly thirty-two years.",
+  "A million and a billion sound like neighbors. They're about thirty-two years apart.",
+  "Now a trillion. That's a thousand billions.",
+  "A trillion seconds is about thirty-one thousand, seven hundred years.",
+  "A trillion seconds ago, it was the Ice Age.",
+  "Woolly mammoths were alive.",
+  "That's more than five times longer than writing has existed.",
+  "A million is days.",
+  "A billion is a lifetime.",
+  "A trillion is the Ice Age.",
+  "So how big is a trillion dollars?"
+ ],
+ "hookScene": {
+  "until": 5,
+  "shots": [
+   {
+    "t": 0.0,
+    "lines": [
+     {
+      "t": "",
+      "count": [
+       0,
+       1000000000
+      ],
+      "s": 150,
+      "y": 470
+     },
+     {
+      "t": "SECONDS",
+      "s": 110,
+      "y": 680,
+      "c": "ice",
+      "d": 3
+     }
+    ],
+    "tag": "Simplified illustration"
+   },
+   {
+    "t": 1.0,
+    "img": "tt075-03",
+    "z0": 1.05,
+    "z1": 1.25,
+    "dim": 0.4,
+    "lines": [
+     {
+      "t": "UNDER 31?",
+      "s": 190,
+      "y": 470
+     }
+    ],
+    "tag": "Illustrative image"
+   },
+   {
+    "t": 1.9,
+    "img": "tt075-03",
+    "z0": 1.3,
+    "z1": 1.5,
+    "oy": "40%",
+    "dim": 0.4,
+    "lines": [
+     {
+      "t": "NOT YET",
+      "s": 250,
+      "y": 470
+     },
+     {
+      "t": "a billion seconds",
+      "s": 80,
+      "y": 760,
+      "c": "ice"
+     }
+    ],
+    "tag": "Illustrative image"
+   },
+   {
+    "t": 2.83,
+    "lines": [
+     {
+      "t": "",
+      "count": [
+       0,
+       1000000
+      ],
+      "s": 190,
+      "y": 470
+     },
+     {
+      "t": "SECONDS",
+      "s": 110,
+      "y": 700,
+      "c": "ice",
+      "d": 3
+     }
+    ],
+    "tag": "Simplified illustration"
+   },
+   {
+    "t": 3.8,
+    "img": "tt075-01",
+    "z0": 1.05,
+    "z1": 1.3,
+    "dim": 0.4,
+    "lines": [
+     {
+      "t": "11 DAYS",
+      "s": 230,
+      "y": 470
+     },
+     {
+      "t": "13 h 46 min 40 s",
+      "s": 80,
+      "y": 760,
+      "c": "ice"
+     }
+    ],
+    "tag": "Illustrative image"
+   },
+   {
+    "t": 5.11,
+    "lines": [
+     {
+      "t": "?",
+      "s": 760,
+      "y": 360
+     },
+     {
+      "t": "1,000,000,000",
+      "s": 100,
+      "y": 1080,
+      "c": "ice"
+     }
+    ],
+    "tag": "Simplified illustration"
+   },
+   {
+    "t": 6.51,
+    "cal": true,
+    "lines": [
+     {
+      "t": "31.7 YEARS",
+      "s": 170,
+      "y": 330,
+      "d": 36
+     }
+    ],
+    "tag": "Simplified illustration"
+   },
+   {
+    "t": 8.13,
+    "img": "tt075-02",
+    "z0": 1.05,
+    "z1": 1.25,
+    "dim": 0.35,
+    "lines": [
+     {
+      "t": "THE MATH",
+      "s": 210,
+      "y": 470
+     }
+    ],
+    "tag": "Illustrative image"
+   }
+  ]
+ },
+ "beats": [
+  {
+   "from": 5,
+   "to": 5,
+   "img": "tt075-02",
+   "tag": "Illustrative image",
+   "kb": "right",
+   "z": 1.15,
+   "labels": [
+    {
+     "p": 5,
+     "t": "86,400 SECONDS",
+     "s": "in one day"
+    }
+   ]
+  },
+  {
+   "from": 6,
+   "to": 6,
+   "img": "tt075-02",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "z": 1.3,
+   "labels": [
+    {
+     "p": 6,
+     "t": "1,000,000,000 ÷ 86,400"
+    }
+   ]
+  },
+  {
+   "from": 7,
+   "to": 7,
+   "diagram": "days",
+   "tag": "Simplified illustration"
+  },
+  {
+   "from": 8,
+   "to": 8,
+   "img": "tt075-03",
+   "tag": "Illustrative image",
+   "kb": "left",
+   "z": 1.15,
+   "labels": [
+    {
+     "p": 8,
+     "t": "ABOUT 2.5 BILLION SECONDS",
+     "s": "US life expectancy at birth: about 79 years"
+    }
+   ]
+  },
+  {
+   "from": 9,
+   "to": 10,
+   "diagram": "bills",
+   "tag": "Simplified illustration",
+   "labels": [
+    {
+     "p": 10,
+     "t": "$1 EVERY SECOND"
+    }
+   ]
+  },
+  {
+   "from": 11,
+   "to": 11,
+   "img": "tt075-01",
+   "tag": "Illustrative image",
+   "kb": "left",
+   "z": 1.15,
+   "labels": [
+    {
+     "p": 11,
+     "t": "$1,000,000",
+     "s": "gone in 11 days 13 h"
+    }
+   ]
+  },
+  {
+   "from": 12,
+   "to": 12,
+   "img": "tt075-02",
+   "tag": "Illustrative image",
+   "kb": "left",
+   "z": 1.15,
+   "labels": [
+    {
+     "p": 12,
+     "t": "$1,000,000,000",
+     "s": "lasts 31.7 years"
+    }
+   ]
+  },
+  {
+   "from": 13,
+   "to": 13,
+   "img": "tt075-04",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "z": 1.04,
+   "labels": [
+    {
+     "p": 13,
+     "t": "MILLION vs BILLION",
+     "s": "about 31.65 years apart"
+    }
+   ]
+  },
+  {
+   "from": 14,
+   "to": 15,
+   "diagram": "zoom",
+   "tag": "Simplified illustration",
+   "labels": [
+    {
+     "p": 14,
+     "t": "1,000 × 31.7 YEARS"
+    },
+    {
+     "p": 15,
+     "t": "31,700 YEARS"
+    }
+   ]
+  },
+  {
+   "from": 16,
+   "to": 16,
+   "img": "tt075-05",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "z": 1.04,
+   "stamps": [
+    {
+     "p": 16,
+     "t": "DOCUMENTED",
+     "s": "Last Glacial Period",
+     "c": "teal",
+     "y": 290
+    }
+   ]
+  },
+  {
+   "from": 17,
+   "to": 17,
+   "img": "tt075-06",
+   "tag": "Illustrative image",
+   "kb": "right",
+   "z": 1.15
+  },
+  {
+   "from": 18,
+   "to": 18,
+   "img": "tt075-07",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "z": 1.04,
+   "labels": [
+    {
+     "p": 18,
+     "t": "WRITING: UNDER 6,000 YEARS",
+     "s": "a trillion seconds: 31,700"
+    }
+   ]
+  },
+  {
+   "from": 19,
+   "to": 19,
+   "img": "tt075-01",
+   "tag": "Illustrative image",
+   "kb": "still",
+   "z": 1.2,
+   "labels": [
+    {
+     "p": 19,
+     "t": "DAYS"
+    }
+   ]
+  },
+  {
+   "from": 20,
+   "to": 20,
+   "img": "tt075-03",
+   "tag": "Illustrative image",
+   "kb": "still",
+   "z": 1.2,
+   "labels": [
+    {
+     "p": 20,
+     "t": "A LIFETIME"
+    }
+   ]
+  },
+  {
+   "from": 21,
+   "to": 21,
+   "img": "tt075-06",
+   "tag": "Illustrative image",
+   "kb": "still",
+   "z": 1.2,
+   "labels": [
+    {
+     "p": 21,
+     "t": "THE ICE AGE"
+    }
+   ]
+  },
+  {
+   "from": 22,
+   "to": 22,
+   "img": "tt075-05",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "z": 1.3,
+   "labels": [
+    {
+     "p": 22,
+     "t": "NEXT: A TRILLION DOLLARS"
+    }
+   ]
+  }
+ ]
+}

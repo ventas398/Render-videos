@@ -1,0 +1,94 @@
+name: render
+
+on:
+  workflow_dispatch:
+    inputs:
+      composition:
+        description: "Composition id"
+        default: "SHORT-08"
+      chunks:
+        description: "Parallel parts (machines)"
+        default: "6"
+
+env:
+  COMP: ${{ inputs.composition }}
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.p.outputs.matrix }}
+      total: ${{ steps.p.outputs.total }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci
+      - name: Sistema (chrome libs + fuentes)
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq libnss3 libdbus-1-3 libatk1.0-0 libasound2t64 libxrandr2 libxkbcommon-dev libxfixes3 libxcomposite1 libxdamage1 libgbm-dev libcups2 libatk-bridge2.0-0 fontconfig
+      - id: p
+        name: Duracion y reparto en partes
+        run: |
+          npx remotion compositions src/index.ts --quiet | tee comps.txt
+          TOTAL=$(awk -v id="$COMP" '$1==id {print $4}' comps.txt)
+          test -n "$TOTAL" || { echo "no encuentro $COMP"; exit 1; }
+          N=${{ inputs.chunks }}
+          node -e '
+            const total=+process.argv[1], n=+process.argv[2];
+            const size=Math.ceil(total/n); const m=[];
+            for(let i=0;i<n;i++){const a=i*size,b=Math.min(total-1,a+size-1); if(a<=b) m.push({i,a,b});}
+            require("fs").appendFileSync(process.env.GITHUB_OUTPUT,"matrix="+JSON.stringify({include:m})+"\ntotal="+total+"\n");
+          ' "$TOTAL" "$N"
+
+  part:
+    needs: plan
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci
+      - name: Sistema (chrome libs + fuentes)
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq libnss3 libdbus-1-3 libatk1.0-0 libasound2t64 libxrandr2 libxkbcommon-dev libxfixes3 libxcomposite1 libxdamage1 libgbm-dev libcups2 libatk-bridge2.0-0 fontconfig
+          # Impact no existe en Linux: Anton (licencia OFL) hace de sustituta
+          mkdir -p ~/.fonts ~/.config/fontconfig
+          curl -fsSL -o ~/.fonts/Anton-Regular.ttf https://raw.githubusercontent.com/google/fonts/main/ofl/anton/Anton-Regular.ttf || true
+          printf '<?xml version="1.0"?><fontconfig><alias binding="same"><family>Impact</family><prefer><family>Anton</family></prefer></alias></fontconfig>' > ~/.config/fontconfig/fonts.conf
+          fc-cache -f
+      - name: Render parte ${{ matrix.i }} (frames ${{ matrix.a }}-${{ matrix.b }})
+        run: |
+          START=$(date +%s)
+          npx remotion render src/index.ts "$COMP" out/part-${{ matrix.i }}.mp4 --frames=${{ matrix.a }}-${{ matrix.b }} --muted --codec=h264
+          echo "parte ${{ matrix.i }}: $(( $(date +%s) - START )) s"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: part-${{ matrix.i }}
+          path: out/part-${{ matrix.i }}.mp4
+          retention-days: 1
+
+  join:
+    needs: [plan, part]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with: { pattern: "part-*", path: parts, merge-multiple: true }
+      - name: Unir partes y poner el audio
+        run: |
+          ls -l parts
+          for f in $(ls parts/part-*.mp4 | sort -V); do echo "file '$PWD/$f'"; done > list.txt
+          ffmpeg -y -f concat -safe 0 -i list.txt -c copy video.mp4
+          ffmpeg -y -i video.mp4 -i public/audio/$COMP.wav -map 0:v -map 1:a -c:v copy -c:a aac -b:a 192k -shortest $COMP.mp4
+          ffprobe -v error -show_entries format=duration:stream=codec_name -of default=nw=1 $COMP.mp4
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ${{ inputs.composition }}
+          path: ${{ inputs.composition }}.mp4
+          retention-days: 7

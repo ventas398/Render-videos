@@ -1,0 +1,184 @@
+{
+  "id": "EM-036",
+  "title": "Why Does Wind Make Cold Feel Colder Than the Thermometer?",
+  "voice": "am_liam",
+  "speed": 1,
+  "pronounce": {
+    "Siple": "sˈaɪpəl",
+    "Passel": "pˈæsəl",
+    "Osczevski": "ɑstʃˈɛvski",
+    "Bluestein": "blˈustaɪn",
+    "Antarctica": "æntˈɑɹktɪkə",
+    "Fahrenheit": "fˈæɹənhˌaɪt"
+  },
+  "pads": {
+    "6": 0.4,
+    "16": 0.4,
+    "32": 0.4,
+    "48": 0.5,
+    "52": 0.4,
+    "62": 0.4
+  },
+  "audio": "public/audio/EM-036.wav",
+  "timing": "src/episodes/EM-036.timing.json",
+  "chapters": [
+    0,
+    7,
+    8,
+    18,
+    26,
+    33,
+    40,
+    43,
+    47,
+    53,
+    57,
+    63,
+    70,
+    75
+  ],
+  "parts": [
+    "On a day when the real air temperature is five degrees below zero, your weather app can tell you it feels like thirty-one below.",
+    "Step outside and look at your car.",
+    "The radiator sits in that exact same freezing air.",
+    "It does not drop to thirty-one below.",
+    "It stays at five below.",
+    "So what is that second number actually measuring?",
+    "And where did it even come from?",
+    "By the end of this video, you will know the real formula behind that number, the strange experiment in Antarctica that started it all, and why the version on your phone today is not the one meteorologists used for more than fifty years.",
+    "Here is the mechanism.",
+    "Your skin heats a thin, almost still layer of air right above it.",
+    "That layer works like a blanket.",
+    "Wind rips that blanket away and replaces it with cold air, over and over.",
+    "That speeds up how fast your body loses heat.",
+    "Moving air also speeds up evaporation from your skin, which pulls away even more heat.",
+    "The air itself never gets colder.",
+    "You do.",
+    "The United States National Weather Service confirms this directly: wind chill measures the rate of heat loss from exposed skin, caused by the combined effect of wind and cold.",
+    "Documented.",
+    "Now the formula.",
+    "The official United States version converts air temperature and wind speed into a single number, in Fahrenheit.",
+    "It only applies at fifty degrees or below.",
+    "Below three miles an hour of wind, it is not calculated at all.",
+    "That counts as calm.",
+    "It also assumes a clear night sky, since sunlight changes the real feeling by ten to eighteen degrees.",
+    "And one detail surprised the scientists themselves: in their tests with twelve volunteers, humidity changed the result by less than one degree.",
+    "So the official formula leaves humidity out, on purpose.",
+    "Now the origin.",
+    "In the nineteen forties, two American researchers, Paul Siple and Charles Passel, were stationed in Antarctica.",
+    "They hung plastic cylinders filled with water outside their base, and timed how long each one took to freeze, under nearly a hundred combinations of wind and temperature.",
+    "They published their results in nineteen forty-five.",
+    "Sources disagree on the exact size of those cylinders, and even the exact year the tests were run.",
+    "But the method itself is well documented.",
+    "Water, wind, and a stopwatch.",
+    "Here is the problem nobody fixed for decades.",
+    "A cylinder of water is not skin.",
+    "It has no blood flow.",
+    "It cannot regulate its own temperature.",
+    "So it freezes faster than a real person loses heat.",
+    "That means the original wind chill numbers likely overstated how dangerous the wind actually was.",
+    "And weather services used those numbers anyway, for more than fifty years.",
+    "By the nineteen eighties, Canada was not even using a number like that.",
+    "It measured wind chill in watts per square meter, a raw unit of energy loss.",
+    "After a brutal cold wave in nineteen ninety-nine, confused callers flooded weather lines, asking what a number in the thousands even meant.",
+    "So that same year, the United States and Canada formed a joint group to fix it.",
+    "Two scientists, Randall Osczevski and Maurice Bluestein, built a new model, tested this time on twelve human volunteers, not water.",
+    "The new formula was agreed in February two thousand one, and rolled out across both countries for that winter.",
+    "For the first time, North America had one single, human-tested wind chill scale.",
+    "So back to that car.",
+    "The National Weather Service gives this exact example: if the real air temperature is five below zero, and the wind chill is thirty-one below, a car's radiator still sits at five below.",
+    "Not thirty-one.",
+    "Wind chill cannot push an object past the real temperature of the air.",
+    "It only describes how fast a living, warm body loses heat.",
+    "Verdict: the idea that wind chill, by itself, freezes your engine is a myth.",
+    "The same logic applies to pipes.",
+    "A separate weather report makes the same point: a low wind chill number does not, by itself, freeze a pipe below the real air temperature either.",
+    "What freezes a pipe is cold air and poor insulation.",
+    "Not the number on your app.",
+    "Here is where it gets genuinely unresolved.",
+    "The same official source says frostbite needs the real air temperature to be below freezing, not just a low wind chill number.",
+    "But other technical sources suggest that strong wind might speed up skin damage even when the real temperature sits close to, or just above, freezing.",
+    "Nobody has closed this argument with a clean, public study.",
+    "So we are leaving it open.",
+    "Not picking a side.",
+    "One more myth, smaller but real.",
+    "Some people say wind chill is not real, just invented.",
+    "That is only half right.",
+    "It is calculated, not measured directly, the way a thermometer measures air.",
+    "But the physical effect behind it, wind pulling heat off your skin faster, is completely real.",
+    "What gets argued over is the number.",
+    "Not the feeling.",
+    "So the next time your phone says it feels twenty degrees colder than the thermometer, remember: nothing outside you actually changed temperature.",
+    "What changed is how fast you are losing heat, a number finally tested on people, not on a bucket of water in Antarctica.",
+    "So next time you check the weather, ask yourself one thing.",
+    "Is that number telling you about the air?",
+    "Or about you?"
+  ],
+  "scenes": [
+    {
+      "id": "ch01",
+      "fromPart": 0,
+      "toPart": 6
+    },
+    {
+      "id": "ch02",
+      "fromPart": 7,
+      "toPart": 7
+    },
+    {
+      "id": "ch03",
+      "fromPart": 8,
+      "toPart": 17
+    },
+    {
+      "id": "ch04",
+      "fromPart": 18,
+      "toPart": 25
+    },
+    {
+      "id": "ch05",
+      "fromPart": 26,
+      "toPart": 32
+    },
+    {
+      "id": "ch06",
+      "fromPart": 33,
+      "toPart": 39
+    },
+    {
+      "id": "ch07",
+      "fromPart": 40,
+      "toPart": 42
+    },
+    {
+      "id": "ch08",
+      "fromPart": 43,
+      "toPart": 46
+    },
+    {
+      "id": "ch09",
+      "fromPart": 47,
+      "toPart": 52
+    },
+    {
+      "id": "ch10",
+      "fromPart": 53,
+      "toPart": 56
+    },
+    {
+      "id": "ch11",
+      "fromPart": 57,
+      "toPart": 62
+    },
+    {
+      "id": "ch12",
+      "fromPart": 63,
+      "toPart": 69
+    },
+    {
+      "id": "ch13",
+      "fromPart": 70,
+      "toPart": 74
+    }
+  ]
+}

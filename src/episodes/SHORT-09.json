@@ -1,0 +1,213 @@
+{
+ "id": "SHORT-09",
+ "title": "Ring Finger to Heart: Is There a Vein?",
+ "voice": "am_liam",
+ "speed": 1,
+ "music": "em-curious",
+ "audio": "public/audio/SHORT-09.wav",
+ "timing": "src/episodes/SHORT-09.timing.json",
+ "pronounce": {
+  "Aulus Gellius": "ˈɔləs dʒˈɛliəs",
+  "Gellius": "dʒˈɛliəs",
+  "Apion": "ˈeɪpiˌɑn",
+  "Swinburne": "swˈɪnbˌɜɹn",
+  "Vena amoris": "vˈinə əmˈɔɹɪs"
+ },
+ "parts": [
+  "Is there a vein from the ring finger to the heart?",
+  "Aulus Gellius, in the second century, quotes a writer named Apion.",
+  "In a history of Egypt, Apion wrote of a fine nerve from that finger to the heart.",
+  "A nerve. Not a vein.",
+  "We found no Egyptian text that says this.",
+  "The Latin name, Vena amoris, is much younger.",
+  "The earliest user we found is an English lawyer, Henry Swinburne.",
+  "His book was printed in sixteen eighty-six, after his death.",
+  "Today, an anatomy teaching site is plain: no single vein links one finger straight to the heart.",
+  "The vein of love is a myth.",
+  "The full story is in the video linked below."
+ ],
+ "beats": [
+  {
+   "from": 0,
+   "to": 0,
+   "img": "em026-hand-heart-v",
+   "src": "images/em026-hand-heart-v.png",
+   "tag": "AI illustration, not a portrait",
+   "vein": "line",
+   "kb": "in",
+   "z": 1.3,
+   "ox": "55%",
+   "oy": "60%",
+   "labels": [
+    {
+     "p": 0,
+     "t": "IS THERE A VEIN FROM THE RING FINGER\nTO THE HEART?"
+    }
+   ]
+  },
+  {
+   "from": 1,
+   "to": 1,
+   "img": "em026-papyrus-v",
+   "src": "images/em026-papyrus-v.png",
+   "tag": "Illustrative image",
+   "kb": "right",
+   "z": 1.8,
+   "ox": "50%",
+   "oy": "50%",
+   "labels": [
+    {
+     "p": 1,
+     "t": "AULUS GELLIUS, 2ND CENTURY\nAttic Nights",
+     "s": "Aulus Gellius, Attic Nights X.10"
+    }
+   ]
+  },
+  {
+   "from": 2,
+   "to": 2,
+   "img": "em026-papyrus-v",
+   "src": "images/em026-papyrus-v.png",
+   "tag": "Illustrative image",
+   "kb": "left",
+   "z": 2.2,
+   "ox": "35%",
+   "oy": "62%",
+   "labels": [
+    {
+     "p": 2,
+     "t": "APION, IN A HISTORY OF EGYPT:\nA FINE NERVE TO THE HEART"
+    }
+   ]
+  },
+  {
+   "from": 3,
+   "to": 3,
+   "img": "em026-hand-heart-v",
+   "src": "images/em026-hand-heart-v.png",
+   "tag": "AI illustration, not a portrait",
+   "vein": "nerve",
+   "kb": "right",
+   "z": 1.6,
+   "ox": "55%",
+   "oy": "60%",
+   "labels": [
+    {
+     "p": 3,
+     "t": "A NERVE. NOT A VEIN."
+    }
+   ]
+  },
+  {
+   "from": 4,
+   "to": 4,
+   "img": "em026-papyrus-v",
+   "src": "images/em026-papyrus-v.png",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "z": 2.4,
+   "ox": "50%",
+   "oy": "40%",
+   "labels": [
+    {
+     "p": 4,
+     "t": "WE FOUND NO EGYPTIAN TEXT\nTHAT SAYS THIS"
+    }
+   ]
+  },
+  {
+   "from": 5,
+   "to": 5,
+   "img": "em026-lawyer-v",
+   "src": "images/em026-lawyer-v.png",
+   "tag": "AI illustration, not a portrait",
+   "kb": "in",
+   "z": 1.4,
+   "ox": "50%",
+   "oy": "35%",
+   "labels": [
+    {
+     "p": 5,
+     "t": "VENA AMORIS = THE VEIN OF LOVE\n(as far as we found, much younger)"
+    }
+   ]
+  },
+  {
+   "from": 6,
+   "to": 6,
+   "img": "em026-lawyer-v",
+   "src": "images/em026-lawyer-v.png",
+   "tag": "AI illustration, not a portrait",
+   "kb": "left",
+   "z": 1.9,
+   "ox": "40%",
+   "oy": "45%",
+   "labels": [
+    {
+     "p": 6,
+     "t": "THE EARLIEST USER WE FOUND:\nHENRY SWINBURNE, ENGLISH LAWYER"
+    }
+   ]
+  },
+  {
+   "from": 7,
+   "to": 7,
+   "img": "em026-lawyer-v",
+   "src": "images/em026-lawyer-v.png",
+   "tag": "AI illustration, not a portrait",
+   "kb": "right",
+   "z": 2.3,
+   "ox": "60%",
+   "oy": "70%",
+   "labels": [
+    {
+     "p": 7,
+     "t": "PRINTED 1686\n(after his death)"
+    }
+   ]
+  },
+  {
+   "from": 8,
+   "to": 8,
+   "img": "em026-anatomy-hand-v",
+   "src": "images/em026-anatomy-hand-v.png",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "z": 1.3,
+   "ox": "50%",
+   "oy": "50%",
+   "labels": [
+    {
+     "p": 8,
+     "t": "NO SINGLE VEIN LINKS ONE FINGER\nSTRAIGHT TO THE HEART",
+     "s": "Source: Visible Body (one teaching site)"
+    }
+   ]
+  },
+  {
+   "from": 9,
+   "to": 9,
+   "img": "em026-hand-heart-v",
+   "src": "images/em026-hand-heart-v.png",
+   "tag": "AI illustration, not a portrait",
+   "vein": "break",
+   "kb": "in",
+   "z": 1.5,
+   "ox": "55%",
+   "oy": "60%",
+   "stamps": [
+    {
+     "p": 9,
+     "t": "MYTH",
+     "s": "the vein, per this Short",
+     "c": "orange"
+    }
+   ]
+  },
+  {
+   "from": 10,
+   "to": 10,
+   "end": true
+  }
+ ]
+}

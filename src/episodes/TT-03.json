@@ -1,0 +1,261 @@
+{
+ "id": "TT-03",
+ "title": "Why do some people sneeze at the sun?",
+ "voice": "am_liam",
+ "speed": 1,
+ "music": "em-curious",
+ "words": true,
+ "audio": "public/audio/TT-03.wav",
+ "timing": "src/episodes/TT-03.timing.json",
+ "parts": [
+  "In one big study, about one in four people said they sneeze at the sun.",
+  "That study surveyed more than three thousand people in China.",
+  "So why does bright light make your nose tickle?",
+  "Scientists still don't fully know.",
+  "You might think that's rare. It's not.",
+  "Is it just one gene? Also no.",
+  "In twenty ten, researchers surveyed customers of a genetics company.",
+  "They found a spot on chromosome two linked to it.",
+  "In twenty nineteen, the study in China found that same spot.",
+  "The authors' conclusion: it's complex, not a simple one-gene trait.",
+  "So what happens in the brain? A small study recorded the brain activity of ten sneezers and ten other people.",
+  "The sneezers' vision center reacted more strongly, even to a plain checkerboard.",
+  "The authors say it's more than a classic brainstem reflex.",
+  "But they can't rule out the brainstem playing a role.",
+  "So look around the dinner table.",
+  "Maybe one of every four people there sneezes at the sun, and science still can't fully explain it."
+ ],
+ "beats": [
+  {
+   "from": 0,
+   "to": 0,
+   "img": "tt03-quarter",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "z": 1.04,
+   "ox": "50%",
+   "oy": "70%"
+  },
+  {
+   "from": 1,
+   "to": 1,
+   "diagram": "grid",
+   "tag": "Simplified illustration"
+  },
+  {
+   "from": 2,
+   "to": 2,
+   "img": "tt03-sun",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "z": 1.04,
+   "ox": "50%",
+   "oy": "60%",
+   "stamps": [
+    {
+     "p": 3,
+     "t": "DISPUTED",
+     "s": "cause not fully known",
+     "c": "orange"
+    }
+   ]
+  },
+  {
+   "from": 4,
+   "to": 4,
+   "img": "tt03-quarter",
+   "tag": "Illustrative image",
+   "kb": "right",
+   "z": 1.3,
+   "ox": "45%",
+   "oy": "72%",
+   "stamps": [
+    {
+     "p": 4,
+     "t": "MYTH",
+     "s": "\"it's rare\"",
+     "c": "orange"
+    }
+   ]
+  },
+  {
+   "from": 5,
+   "to": 5,
+   "img": "tt03-puzzle",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "z": 1.04,
+   "ox": "50%",
+   "oy": "60%",
+   "labels": [
+    {
+     "p": 5,
+     "t": "JUST ONE GENE? NO"
+    }
+   ]
+  },
+  {
+   "from": 6,
+   "to": 6,
+   "img": "tt03-survey",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "z": 1.04,
+   "ox": "50%",
+   "oy": "58%",
+   "labels": [
+    {
+     "p": 6,
+     "t": "2010: A GENETICS-COMPANY SURVEY"
+    }
+   ]
+  },
+  {
+   "from": 7,
+   "to": 7,
+   "img": "tt03-dna",
+   "tag": "Simplified illustration",
+   "kb": "in",
+   "z": 1.04,
+   "ox": "30%",
+   "oy": "55%",
+   "labels": [
+    {
+     "p": 7,
+     "t": "A SPOT ON CHROMOSOME 2"
+    }
+   ]
+  },
+  {
+   "from": 8,
+   "to": 8,
+   "img": "tt03-dna",
+   "tag": "Simplified illustration",
+   "kb": "left",
+   "z": 1.2,
+   "ox": "75%",
+   "oy": "55%",
+   "labels": [
+    {
+     "p": 8,
+     "t": "SAME SPOT IN CHINA, 2019"
+    }
+   ]
+  },
+  {
+   "from": 9,
+   "to": 9,
+   "img": "tt03-puzzle",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "z": 1.25,
+   "ox": "75%",
+   "oy": "60%",
+   "labels": [
+    {
+     "p": 9,
+     "t": "COMPLEX, NOT ONE GENE"
+    }
+   ]
+  },
+  {
+   "from": 10,
+   "to": 10,
+   "img": "tt03-eeg",
+   "tag": "Illustrative image",
+   "kb": "left",
+   "z": 1.3,
+   "ox": "75%",
+   "oy": "55%",
+   "labels": [
+    {
+     "p": 10,
+     "t": "10 SNEEZERS vs 10 OTHERS"
+    }
+   ]
+  },
+  {
+   "from": 11,
+   "to": 11,
+   "img": "tt03-checker",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "z": 1.04,
+   "ox": "50%",
+   "oy": "62%",
+   "labels": [
+    {
+     "p": 11,
+     "t": "VISION CENTER REACTED MORE"
+    }
+   ]
+  },
+  {
+   "from": 12,
+   "to": 12,
+   "img": "tt03-brain",
+   "tag": "Simplified illustration",
+   "kb": "right",
+   "z": 1.4,
+   "ox": "55%",
+   "oy": "72%",
+   "labels": [
+    {
+     "p": 12,
+     "t": "MORE THAN A BRAINSTEM REFLEX"
+    }
+   ]
+  },
+  {
+   "from": 13,
+   "to": 13,
+   "img": "tt03-brain",
+   "tag": "Simplified illustration",
+   "kb": "in",
+   "z": 1.5,
+   "ox": "60%",
+   "oy": "78%",
+   "stamps": [
+    {
+     "p": 13,
+     "t": "DISPUTED",
+     "s": "brainstem role",
+     "c": "orange"
+    }
+   ]
+  },
+  {
+   "from": 14,
+   "to": 14,
+   "img": "tt03-quarter",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "z": 1.04,
+   "ox": "50%",
+   "oy": "70%"
+  },
+  {
+   "from": 15,
+   "to": 15,
+   "img": "tt03-quarter",
+   "tag": "Illustrative image",
+   "kb": "left",
+   "z": 1.3,
+   "ox": "30%",
+   "oy": "72%",
+   "stamps": [
+    {
+     "p": 15,
+     "t": "DISPUTED",
+     "s": "science can't fully explain it",
+     "c": "orange"
+    }
+   ]
+  }
+ ],
+ "fin": {
+  "img": "tt03-quarter",
+  "big": "Illustrative image.",
+  "small": "Sources: PLOS Genetics 2010; Scientific Reports 2019; PLOS ONE 2010"
+ }
+}

@@ -1,0 +1,145 @@
+{
+  "id": "EM-038",
+  "title": "Why Does Buttered Toast Always Land Butter-Side Down?",
+  "voice": "am_liam",
+  "speed": 1,
+  "pads": {
+    "2": 0.4,
+    "37": 0.4
+  },
+  "audio": "public/audio/EM-038.wav",
+  "timing": "src/episodes/EM-038.timing.json",
+  "chapters": [
+    0,
+    6,
+    7,
+    10,
+    14,
+    18,
+    22,
+    25,
+    27,
+    31,
+    35,
+    39,
+    43,
+    48
+  ],
+  "parts": [
+    "Your toast slips off the plate.",
+    "It lands on the floor.",
+    "And almost every time, it seems to land butter-side down.",
+    "That is not just bad luck in your kitchen.",
+    "In nineteen ninety-six, a British physicist won an actual award for proving there is real geometry behind it.",
+    "And the reason is not the weight of the butter at all.",
+    "By the end of this video, you will know the real mechanism behind the fall, the award that made it famous, and one television test that got the opposite result, plus why that test does not actually disprove anything.",
+    "Here is where the real investigation starts.",
+    "Physicist Robert Matthews, at Aston University in Birmingham, published a detailed analysis of the problem in the European Journal of Physics, in nineteen ninety-five.",
+    "Documented, confirmed independently in two separate academic catalogues.",
+    "Matthews found that toast does not simply fall flat.",
+    "As it slides off the edge of a table or plate, that edge acts like a pivot.",
+    "It gives the toast a push that makes it rotate.",
+    "That rotation, not the weight of whatever is on top, is what decides which side touches the ground.",
+    "And here is the detail most people get wrong.",
+    "The weight of the butter itself is not the deciding factor.",
+    "What actually decides the outcome is how much time the toast has to keep rotating once it starts falling.",
+    "Documented, confirmed in two independent sources.",
+    "A normal kitchen table is about seventy-five centimeters high.",
+    "That height gives the toast just enough time to rotate between ninety and two hundred seventy degrees, enough to flip it onto the wrong side, but not enough to complete a full rotation and land safely butter-side up again.",
+    "According to the same analysis, you would need a table roughly twice as tall, around one and a half meters, for the toast to have time to finish the spin.",
+    "That is why the effect disappears if you drop toast from somewhere much higher.",
+    "This piece of physics did not stay in an academic journal.",
+    "In nineteen ninety-six, Matthews received an Ig Nobel Prize in Physics, the award that celebrates research that makes people laugh, and then makes them think.",
+    "Documented, confirmed directly by the organization that gives the award.",
+    "Matthews did not even travel to collect it in person.",
+    "He sent a recorded acceptance speech instead, and later joked that he had done the whole study in his spare time, when there was, in his words, nothing on television.",
+    "Here is where it gets more interesting.",
+    "Back in nineteen ninety-one, a BBC science programme tested the idea by tossing three hundred pieces of buttered bread into the air.",
+    "The result was close to fifty-fifty, almost like flipping a coin.",
+    "Documented, confirmed in independent sources that cite the same test.",
+    "That does not actually disprove Matthews's analysis.",
+    "Tossing bread into the air and catching the spin from the start is a completely different setup from toast sliding off the edge of a table.",
+    "Matthews's mechanism is specifically about that edge, that pivot, and that exact starting push.",
+    "Change the setup, and you change the result.",
+    "And the story has one more twist.",
+    "In two thousand one, a separate team of researchers published a follow-up study, this time using video analysis and plywood models instead of real toast.",
+    "According to a reliable summary of that paper, their results suggest the real-world split might be closer to fifty-fifty than the original analysis implied.",
+    "Disputed: the mechanism of the rotation itself is not in question, but exactly how strongly the odds lean toward butter-side down still is.",
+    "So here is where things actually stand.",
+    "The rotation mechanism, the role of the table's edge, and the importance of table height: all of that is well documented and has not been seriously challenged.",
+    "What remains genuinely open is just how lopsided the real odds are in an ordinary kitchen.",
+    "Real science, even about something as small as toast, does not always close every question on the first try.",
+    "So next time your toast hits the floor, you will know it is not bad luck.",
+    "It is a pivot, a height, and a spin that almost, but not quite, makes it back around.",
+    "Just do not expect anyone to tell you the exact odds with total certainty.",
+    "That part of the story is still being written.",
+    "So, next breakfast: are you going to test it yourself, and see which side yours lands on?"
+  ],
+  "scenes": [
+    {
+      "id": "ch01",
+      "fromPart": 0,
+      "toPart": 5
+    },
+    {
+      "id": "ch02",
+      "fromPart": 6,
+      "toPart": 6
+    },
+    {
+      "id": "ch03",
+      "fromPart": 7,
+      "toPart": 9
+    },
+    {
+      "id": "ch04",
+      "fromPart": 10,
+      "toPart": 13
+    },
+    {
+      "id": "ch05",
+      "fromPart": 14,
+      "toPart": 17
+    },
+    {
+      "id": "ch06",
+      "fromPart": 18,
+      "toPart": 21
+    },
+    {
+      "id": "ch07",
+      "fromPart": 22,
+      "toPart": 24
+    },
+    {
+      "id": "ch08",
+      "fromPart": 25,
+      "toPart": 26
+    },
+    {
+      "id": "ch09",
+      "fromPart": 27,
+      "toPart": 30
+    },
+    {
+      "id": "ch10",
+      "fromPart": 31,
+      "toPart": 34
+    },
+    {
+      "id": "ch11",
+      "fromPart": 35,
+      "toPart": 38
+    },
+    {
+      "id": "ch12",
+      "fromPart": 39,
+      "toPart": 42
+    },
+    {
+      "id": "ch13",
+      "fromPart": 43,
+      "toPart": 47
+    }
+  ]
+}

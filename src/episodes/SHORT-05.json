@@ -1,0 +1,125 @@
+{
+ "id": "SHORT-05",
+ "title": "Why A4 Keeps Its Shape When You Fold It",
+ "voice": "am_liam",
+ "speed": 1,
+ "music": "em-curious",
+ "pronounce": {
+  "Lichtenberg": "lˈɪktənbˌɜɹɡ",
+  "ISO": "ˌaɪˌɛsˈO",
+  "A4": "ˈA fˈɔɹ"
+ },
+ "audio": "public/audio/SHORT-05.wav",
+ "timing": "src/episodes/SHORT-05.timing.json",
+ "parts": [
+  "Fold an A4 sheet in half, and the halves keep the shape of the whole.",
+  "Wikipedia says ISO paper sizes share one ratio: the square root of two.",
+  "Where did the shape come from? Wikipedia says it was first mentioned in a letter written on October twenty-fifth, seventeen eighty-six.",
+  "The writer was a German physics professor, Lichtenberg.",
+  "A Cambridge translation says he planned to cut ordinary writing paper to the shape he wanted.",
+  "Then he found, with pleasure, that the paper already had that shape.",
+  "He wrote that the shape appeared not to have emerged by accident.",
+  "The full story is in the video linked below."
+ ],
+ "beats": [
+  {
+   "from": 0,
+   "to": 0,
+   "img": "em022-fold-hook",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "labels": [
+    {
+     "p": 0,
+     "t": "A4: FOLD IN HALF\nSame shape, half the size"
+    }
+   ]
+  },
+  {
+   "from": 1,
+   "to": 1,
+   "img": "em022-ladder",
+   "tag": "Simplified illustration",
+   "kb": "left",
+   "labels": [
+    {
+     "p": 1,
+     "t": "RATIO: square root of 2\nabout 1.414",
+     "s": "Source: Wikipedia"
+    }
+   ]
+  },
+  {
+   "from": 2,
+   "to": 2,
+   "img": "em022-letter",
+   "tag": "Illustrative image",
+   "kb": "right",
+   "labels": [
+    {
+     "p": 2,
+     "t": "Letter dated 25 Oct 1786",
+     "s": "Source: Wikipedia"
+    }
+   ]
+  },
+  {
+   "from": 3,
+   "to": 3,
+   "img": "em022-professor",
+   "tag": "AI illustration, not a portrait",
+   "kb": "in",
+   "labels": [
+    {
+     "p": 3,
+     "t": "LICHTENBERG\nGerman physics professor"
+    }
+   ]
+  },
+  {
+   "from": 4,
+   "to": 4,
+   "img": "em022-scissors",
+   "tag": "Illustrative image",
+   "kb": "left",
+   "labels": [
+    {
+     "p": 4,
+     "t": "Cambridge translation of the letter\nHe planned to cut the paper"
+    }
+   ]
+  },
+  {
+   "from": 5,
+   "to": 5,
+   "img": "em022-professor",
+   "tag": "AI illustration, not a portrait",
+   "kb": "right",
+   "labels": [
+    {
+     "p": 5,
+     "t": "IT ALREADY FIT"
+    }
+   ]
+  },
+  {
+   "from": 6,
+   "to": 6,
+   "img": "em022-letter",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "labels": [
+    {
+     "p": 6,
+     "t": "HIS CLAIM:\nNot by accident, he wrote",
+     "s": "(Cambridge translation)"
+    }
+   ]
+  },
+  {
+   "from": 7,
+   "to": 7,
+   "end": true
+  }
+ ]
+}

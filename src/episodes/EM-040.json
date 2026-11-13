@@ -1,0 +1,163 @@
+{
+  "id": "EM-040",
+  "title": "Why Do We Count Eggs by the Dozen?",
+  "voice": "am_liam",
+  "speed": 1,
+  "pads": {
+    "5": 0.4,
+    "56": 0.4
+  },
+  "audio": "public/audio/EM-040.wav",
+  "timing": "src/episodes/EM-040.timing.json",
+  "chapters": [
+    0,
+    6,
+    7,
+    11,
+    15,
+    19,
+    23,
+    28,
+    33,
+    38,
+    44,
+    49,
+    52,
+    58,
+    60
+  ],
+  "parts": [
+    "You open a carton of eggs.",
+    "Twelve of them, in two neat rows of six.",
+    "Almost everything else in your kitchen, you count in tens.",
+    "So why eggs, in twelves?",
+    "Most people have the same answer ready: the carton made it that way.",
+    "That answer is wrong.",
+    "By the end of this video, you will know when the egg carton actually showed up, why it cannot be where the number twelve comes from, and three competing theories for the real origin — none of which anyone has fully proven.",
+    "The cardboard egg carton is not ancient.",
+    "The earliest documented version dates to nineteen-oh-six, when Thomas Peter Bethell, from Liverpool, patented interlocking strips of cardboard to ship eggs by road and rail.",
+    "The more famous version, the one often called the modern egg carton, came in nineteen-eleven, from a newspaper editor in British Columbia named Joseph Coyle, built to settle a dispute between a farmer and a hotel owner over broken eggs.",
+    "Documented.",
+    "Here is the problem with blaming the carton.",
+    "The word \"dozen\" comes from the Latin \"duodecim,\" twelve, through Old French — and people were already buying and selling things by the dozen for centuries before any cardboard box existed.",
+    "The carton did not invent the number twelve.",
+    "It simply adopted a counting unit that was already in everyday use.",
+    "So if not the carton, then what?",
+    "One idea, from historian of mathematics Georges Ifrah, is that counting in twelves comes from using your thumb to tap the three segments of each of your other four fingers.",
+    "Three segments, times four fingers, equals twelve on one hand alone.",
+    "This is presented by the source itself as an idea, not as proven history.",
+    "But there is a detail that argues against this being universal.",
+    "In Germanic languages — the ancestors of English and German — the words for \"eleven\" and \"twelve\" literally mean something closer to \"one left over\" and \"two left over,\" counting past ten.",
+    "That points to a base-ten system behind those specific words, not base twelve.",
+    "Documented, as a linguistic fact.",
+    "A second theory is purely practical.",
+    "Twelve has six exact divisors: one, two, three, four, six, and twelve.",
+    "Ten has only four.",
+    "That means a dozen splits evenly into halves, thirds, quarters, and sixths, with nothing left over — something ten simply cannot do.",
+    "Documented, as basic arithmetic.",
+    "It is a convincing argument — convincing enough that people have used it to push for switching entirely to base twelve.",
+    "A writer named William James Sidis made the case in nineteen-oh-six.",
+    "Another writer, Frank Emerson Andrews, wrote an entire book about it in nineteen thirty-five.",
+    "Groups still make this argument today.",
+    "But wanting a system to be better is not the same as proving it was chosen for that reason, centuries ago.",
+    "The third theory points much further back, to Mesopotamia.",
+    "The Sumerians and Babylonians used a base-sixty counting system for mathematics and astronomy — that part is well established history of science.",
+    "Documented.",
+    "But exactly why they chose twelve and sixty in the first place is the part researchers still have not nailed down with a fully open primary source — this video could trace the citation, but not open the original academic paper behind it.",
+    "Not evidence found, for the precise mechanism.",
+    "One more thing, before we go further — and this is a completely separate mystery.",
+    "A \"baker's dozen\" is thirteen, not twelve.",
+    "According to a fifteenth-century legal text, bakers in medieval London gave an extra loaf per dozen sold to resellers, likely to avoid being fined for underweight bread.",
+    "That explains why a thirteenth loaf sometimes gets added on top of a dozen.",
+    "It does not explain why twelve was the base number to begin with.",
+    "Two different puzzles.",
+    "Back to the carton, one more time.",
+    "Even the story of its own invention does not fully agree with itself.",
+    "Some versions place Joseph Coyle's breakthrough in one small town, others in a different one nearby.",
+    "The exact year of the patent varies between sources too.",
+    "The egg carton origin story, repeated as if it were simple fact, is not as settled as it sounds.",
+    "Even the reference page used to research this video contradicts its own dates — giving one year for a patent in its text, and a different year for the same patent in its own citation.",
+    "That is not a reason to distrust everything here.",
+    "It is a reason to treat every date in this story, including the carton's, with a little caution.",
+    "So here is where this actually stands.",
+    "Fingers and thumbs: a real idea, but presented as speculation by its own source, and contradicted by language in at least one family of languages.",
+    "Easier division into halves and thirds: real mathematics, but mainly used today to argue for change, not proof of why it was chosen in the past.",
+    "Mesopotamia and base sixty: the oldest and most repeated lead, and the one with the least open evidence behind its exact reasoning.",
+    "Disputed.",
+    "What is not disputed is this: whichever theory turns out to be right, it has nothing to do with a cardboard box from the twentieth century.",
+    "So next time you pick up a dozen eggs, remember: the box is barely a hundred years old.",
+    "The number inside it is far, far older — and nobody has fully proven exactly why it is twelve."
+  ],
+  "scenes": [
+    {
+      "id": "ch01",
+      "fromPart": 0,
+      "toPart": 5
+    },
+    {
+      "id": "ch02",
+      "fromPart": 6,
+      "toPart": 6
+    },
+    {
+      "id": "ch03",
+      "fromPart": 7,
+      "toPart": 10
+    },
+    {
+      "id": "ch04",
+      "fromPart": 11,
+      "toPart": 14
+    },
+    {
+      "id": "ch05",
+      "fromPart": 15,
+      "toPart": 18
+    },
+    {
+      "id": "ch06",
+      "fromPart": 19,
+      "toPart": 22
+    },
+    {
+      "id": "ch07",
+      "fromPart": 23,
+      "toPart": 27
+    },
+    {
+      "id": "ch08",
+      "fromPart": 28,
+      "toPart": 32
+    },
+    {
+      "id": "ch09",
+      "fromPart": 33,
+      "toPart": 37
+    },
+    {
+      "id": "ch10",
+      "fromPart": 38,
+      "toPart": 43
+    },
+    {
+      "id": "ch11",
+      "fromPart": 44,
+      "toPart": 48
+    },
+    {
+      "id": "ch12",
+      "fromPart": 49,
+      "toPart": 51
+    },
+    {
+      "id": "ch13",
+      "fromPart": 52,
+      "toPart": 57
+    },
+    {
+      "id": "ch14",
+      "fromPart": 58,
+      "toPart": 59
+    }
+  ]
+}

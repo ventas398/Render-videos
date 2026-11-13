@@ -1,0 +1,23 @@
+{
+ "id": "SHORT-053B",
+ "title": "One Scene, Four Moods",
+ "shortTitle": "Same Hallway, Two Songs. Blame the Music",
+ "capMax": 44,
+ "audio": "public/audio/SHORT-053B.wav",
+ "timing": "src/episodes/SHORT-053B.timing.json",
+ "_notes": "P3 11/11 disenador puesto: tramo hook de EM-053B v7 APROBADO (partes 0-5: pasillo con SCARE-A y CIRCUS). Audio = recorte 0-41,775 s de public/audio/EM-053B-mix.wav (voz + musica ya mezcladas, sin regrabar), fundido 0,42 s antes de la parte 6 y 1,4 s de silencio. Creditos exactos del JSON del largo durante la musica sola. Sin hechos nuevos: frases identicas al largo.",
+ "parts": [
+  "One hallway. One woman. The middle of the night. Just watch.",
+  "Same hallway. Same woman. Not one pixel changed. Watch again.",
+  "The first time, you wanted to yell: don't open that door.",
+  "The second time, you were waiting for her to trip over the cat.",
+  "I never touched the picture. I only changed the music.",
+  "So who decides what you feel at the movies? Often, whoever picked the music."
+ ],
+ "beats": [
+  { "from": 0, "img": "em053b-hallway", "tag": "Illustrative image", "kb": "in", "labels": [{ "p": 0, "t": "SAME SCENE.\nTWO SONGS." }], "credit": { "p": 0, "t": "Horror Suspense - Rafael Krux (CC0)" } },
+  { "from": 1, "img": "em053b-hallway", "tag": "Illustrative image", "kb": "left", "credit": { "p": 1, "t": "Entrance of the Gladiators - Julius Fucik, U.S. Marine Band (Public domain)" } },
+  { "from": 2, "img": "em053b-hallway", "tag": "Illustrative image", "kb": "right", "labels": [{ "p": 4, "t": "SAME PICTURE.\nNEW MUSIC." }] },
+  { "from": 5, "end": true }
+ ]
+}

@@ -1,0 +1,158 @@
+{
+  "id": "EM-037",
+  "title": "Why Does Every Country Have a Different Plug?",
+  "voice": "am_liam",
+  "speed": 1,
+  "pads": {
+    "7": 0.4,
+    "54": 0.4
+  },
+  "audio": "public/audio/EM-037.wav",
+  "timing": "src/episodes/EM-037.timing.json",
+  "chapters": [
+    0,
+    8,
+    9,
+    15,
+    19,
+    25,
+    28,
+    31,
+    34,
+    38,
+    41,
+    47,
+    55,
+    61
+  ],
+  "parts": [
+    "You land after a long flight.",
+    "You pull out your phone charger.",
+    "It does not fit the wall.",
+    "This is not bad luck, and it is not one broken country.",
+    "Right now, the world runs on around fifteen different plug and socket designs.",
+    "There is an international organization built specifically to fix this.",
+    "In nineteen eighty-six, they actually released one official universal plug for the entire planet.",
+    "Almost nobody uses it.",
+    "By the end of this video, you will know why no single plug ever took over, the real story of one country that built its own system from scratch, and the one travel mistake that can still fry your charger even with the right adapter in your hand.",
+    "Here is the root of the problem.",
+    "Home electricity was brand new in the early twentieth century.",
+    "Country after country designed its own plug, with its own engineers and its own safety rules, instead of simply copying what the United States was already using.",
+    "The world was not as connected as it is today.",
+    "So every national grid grew its own shape of plug, on its own schedule, with no one coordinating the pins.",
+    "Documented, according to the leading specialist reference on electrical standards.",
+    "The very first two-pin plug is credited to a patent from eighteen eighty-three.",
+    "Before that, household electricity was mostly for lighting, and early appliances did not plug into a wall at all.",
+    "A toaster from nineteen-oh-nine, for example, simply screwed into a light bulb socket, the same socket meant for a bulb.",
+    "Plugs, as we know them, came later than the appliances themselves.",
+    "So an international body, the International Electrotechnical Commission, spent decades trying to design one plug the whole world could share.",
+    "Repeatedly, the effort stalled.",
+    "Political disagreements.",
+    "Economic resistance.",
+    "And the Second World War simply interrupted everything for years.",
+    "Documented.",
+    "In nineteen eighty-six, the IEC finally published its answer: an official universal design, known as Type N.",
+    "By then, the early enthusiasm had already cooled.",
+    "Almost no country adopted it right away.",
+    "More than twenty years later, in two thousand seven, Brazil became the first country in the world to adopt Type N as its own national standard, replacing a mix of incompatible plugs that had been coexisting inside the same country.",
+    "Around the same time, Thailand went a different way and built its own design, Type O, in two thousand six, compatible with the common European plug, and rolled it out gradually.",
+    "Documented.",
+    "Here is why almost no one follows Brazil's example.",
+    "Switching a national plug standard means rewiring homes, offices, and factories, and redesigning every appliance sold in that country.",
+    "Once a system is in place, changing it is expensive and slow, even when a universal alternative already exists on paper.",
+    "Now, one real case of how a country built its own answer from the ground up.",
+    "Before nineteen forty-seven, the United Kingdom used round-pin plugs under a standard from nineteen thirty-four, with separate two, five, and fifteen amp versions.",
+    "None of those three versions fit each other's socket.",
+    "Documented, confirmed independently by two separate sources.",
+    "The fix traces back to an official post-war planning report, in an appendix from nineteen forty-four.",
+    "It proposed one all-purpose socket with a replaceable fuse built directly into the plug itself, to protect the flexible cord of every appliance.",
+    "The same report separately recommended a new wiring method for homes, the ring circuit, as its own, distinct proposal.",
+    "In June nineteen forty-seven, that design became an official standard, replacing all four incompatible British plugs with a single rectangular, three-pin system, fuse included.",
+    "It was not the only candidate.",
+    "One competing design from nineteen twenty-six, and another patented in nineteen forty-three with a fuse built into the live pin itself, both lost out.",
+    "The standards body chose a rival design instead, the one still used across the United Kingdom today.",
+    "It is not compatible with the old round-pin plugs at all.",
+    "You need an adapter just to use one in the other.",
+    "So back to that charger that would not fit the wall.",
+    "Here is the distinction that actually matters for your next trip.",
+    "The shape of a plug, how many pins, and where they sit, is a completely separate problem from the voltage and frequency of the electricity itself.",
+    "A simple shape adapter changes only the shape.",
+    "It does not change the voltage reaching your device.",
+    "Plug a device that is not built for a higher voltage into that voltage, using only a shape adapter, and you can still damage it.",
+    "The adapter in your bag solves one problem.",
+    "Not the other one.",
+    "So the next time your charger does not fit a wall in another country, remember: there never was a missing universal plug waiting to be adopted.",
+    "There was an attempt, in nineteen eighty-six, and the world mostly said no.",
+    "So before your next trip, the real question is not just which adapter to pack.",
+    "It is whether you actually checked what is printed on your charger.",
+    "Shape, or voltage.",
+    "Which one did you check last time?"
+  ],
+  "scenes": [
+    {
+      "id": "ch01",
+      "fromPart": 0,
+      "toPart": 7
+    },
+    {
+      "id": "ch02",
+      "fromPart": 8,
+      "toPart": 8
+    },
+    {
+      "id": "ch03",
+      "fromPart": 9,
+      "toPart": 14
+    },
+    {
+      "id": "ch04",
+      "fromPart": 15,
+      "toPart": 18
+    },
+    {
+      "id": "ch05",
+      "fromPart": 19,
+      "toPart": 24
+    },
+    {
+      "id": "ch06",
+      "fromPart": 25,
+      "toPart": 27
+    },
+    {
+      "id": "ch07",
+      "fromPart": 28,
+      "toPart": 30
+    },
+    {
+      "id": "ch08",
+      "fromPart": 31,
+      "toPart": 33
+    },
+    {
+      "id": "ch09",
+      "fromPart": 34,
+      "toPart": 37
+    },
+    {
+      "id": "ch10",
+      "fromPart": 38,
+      "toPart": 40
+    },
+    {
+      "id": "ch11",
+      "fromPart": 41,
+      "toPart": 46
+    },
+    {
+      "id": "ch12",
+      "fromPart": 47,
+      "toPart": 54
+    },
+    {
+      "id": "ch13",
+      "fromPart": 55,
+      "toPart": 60
+    }
+  ]
+}

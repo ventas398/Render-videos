@@ -1,0 +1,46 @@
+﻿{
+    "name":  "render-videos",
+    "version":  "1.0.0",
+    "description":  "Render of short videos",
+    "repository":  {
+
+                   },
+    "license":  "UNLICENSED",
+    "engines":  {
+                    "node":  "^20.19.0 || ^22.13.0 || \u003e=24"
+                },
+    "private":  true,
+    "dependencies":  {
+                         "@remotion/cli":  "4.0.539",
+                         "@remotion/noise":  "4.0.539",
+                         "@remotion/paths":  "4.0.539",
+                         "@remotion/shapes":  "4.0.539",
+                         "@remotion/transitions":  "4.0.539",
+                         "d3-geo":  "3.1.1",
+                         "react":  "19.2.3",
+                         "react-dom":  "19.2.3",
+                         "remotion":  "4.0.539",
+                         "roughjs":  "4.6.6",
+                         "topojson-client":  "3.1.0",
+                         "world-atlas":  "2.0.2"
+                     },
+    "devDependencies":  {
+                            "@remotion/eslint-config-flat":  "4.0.539",
+                            "@types/d3-geo":  "3.1.1",
+                            "@types/geojson":  "7946.0.16",
+                            "@types/react":  "19.2.7",
+                            "@types/topojson-client":  "3.1.5",
+                            "@types/topojson-specification":  "1.0.5",
+                            "@types/web":  "0.0.166",
+                            "eslint":  "10.12.0",
+                            "prettier":  "3.8.1",
+                            "typescript":  "5.9.3"
+                        },
+    "scripts":  {
+                    "render":  "remotion render src/index.ts",
+                    "compositions":  "remotion compositions src/index.ts"
+                },
+    "allowScripts":  {
+                         "esbuild":  false
+                     }
+}

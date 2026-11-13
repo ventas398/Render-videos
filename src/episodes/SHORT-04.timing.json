@@ -1,0 +1,28 @@
+{
+ "ends": [
+  3.75,
+  6.625,
+  13.575,
+  17.575,
+  22.9,
+  26.2,
+  31.15,
+  34.65,
+  36.875,
+  40.675,
+  43.95
+ ],
+ "parts": [
+  "You see the flash. Now count. One second. Five. Ten.",
+  "Only then does the thunder arrive.",
+  "Environment Canada says light travels three hundred thousand kilometers per second. Sound, about three tenths.",
+  "Our arithmetic: light is about a million times faster.",
+  "The National Weather Service says thunder takes about five seconds to travel a mile.",
+  "Our comparison: the delay is a tape measure.",
+  "Count the seconds, then divide by five for miles, or by three for kilometers.",
+  "Our arithmetic: ten seconds is about two miles.",
+  "Treat it as an estimate.",
+  "Sound moves faster in hot air and slower in cold air.",
+  "The full story is in the video linked below."
+ ]
+}

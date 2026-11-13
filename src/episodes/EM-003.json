@@ -1,0 +1,102 @@
+{
+  "id": "EM-003",
+  "title": "Why Is There a Barcode on Everything?",
+  "voice": "am_liam",
+  "speed": 1.0,
+  "pronounce": {
+    "Laurer": "lˈɔɹəɹ"
+  },
+  "audio": "public/audio/EM-003.wav",
+  "timing": "src/episodes/EM-003.timing.json",
+  "parts": [
+    "The first product ever scanned with today's barcode at a supermarket checkout was a pack of chewing gum.",
+    "Later, some people even claimed the stripes hid the mark of the beast.",
+    "Pick up a can of soup, a phone charger, a pack of gum. They all carry the same patch of black stripes.",
+    "How did it end up on everything?",
+    "The story starts with a complaint, and a doodle in the sand.",
+    "At the checkout, a person reads every price and punches it in.",
+    "According to the story, one grocery boss wished the checkout could read a product by itself.",
+    "Bernard Silver, a graduate student at Drexel in Philadelphia, heard about it. He and Norman Joseph Woodland started looking for an answer.",
+    "Their first try used a special ink, but it faded too easily and cost too much.",
+    "Then Woodland went to Miami Beach to think. Inspired by Morse code, he drew long and short lines in the sand with his fingers.",
+    "Then he swept the lines around into a circle, like a target, so a machine could read it from any angle.",
+    "They filed a patent in 1949, and it was granted in 1952.",
+    "But the world was not ready. The machines to read it quickly, and affordable computers to make sense of it, did not exist yet.",
+    "Later, shops wanted it. Checkouts took a lot of staff time, and grocers made very little profit on each sale.",
+    "But every chain used its own numbers, and a code only works if everybody shares one.",
+    "So in 1970, the grocery industry formed a committee to pick one.",
+    "Makers did not want to redo packages while few shops had scanners, and shops doubted scanners would pay off.",
+    "Several companies pitched designs, including a round target from RCA.",
+    "The winner was a rectangle.",
+    "An IBM engineer named George Laurer designed it from scratch.",
+    "Straight bars printed better than the round target.",
+    "The committee chose it in March 1973, and it became the Universal Product Code.",
+    "On June 26, 1974, at a Marsh supermarket in Troy, Ohio, Clyde Dawson went to the checkout.",
+    "Cashier Sharon Buchanan scanned his item: a pack of Juicy Fruit gum.",
+    "Legend says he chose it on purpose, because nobody was sure stripes could be printed on something that small.",
+    "It was the first product ever scanned with the new code at a store checkout.",
+    "But not everybody cheered.",
+    "Unions feared losing jobs.",
+    "Consumer groups worried about wrong prices, and about shops keeping track of what people buy.",
+    "In 1976, several states required price stickers to stay on the items, which slowed things down.",
+    "There was also a strange rumour. Some people claimed the long guard lines hid the number six, six, six.",
+    "Laurer called it a coincidence. His first, middle and last names have six letters each.",
+    "In the 1980s, big stores like Kmart and Walmart began demanding barcodes on clothing, and the stripes spread everywhere.",
+    "Makers could see what was selling, straight from the checkout.",
+    "Even the numbers under the bars have a job: a backup, in case the scanner cannot read the stripes.",
+    "So that patch of stripes on your soup can is a doodle in the sand, a committee, and a pack of chewing gum.",
+    "And speaking of prices, why does a bucket of popcorn at the cinema cost so much?"
+  ],
+  "scenes": [
+    {
+      "id": "gum-hook",
+      "fromPart": 0,
+      "toPart": 4
+    },
+    {
+      "id": "grocery",
+      "fromPart": 5,
+      "toPart": 7
+    },
+    {
+      "id": "sand",
+      "fromPart": 8,
+      "toPart": 11
+    },
+    {
+      "id": "not-ready",
+      "fromPart": 12,
+      "toPart": 12
+    },
+    {
+      "id": "standard",
+      "fromPart": 13,
+      "toPart": 17
+    },
+    {
+      "id": "rectangle",
+      "fromPart": 18,
+      "toPart": 21
+    },
+    {
+      "id": "first-scan",
+      "fromPart": 22,
+      "toPart": 25
+    },
+    {
+      "id": "fear",
+      "fromPart": 26,
+      "toPart": 31
+    },
+    {
+      "id": "everywhere",
+      "fromPart": 32,
+      "toPart": 34
+    },
+    {
+      "id": "close",
+      "fromPart": 35,
+      "toPart": 36
+    }
+  ]
+}

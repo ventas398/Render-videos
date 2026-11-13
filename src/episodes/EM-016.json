@@ -1,0 +1,81 @@
+{
+  "id": "EM-016",
+  "title": "Why Do Sticky Notes Exist?",
+  "voice": "am_liam",
+  "speed": 1,
+  "pronounce": {
+    "Boise": "bˈYsi",
+    "3M": "θɹˈi ˈɛm",
+    "Amron": "ˈæmɹən"
+  },
+  "audio": "public/audio/EM-016.wav",
+  "timing": "src/episodes/EM-016.timing.json",
+  "parts": [
+    "Look at the little square stuck to your monitor. It barely holds on, and that is the whole point.",
+    "Peel it off, and it comes away clean. Stick it somewhere else, and it works again.",
+    "And, as the usual story goes, it exists because of a glue that was supposed to be strong.",
+    "For years, almost nobody knew what to do with it.",
+    "So why do sticky notes exist?",
+    "In nineteen sixty-eight, a scientist at the company 3M, Spencer Silver, was trying to make a very strong adhesive.",
+    "Instead, by accident, he made a weak one. It was low-tack and reusable, and it peeled off without tearing.",
+    "A program at the Massachusetts Institute of Technology says it was made of tiny acrylic spheres. Silver hoped it could be a spray, or a surface for bulletin boards.",
+    "It was, in Wikipedia's words, a solution without a problem. For about five years, Silver tried to sell the idea inside the company, and few people were interested.",
+    "Then came Arthur Fry, a colleague who sang in a church choir. His paper bookmarks kept slipping out of his hymn book.",
+    "He thought of Silver's adhesive. A bookmark with that gentle grip could stay in place without tearing the page.",
+    "Sources differ on the year of that idea: some say nineteen seventy-three, others nineteen seventy-four.",
+    "According to Wikipedia, Fry used a company policy that let employees work on their own projects, and gave samples to his colleagues.",
+    "Colleagues began using them to exchange messages. The bookmark had found a second life.",
+    "In nineteen seventy-seven, the company test-marketed the product in several cities, under the name Press and Peel.",
+    "The results were mixed. Wikipedia calls them disappointing.",
+    "A year later, it tried something different: free samples in offices in Boise, Idaho.",
+    "According to Wikipedia, about nine in ten people who tried them said they would buy them.",
+    "The product was renamed Post-it Note, and in nineteen eighty it went on sale across the United States.",
+    "This is the company's story. Not everyone agrees on the credit.",
+    "Wikipedia notes that another man, Alan Amron, said he came up with the idea in nineteen seventy-three.",
+    "It says his first lawsuit ended in a confidential settlement, and a second one, in twenty sixteen, was dismissed.",
+    "We cannot settle that dispute here, so we tell the version in the sources we read, and we note the other.",
+    "Next time you use a sticky note, peel it off and stick it somewhere else. That is the failed glue, doing its job.",
+    "Here is our reading. The weak grip was a flaw in a glue, and became the feature in a note.",
+    "So if you have an idea nobody wants yet, remember this glue. Sometimes the answer already exists, and the question has not been found yet.",
+    "A glue that was meant to be strong became famous for being weak.",
+    "Everyday objects often hide a simple trick in plain sight. Even the light in your building hallway.",
+    "Next time you press the light in a building hallway, notice what happens next. Why does it turn itself off?"
+  ],
+  "scenes": [
+    {
+      "id": "hook",
+      "fromPart": 0,
+      "toPart": 4
+    },
+    {
+      "id": "failure",
+      "fromPart": 5,
+      "toPart": 8
+    },
+    {
+      "id": "fry",
+      "fromPart": 9,
+      "toPart": 13
+    },
+    {
+      "id": "market",
+      "fromPart": 14,
+      "toPart": 18
+    },
+    {
+      "id": "dispute",
+      "fromPart": 19,
+      "toPart": 22
+    },
+    {
+      "id": "practical",
+      "fromPart": 23,
+      "toPart": 25
+    },
+    {
+      "id": "close",
+      "fromPart": 26,
+      "toPart": 28
+    }
+  ]
+}

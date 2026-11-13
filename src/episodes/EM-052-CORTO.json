@@ -1,0 +1,110 @@
+{
+ "id": "EM-052-CORTO",
+ "title": "Which Color Psychology Claims Are Real?",
+ "shortTitle": "Same Painting, Three Colors. Watch What Changes",
+ "voice": "am_liam",
+ "speed": 1,
+ "music": "em-curious",
+ "capMax": 44,
+ "capStarts": {"0": [0, 0.85, 1.95], "4": [0, 1.75, 3.4, 4.95], "7": [0, 3.05, 4.5], "8": [0, 2.2, 3.3, 4.45, 6.85], "9": [0, 1.85], "10": [0, 1.15, 2.72], "11": [0, 1.65]},
+ "audio": "public/audio/EM-052-CORTO.wav",
+ "timing": "src/episodes/EM-052-CORTO.timing.json",
+ "_notes": "v2 09/11: guion del pensador (11:33, direccion de Javier 10:53: 2/3 demostracion con obras de dominio publico, 1/3 ciencia) montado por relevo17 con las imagenes ya descargadas para el medio v3 (public/images/em052-art-*.jpg, creditos en EM-052-fuentes.md). Cambios sobre el texto del pensador: las frases de color van en partes separadas para que el color dicho coincida al fotograma con el color visto; 'Blue at dawn / Gold at noon' pasa a 'Blue in the morning / Gold in full sun' (titulos reales de los cuadros: Harmonie bleue, soleil matinal; Sunlight). 'title' = titulo del video MEDIO (lo pinta la tarjeta final); el titulo del Short es 'shortTitle' (provisional, pasar lint). Retintado = propiedad 'tint' del beat (mix-blend-mode color) y tag 'Color digitally altered'. Hechos: EM-052-FACTS.md bloques 3 y 8. v3 09/11 relevo18: la reproduccion de Harmonie bleue se ve ocre, no azul; se cambia a Grey in dull weather (The Portal, Grey Weather, Orsay) y Orange at sunset (Facade (Sunset), Marmottan), que si se ven del color dicho.",
+ "pronounce": {
+  "café": "kæfˈeɪ"
+ },
+ "parts": [
+  "Same painting. Three times. We changed only the color.",
+  "In red, the rainy street feels tense.",
+  "In green, it goes quiet.",
+  "In yellow, it's almost sunny.",
+  "Claude Monet painted one cathedral front about thirty times. The stone never changed. The light did.",
+  "Grey in dull weather.",
+  "Orange at sunset.",
+  "Van Gogh painted a café in red and green. He wrote to his brother that he wanted to show the terrible passions of humanity.",
+  "Science backs one part of this. In eighteen thirty nine, a chemist showed that the same grey looks different on red and on green. Documented.",
+  "Color changes what you see. What it does to your mood is much shakier.",
+  "Pink prison cells, painted to calm aggression. Did it work?",
+  "The answer is in the full video, linked below."
+ ],
+ "beats": [
+  {
+   "from": 0, "to": 0,
+   "src": "images/em052-art-rain.jpg",
+   "tag": "Caillebotte, Paris Street; Rainy Day, 1877",
+   "kb": "in", "pan": [22, 72],
+   "labels": [{ "p": 0, "t": "SAME PAINTING.\nONLY THE COLOR CHANGES." }]
+  },
+  {
+   "from": 1, "to": 1,
+   "src": "images/em052-art-rain.jpg", "tint": "#D4121F",
+   "tag": "Color digitally altered · after Caillebotte, 1877",
+   "kb": "in", "pan": [72, 72],
+   "labels": [{ "p": 1, "t": "RED", "s": "How it feels: our reading" }]
+  },
+  {
+   "from": 2, "to": 2,
+   "src": "images/em052-art-rain.jpg", "tint": "#1F9A4B",
+   "tag": "Color digitally altered · after Caillebotte, 1877",
+   "kb": "in", "pan": [72, 72],
+   "labels": [{ "p": 2, "t": "GREEN", "s": "How it feels: our reading" }]
+  },
+  {
+   "from": 3, "to": 3,
+   "src": "images/em052-art-rain.jpg", "tint": "#F0BE00",
+   "tag": "Color digitally altered · after Caillebotte, 1877",
+   "kb": "in", "pan": [72, 72],
+   "labels": [{ "p": 3, "t": "YELLOW", "s": "How it feels: our reading" }]
+  },
+  {
+   "from": 4, "to": 4,
+   "src": "images/em052-art-rouen-sun.jpg",
+   "tag": "Claude Monet, Rouen Cathedral series, 1892–1894",
+   "kb": "in",
+   "labels": [{ "p": 4, "t": "ONE CATHEDRAL.\nABOUT 30 PAINTINGS.", "s": "Documented" }]
+  },
+  {
+   "from": 5, "to": 5,
+   "src": "images/em052-art-rouen-grey.jpg",
+   "tag": "Claude Monet, Rouen Cathedral series, 1892–1894",
+   "kb": "in",
+   "labels": [{ "p": 5, "t": "GREY IN DULL WEATHER" }]
+  },
+  {
+   "from": 6, "to": 6,
+   "src": "images/em052-art-rouen-sunset.jpg",
+   "tag": "Claude Monet, Rouen Cathedral series, 1892–1894",
+   "kb": "in",
+   "labels": [{ "p": 6, "t": "ORANGE AT SUNSET" }]
+  },
+  {
+   "from": 7, "to": 7,
+   "src": "images/em052-art-nightcafe.jpg",
+   "tag": "Vincent van Gogh, The Night Café, 1888",
+   "kb": "in", "pan": [25, 75],
+   "labels": [{ "p": 7, "t": "“THE TERRIBLE PASSIONS\nOF HUMANITY”", "s": "Van Gogh, letter to Theo, 1888 · documented" }]
+  },
+  {
+   "from": 8, "to": 8,
+   "src": "images/em052c-chevreul.png",
+   "tag": "Our diagram: both grey squares are identical",
+   "kb": "in", "z": 1,
+   "labels": [{ "p": 8, "t": "SAME GREY.\nDIFFERENT NEIGHBORS.", "s": "Chevreul, 1839 · documented" }]
+  },
+  {
+   "from": 9, "to": 9,
+   "src": "images/em052-art-rain.jpg",
+   "tag": "Caillebotte, Paris Street; Rainy Day, 1877",
+   "kb": "in", "pan": [72, 30],
+   "labels": [{ "p": 9, "t": "WHAT YOU SEE: SOLID.\nHOW YOU FEEL: SHAKY.", "s": "Our reading of the studies" }]
+  },
+  {
+   "from": 10, "to": 10,
+   "src": "images/em052-art-rain.jpg", "tint": "#FF91AF",
+   "tag": "Color digitally altered · after Caillebotte, 1877",
+   "kb": "in", "pan": [72, 72],
+   "stamps": [{ "p": 10, "t": "MYTH?", "s": "pink cells to calm aggression", "c": "orange" }]
+  },
+  { "from": 11, "to": 11, "end": true }
+ ]
+}

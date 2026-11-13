@@ -1,0 +1,394 @@
+{
+ "id": "IDEA-73G",
+ "title": "Voyager 1 reaches one light-day from Earth",
+ "voice": "am_liam",
+ "speed": 1.0,
+ "music": "em-curious",
+ "words": true,
+ "audio": "public/audio/IDEA-73G.wav",
+ "timing": "src/episodes/IDEA-73G.timing.json",
+ "pronounce": {},
+ "fin": {
+  "img": "tt073-02",
+  "big": "Illustrative images. Not to scale.",
+  "small": "Sources: NASA Science, “Voyager 1: What Is a Light-Day”; JPL/NASA, Oct. 29 and Nov. 10, 2026"
+ },
+ "parts": [
+  "Nothing travels faster than light.",
+  "And soon, light will need a full day to reach Voyager one.",
+  "Light reaches the Moon in about one point three seconds.",
+  "Mars: three to twenty-two minutes.",
+  "Voyager one: twenty-four hours.",
+  "That distance is called one light-day.",
+  "It's about sixteen billion miles.",
+  "It launched in September, nineteen seventy-seven.",
+  "Years later, it turned around and photographed Earth from three point seven billion miles.",
+  "Now it's more than four times farther.",
+  "Its power drops about four watts every year.",
+  "In September, engineers swapped three devices for lower-power ones.",
+  "In October, ground antennas couldn't detect its signal on two scheduled tries.",
+  "Then it came back.",
+  "When it crosses one light-day, the spacecraft won't detect any change.",
+  "NASA says the milestone is about distance, not time.",
+  "It's a line we drew, not one it feels.",
+  "Send it a question, and the answer comes back in about two days.",
+  "What would you ask it?"
+ ],
+ "hookScene": {
+  "until": 5,
+  "shots": [
+   {
+    "t": 0.0,
+    "img": "tt073-02",
+    "z0": 3.2,
+    "z1": 2.3,
+    "ox": "25%",
+    "oy": "80%",
+    "lines": [
+     {
+      "t": "NOTHING",
+      "s": 190,
+      "y": 420
+     }
+    ],
+    "tag": "Illustrative image"
+   },
+   {
+    "t": 0.76,
+    "img": "tt073-01",
+    "z0": 1.0,
+    "z1": 1.15,
+    "lines": [
+     {
+      "t": "FASTER THAN",
+      "s": 150,
+      "y": 330
+     },
+     {
+      "t": "LIGHT",
+      "s": 300,
+      "y": 500,
+      "d": 17
+     }
+    ],
+    "tag": "Illustrative image"
+   },
+   {
+    "t": 1.8,
+    "img": "tt073-07",
+    "z0": 1.0,
+    "z1": 1.2,
+    "lines": [
+     {
+      "t": "A FULL DAY",
+      "s": 210,
+      "y": 420
+     }
+    ],
+    "tag": "Illustrative image"
+   },
+   {
+    "t": 3.26,
+    "img": "tt073-11",
+    "z0": 1.0,
+    "z1": 1.2,
+    "lines": [
+     {
+      "t": "TO VOYAGER 1",
+      "s": 150,
+      "y": 420
+     }
+    ],
+    "tag": "Illustrative image"
+   },
+   {
+    "t": 4.33,
+    "img": "tt073-03",
+    "z0": 1.05,
+    "z1": 1.2,
+    "lines": [
+     {
+      "t": "MOON",
+      "s": 220,
+      "y": 420
+     }
+    ],
+    "tag": "Illustrative image"
+   },
+   {
+    "t": 5.5,
+    "img": "tt073-03",
+    "z0": 1.2,
+    "z1": 1.35,
+    "lines": [
+     {
+      "t": "1.3 SECONDS",
+      "s": 150,
+      "y": 420
+     }
+    ],
+    "tag": "Illustrative image"
+   },
+   {
+    "t": 6.82,
+    "img": "tt073-04",
+    "z0": 1.05,
+    "z1": 1.2,
+    "lines": [
+     {
+      "t": "MARS",
+      "s": 220,
+      "y": 420
+     }
+    ],
+    "tag": "Illustrative image"
+   },
+   {
+    "t": 7.45,
+    "img": "tt073-04",
+    "z0": 1.2,
+    "z1": 1.35,
+    "lines": [
+     {
+      "t": "3-22 MIN",
+      "s": 200,
+      "y": 420
+     }
+    ],
+    "tag": "Illustrative image"
+   },
+   {
+    "t": 8.46,
+    "img": "tt073-05",
+    "z0": 1.05,
+    "z1": 1.2,
+    "lines": [
+     {
+      "t": "VOYAGER 1",
+      "s": 160,
+      "y": 420
+     }
+    ],
+    "tag": "Illustrative image"
+   },
+   {
+    "t": 9.14,
+    "img": "tt073-05",
+    "z0": 1.2,
+    "z1": 1.3,
+    "lines": [
+     {
+      "t": "24 HOURS",
+      "s": 220,
+      "y": 420
+     }
+    ],
+    "tag": "Illustrative image"
+   }
+  ]
+ },
+ "beats": [
+  {
+   "from": 5,
+   "to": 5,
+   "img": "tt073-02",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "z": 1.04,
+   "labels": [
+    {
+     "p": 5,
+     "t": "1 LIGHT-DAY"
+    }
+   ]
+  },
+  {
+   "from": 6,
+   "to": 6,
+   "img": "tt073-02",
+   "tag": "Illustrative image",
+   "kb": "left",
+   "z": 1.15,
+   "labels": [
+    {
+     "p": 6,
+     "t": "ABOUT 16 BILLION MILES"
+    }
+   ]
+  },
+  {
+   "from": 7,
+   "to": 7,
+   "img": "tt073-06",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "z": 1.04,
+   "labels": [
+    {
+     "p": 7,
+     "t": "SEPT. 5, 1977",
+     "s": "launch"
+    }
+   ]
+  },
+  {
+   "from": 8,
+   "to": 8,
+   "img": "tt073-07",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "z": 1.04,
+   "labels": [
+    {
+     "p": 8,
+     "t": "3.7 BILLION MILES",
+     "s": "Earth, seen from there"
+    }
+   ]
+  },
+  {
+   "from": 9,
+   "to": 9,
+   "img": "tt073-08",
+   "diagram": "bars73",
+   "tag": "Illustrative image · Simplified overlay",
+   "kb": "still",
+   "z": 1,
+   "labels": [
+    {
+     "p": 9,
+     "t": "MORE THAN 4× FARTHER"
+    }
+   ]
+  },
+  {
+   "from": 10,
+   "to": 10,
+   "img": "tt073-09",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "z": 1.04,
+   "labels": [
+    {
+     "p": 10,
+     "t": "ABOUT 4 WATTS LESS",
+     "s": "every year · NASA"
+    }
+   ]
+  },
+  {
+   "from": 11,
+   "to": 11,
+   "img": "tt073-09",
+   "tag": "Illustrative image",
+   "kb": "left",
+   "z": 1.3,
+   "oy": "55%",
+   "labels": [
+    {
+     "p": 11,
+     "t": "3 DEVICES SWAPPED",
+     "s": "for lower-power ones · NASA, Oct. 29"
+    }
+   ]
+  },
+  {
+   "from": 12,
+   "to": 13,
+   "img": "tt073-10",
+   "diagram": "signal",
+   "tag": "Illustrative image · Simplified overlay",
+   "kb": "still",
+   "z": 1,
+   "labels": [
+    {
+     "p": 12,
+     "t": "NO SIGNAL ON TWO TRIES",
+     "s": "ground antennas · NASA"
+    },
+    {
+     "p": 13,
+     "t": "THEN IT CAME BACK"
+    }
+   ]
+  },
+  {
+   "from": 14,
+   "to": 14,
+   "img": "tt073-11",
+   "tag": "Illustrative image",
+   "kb": "still",
+   "z": 1.04,
+   "labels": [
+    {
+     "p": 14,
+     "t": "NO CHANGE ON BOARD",
+     "s": "NASA / JPL"
+    }
+   ]
+  },
+  {
+   "from": 15,
+   "to": 15,
+   "img": "tt073-11",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "z": 1.3,
+   "oy": "45%",
+   "labels": [
+    {
+     "p": 15,
+     "t": "“ABOUT DISTANCE, NOT TIME”",
+     "s": "NASA"
+    }
+   ]
+  },
+  {
+   "from": 16,
+   "to": 16,
+   "img": "tt073-11",
+   "tag": "Illustrative image",
+   "kb": "right",
+   "z": 1.15,
+   "stamps": [
+    {
+     "p": 16,
+     "t": "OUR READING",
+     "s": "not a NASA quote",
+     "c": "orange",
+     "y": 290
+    }
+   ]
+  },
+  {
+   "from": 17,
+   "to": 17,
+   "img": "tt073-02",
+   "diagram": "clock2",
+   "tag": "Illustrative image · Simplified overlay",
+   "kb": "in",
+   "z": 1.04,
+   "labels": [
+    {
+     "p": 17,
+     "t": "THE ROUND TRIP",
+     "s": "24 h there + 24 h back · NASA"
+    }
+   ]
+  },
+  {
+   "from": 18,
+   "to": 18,
+   "img": "tt073-11",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "z": 1.04,
+   "labels": [
+    {
+     "p": 18,
+     "t": "WHAT WOULD YOU ASK IT?"
+    }
+   ]
+  }
+ ]
+}

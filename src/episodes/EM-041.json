@@ -1,0 +1,141 @@
+{
+  "id": "EM-041",
+  "title": "Why Do Balls Bounce So Differently?",
+  "voice": "am_liam",
+  "speed": 1,
+  "pads": {
+    "35": 0.4,
+    "39": 0.4
+  },
+  "audio": "public/audio/EM-041.wav",
+  "timing": "src/episodes/EM-041.timing.json",
+  "chapters": [
+    0,
+    5,
+    6,
+    10,
+    15,
+    19,
+    24,
+    29,
+    35,
+    40,
+    46,
+    49,
+    50
+  ],
+  "parts": [
+    "A tennis ball bounces almost up to your waist.",
+    "An American football barely bounces at all.",
+    "Both are just rubber or leather wrapped around air.",
+    "So why is one so lively and the other so dead on the ground?",
+    "The real answer is not as simple as \"more air equals more bounce\" — and as you will see, even the people who write the rulebooks do not always agree on the exact number.",
+    "By the end of this video, you will know how five major sports actually test their balls, one real scandal that happened because of this exact question, and the simple physics idea that explains why air pressure is only half the story.",
+    "Start with football.",
+    "The official rules set a size and a weight range for the ball, and every certified ball has to pass a battery of tests — pressure loss, shape, how much water it soaks up, how it bounces.",
+    "There is an approved pressure range, not one fixed number, and it depends on which edition of the rules you check.",
+    "Documented, from the sport's own rulebook.",
+    "Basketball does something different.",
+    "Leagues set a bounce test, not just a pressure number: drop the ball from a set height, and it has to come back up within an approved range.",
+    "Some secondary guides also quote a PSI range for basketball — but other sources flatly say there is no official pressure rule at all.",
+    "That disagreement is real, and it is the first clue that this is more complicated than one magic number.",
+    "Disputed.",
+    "Tennis takes a stricter approach.",
+    "Only balls on an official approved list can be used in tournaments at all.",
+    "Before that list even matters, each ball goes through a sequence of tests: getting used to the temperature of the room, being squeezed, weighed, measured — and finally dropped onto a hard surface, where it has to bounce back within an approved range for its type.",
+    "Documented, from the sport's own technical rules.",
+    "Table tennis gives us the clearest example of material changing everything.",
+    "The ball used to be made of celluloid — the same flammable material old film reels were made of — and switched to plastic around two thousand fourteen, though sources do not fully agree on the exact year.",
+    "The rule itself has not changed much: drop the ball onto a steel block, and it must bounce back within an approved range.",
+    "What changed is what the ball is made of, and that alone was enough to shift how it plays.",
+    "Disputed on the date, documented on the material change itself.",
+    "And then there is American football's most famous pressure controversy.",
+    "The NFL rulebook sets an official range: twelve point five to thirteen point five pounds per square inch.",
+    "After a two thousand fifteen incident known as \"Deflategate,\" the league added pregame checks: any ball outside that range gets adjusted back to thirteen point zero, with officials logging every reading by hand.",
+    "The controversy itself is well documented — what it did not settle, cleanly, is exactly how much a slightly softer ball actually helps a player grip or control it on the field.",
+    "Documented, the range and the policy change; disputed, what the softer pressure actually proved.",
+    "So why does every sport end up fighting over pressure at all?",
+    "Here is the physics underneath all five rulebooks.",
+    "Scientists measure how \"lively\" a bouncing ball is with something called the coefficient of restitution — basically, how much energy a ball keeps after it hits the ground.",
+    "More internal pressure does raise that number — but not forever.",
+    "The gain gets smaller and smaller the more you pump in, like pushing a swing that is already moving fast.",
+    "Documented, from studies on pressurized balls.",
+    "Here is the part most people miss.",
+    "Pressure is not the only variable — the material of the shell, and even its temperature, change the bounce just as much.",
+    "One source estimates rubber's bounciness can drop noticeably when it gets cold, the same reason a ball feels \"dead\" on a freezing day even with the same amount of air inside.",
+    "In at least one case — a hot squash ball — researchers attributed most of the extra bounce to the rubber itself changing, not to extra air pressure.",
+    "Our reading: this is the real answer to \"why do balls bounce differently\" — it was never just the air.",
+    "This is exactly why none of these five sports rely on a single pressure number alone.",
+    "Football tests shape, water absorption and pressure loss together.",
+    "Basketball and tennis drop the ball and measure how high it comes back.",
+    "Table tennis does the same over a steel block.",
+    "Even American football, which does lean on one specific pressure range, still needs referees physically checking each ball before kickoff.",
+    "The rulebooks are not testing air — they are testing behavior.",
+    "So the next time someone tells you a ball bounces high just because \"it has more air,\" you now know that is only half true.",
+    "It is a competition between how much air is inside and what the shell is made of — and depending on the sport, the temperature of the room can tip that balance too.",
+    "Five sports, five different ways of testing the exact same fight.",
+    "So next time you catch a ball bouncing a little too high, or a little too dead, on a cold morning or a hot afternoon — ask yourself which one is winning right now: the air inside, or the material around it?"
+  ],
+  "scenes": [
+    {
+      "id": "ch01",
+      "fromPart": 0,
+      "toPart": 4
+    },
+    {
+      "id": "ch02",
+      "fromPart": 5,
+      "toPart": 5
+    },
+    {
+      "id": "ch03",
+      "fromPart": 6,
+      "toPart": 9
+    },
+    {
+      "id": "ch04",
+      "fromPart": 10,
+      "toPart": 14
+    },
+    {
+      "id": "ch05",
+      "fromPart": 15,
+      "toPart": 18
+    },
+    {
+      "id": "ch06",
+      "fromPart": 19,
+      "toPart": 23
+    },
+    {
+      "id": "ch07",
+      "fromPart": 24,
+      "toPart": 28
+    },
+    {
+      "id": "ch08",
+      "fromPart": 29,
+      "toPart": 34
+    },
+    {
+      "id": "ch09",
+      "fromPart": 35,
+      "toPart": 39
+    },
+    {
+      "id": "ch10",
+      "fromPart": 40,
+      "toPart": 45
+    },
+    {
+      "id": "ch11",
+      "fromPart": 46,
+      "toPart": 48
+    },
+    {
+      "id": "ch12",
+      "fromPart": 49,
+      "toPart": 49
+    }
+  ]
+}

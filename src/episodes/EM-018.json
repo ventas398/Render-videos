@@ -1,0 +1,79 @@
+{
+  "id": "EM-018",
+  "title": "How Does a Gas Meter Measure What You Use Today?",
+  "voice": "am_liam",
+  "speed": 1,
+  "pronounce": {
+    "calorific": "kˌælɚˈɪfɪk",
+    "kilowatt-hours": "kˈɪləwˌɑt ˈaʊɚz",
+    "UK": "jˌuːkˈeɪ"
+  },
+  "audio": "public/audio/EM-018.wav",
+  "timing": "src/episodes/EM-018.timing.json",
+  "parts": [
+    "Your gas meter counts gas one gulp at a time.",
+    "Nothing flashes. Nobody presses a button. Yet every bill starts from those little numbers.",
+    "So how does a gas meter know how much gas you used?",
+    "According to Wikipedia, the most common type in homes is the diaphragm meter, also called a bellows meter.",
+    "Other designs exist, such as rotary meters, for higher volumes, and ultrasonic ones, mostly in high-flow pipeline stations.",
+    "Inside a home meter, movable diaphragms form two or more chambers. Valves steer the gas so the chambers take turns filling and emptying, which keeps the flow nearly continuous.",
+    "Our comparison: it is like a seesaw that never rests. One chamber fills while the other empties.",
+    "Levers and cranks turn that back-and-forth motion into a spinning shaft.",
+    "The shaft drives a counter, much like the odometer in a car.",
+    "Gas comes in, a chamber fills, the valves switch, and the counter moves a tiny step.",
+    "Here is our reading. The meter does not time the gas. It counts how many times its chambers filled.",
+    "What the meter itself counts is volume, in cubic metres or in cubic feet, depending on the meter.",
+    "Like a car odometer, it is a running total. The bill uses the difference between two readings.",
+    "That is one reason meters get read. Without a recent reading, a supplier may send an estimated bill.",
+    "One supplier says an estimate can leave you paying too much or too little.",
+    "Smart meters can send readings automatically. But another supplier says that if a smart meter stops reporting, bills can be estimated until readings arrive.",
+    "Here is a twist. In places like Belgium and the UK, you are billed for energy, not for volume.",
+    "Wikipedia says volume ignores the quality of the gas and the heat it gives when burned.",
+    "So the company converts, using the gas's calorific value. That is the heat released when it burns. Wikipedia says gas quality is measured and adjusted each billing cycle.",
+    "A Belgian guide says that value varies with the gas's origin and composition, so the same volume can carry different energy.",
+    "It gives about eleven and a half kilowatt-hours per cubic metre as typical in Brussels.",
+    "Wikipedia adds that temperature and pressure change a gas volume, so corrections are applied, in the meter or in the billing system.",
+    "Then the supplier multiplies the energy by the unit price in your contract, plus other charges.",
+    "So the numbers on your meter are not your bill. They are a running total of gas.",
+    "Here is our reading. A gas meter is a counter that turns something invisible into something you can pay for.",
+    "Gas reaches your home through a pipe. A phone call used to reach it through a wire. Today, you never think about either.",
+    "How did a phone call find its way before computers?"
+  ],
+  "scenes": [
+    {
+      "id": "hook",
+      "fromPart": 0,
+      "toPart": 2
+    },
+    {
+      "id": "inside",
+      "fromPart": 3,
+      "toPart": 9
+    },
+    {
+      "id": "counting",
+      "fromPart": 10,
+      "toPart": 12
+    },
+    {
+      "id": "reading",
+      "fromPart": 13,
+      "toPart": 15
+    },
+    {
+      "id": "energy",
+      "fromPart": 16,
+      "toPart": 22
+    },
+    {
+      "id": "practical",
+      "fromPart": 23,
+      "toPart": 24
+    },
+    {
+      "id": "close",
+      "fromPart": 25,
+      "toPart": 26
+    }
+  ]
+}

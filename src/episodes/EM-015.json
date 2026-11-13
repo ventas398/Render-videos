@@ -1,0 +1,53 @@
+{
+  "id": "EM-015",
+  "title": "Why Do Emergency Exit Doors Push Outward?",
+  "voice": "am_liam",
+  "speed": 1,
+  "pronounce": {
+    "Briggs": "bɹˈɪɡz",
+    "Sunderland": "sˈʌndəɹlənd"
+  },
+  "audio": "public/audio/EM-015.wav",
+  "timing": "src/episodes/EM-015.timing.json",
+  "parts": [
+    "That door at the back of the cinema. You have walked past one a hundred times.",
+    "A heavy door, a sign above it, and a long bar across it.",
+    "You push the bar, and the door swings away from you. Almost every time.",
+    "That is not a coincidence. It is a design shaped by rules.",
+    "So why do emergency exit doors push outward?",
+    "Here is our reading, from simple mechanics. If a door opens inward, a crowd pushing toward it presses the door shut against its frame.",
+    "If it opens outward, that same push helps open it.",
+    "The sources we read do not spell out that physics, so it is our explanation, not a quote.",
+    "What they do tell is a story about rules. We will keep it calm, and stick to the design.",
+    "In eighteen eighty-three, in a theater in Sunderland, England, a door at the bottom of a staircase opened inward and was bolted. A disaster followed.",
+    "According to Wikipedia, public outrage and an inquiry led to legislation requiring entertainment venues to have a minimum number of outward-opening emergency exits.",
+    "Wikipedia says Robert Alexander Briggs, motivated by that disaster, received a United Kingdom patent in eighteen ninety-two for a panic bolt with a horizontal bar.",
+    "Wikipedia also links a theater fire in Chicago in nineteen oh three to changes. It says building and fire codes were reformed afterward, and exit doors had to be pushable from the inside.",
+    "We will not give one date or name for the rule. Wikipedia says adoption of such rules varies by place.",
+    "Now the bar. Wikipedia describes a crash bar as a spring-loaded bar fixed across a door that swings in the direction of an exit.",
+    "Press the bar, and it unlatches the door. It goes by many names: crash bar, panic bar, panic exit device.",
+    "Wikipedia says some exit latch designs were hard for people fleeing to open. Wikipedia adds that later patents describe a bar that makes a locked door pop open under simple pressure from inside.",
+    "Here is our reading. A bar can be pushed with a hand, a hip or a whole body, without having to think.",
+    "A knob asks you to grip and twist. A bar only asks you to push.",
+    "Here is a modern example. A Home Office guide for small and medium places of assembly in the United Kingdom, updated in twenty twenty-four, says exit doors on escape routes should normally open in the direction of travel.",
+    "The same guide says they should also be quickly and easily openable without the need for a key.",
+    "In the United States, Wikipedia says model building codes require crash bars in certain healthcare, education and assembly spaces. Adoption varies by city, county or state.",
+    "In Europe, Wikipedia says a standard, number eleven twenty-five, covers panic exit devices operated by a horizontal bar. We did not open the standards or the codes ourselves.",
+    "This video is not a guide to any building's rules. For that, ask the local fire authority.",
+    "Next time you enter a cinema, a theater or a hall, notice which way the exit doors swing.",
+    "Many swing in the direction you would walk to leave, often with a long bar. Not every door is built this way, and rules differ by place.",
+    "And it never hurts to notice where the exits are.",
+    "So the door that pushes outward is a piece of design shaped by rules.",
+    "Let us end on something lighter. Not every invention comes from a plan. Some come from an accident. Take the small yellow square on your monitor.",
+    "Its glue was meant to be very strong. Why does it barely stick?"
+  ],
+  "scenes": [
+    { "id": "hook", "fromPart": 0, "toPart": 4 },
+    { "id": "mechanics", "fromPart": 5, "toPart": 8 },
+    { "id": "history", "fromPart": 9, "toPart": 13 },
+    { "id": "bar", "fromPart": 14, "toPart": 18 },
+    { "id": "rules", "fromPart": 19, "toPart": 23 },
+    { "id": "practical", "fromPart": 24, "toPart": 26 },
+    { "id": "close", "fromPart": 27, "toPart": 29 }
+  ]
+}

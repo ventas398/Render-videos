@@ -1,0 +1,222 @@
+{
+ "id": "SHORT-07",
+ "title": "Did One Scribble Change Pompeii's Last Day?",
+ "voice": "am_liam",
+ "speed": 1,
+ "music": "em-curious",
+ "audio": "public/audio/SHORT-07.wav",
+ "timing": "src/episodes/SHORT-07.timing.json",
+ "parts": [
+  "When did Pompeii end? One scribble pointed to October.",
+  "It was found in October twenty eighteen.",
+  "It reads: the sixteenth day before the Kalends of November.",
+  "Our arithmetic: Roman counting makes that October seventeenth.",
+  "There is no year.",
+  "The Ministry of Culture reasoned that charcoal is fragile.",
+  "So it was most likely written in October of seventy-nine.",
+  "So the park tested it, on the same wall, under a rain cover.",
+  "The park reports it was essentially unaltered after ten months. Still perfectly legible.",
+  "Our reading: it does not prove August. It weakens one argument against it.",
+  "The full story is in the video linked below."
+ ],
+ "beats": [
+  {
+   "from": 0,
+   "to": 0,
+   "img": "em029-01",
+   "src": "images/em029-01.jpg",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "z": 1.3,
+   "ox": "55%",
+   "oy": "58%",
+   "labels": [
+    {
+     "p": 0,
+     "t": "WHEN DID POMPEII END?\nONE SCRIBBLE: OCTOBER",
+     "s": "Photo: Gary Todd / Wikimedia Commons / Public domain"
+    }
+   ]
+  },
+  {
+   "from": 1,
+   "to": 1,
+   "img": "em029-01",
+   "src": "images/em029-01.jpg",
+   "tag": "Illustrative image",
+   "kb": "left",
+   "z": 2.2,
+   "ox": "28%",
+   "oy": "70%",
+   "labels": [
+    {
+     "p": 1,
+     "t": "FOUND: OCT 2018"
+    }
+   ]
+  },
+  {
+   "from": 2,
+   "to": 2,
+   "img": "em029-01",
+   "src": "images/em029-01.jpg",
+   "tag": "Simplified illustration",
+   "kb": "in",
+   "z": 2.6,
+   "ox": "30%",
+   "oy": "72%",
+   "labels": [
+    {
+     "p": 2,
+     "t": "XVI K NOV",
+     "s": "(16th day before the Kalends of November)"
+    }
+   ]
+  },
+  {
+   "from": 3,
+   "to": 3,
+   "img": "em029-01",
+   "src": "images/em029-01.jpg",
+   "tag": "Simplified illustration",
+   "kb": "right",
+   "z": 2.4,
+   "ox": "62%",
+   "oy": "62%",
+   "labels": [
+    {
+     "p": 3,
+     "t": "OUR ARITHMETIC",
+     "s": "1 Nov = day 1 ... 17 Oct = day 16"
+    }
+   ]
+  },
+  {
+   "from": 4,
+   "to": 4,
+   "img": "em029-01",
+   "src": "images/em029-01.jpg",
+   "tag": "Simplified illustration",
+   "kb": "right",
+   "z": 2.5,
+   "ox": "32%",
+   "oy": "72%",
+   "labels": [
+    {
+     "p": 4,
+     "t": "NO YEAR WRITTEN"
+    }
+   ],
+   "stamps": [
+    {
+     "p": 4,
+     "t": "DOCUMENTED",
+     "s": "the scribble itself",
+     "c": "teal"
+    }
+   ]
+  },
+  {
+   "from": 5,
+   "to": 5,
+   "img": "em029-03",
+   "src": "images/em029-03.jpg",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "z": 1.3,
+   "ox": "50%",
+   "oy": "50%",
+   "labels": [
+    {
+     "p": 5,
+     "t": "MINISTRY OF CULTURE, 2018:\nCHARCOAL IS FRAGILE",
+     "s": "Source: Italian Ministry of Culture, 19 Oct 2018"
+    }
+   ]
+  },
+  {
+   "from": 6,
+   "to": 6,
+   "img": "em029-01",
+   "src": "images/em029-01.jpg",
+   "tag": "Simplified illustration",
+   "kb": "in",
+   "z": 1.8,
+   "ox": "45%",
+   "oy": "45%",
+   "labels": [
+    {
+     "p": 6,
+     "t": "MOST LIKELY: OCTOBER, AD 79",
+     "s": "(the Ministry's reasoning)"
+    }
+   ]
+  },
+  {
+   "from": 7,
+   "to": 7,
+   "img": "em029-17",
+   "src": "images/em029-17.jpg",
+   "tag": "Illustrative image: not the experiment",
+   "kb": "right",
+   "z": 1.3,
+   "ox": "55%",
+   "oy": "60%",
+   "labels": [
+    {
+     "p": 7,
+     "t": "THE PARK'S TEST: 2023\nSAME WALL, RAIN COVER",
+     "s": "Source: reported by nunc.ch / MeteoWeb"
+    }
+   ]
+  },
+  {
+   "from": 8,
+   "to": 8,
+   "img": "em029-01",
+   "src": "images/em029-01.jpg",
+   "tag": "Simplified illustration",
+   "kb": "left",
+   "z": 2.3,
+   "ox": "35%",
+   "oy": "70%",
+   "labels": [
+    {
+     "p": 8,
+     "t": "AFTER 10 MONTHS:\nESSENTIALLY UNALTERED",
+     "s": "Reported by the park, Dec 2024"
+    }
+   ]
+  },
+  {
+   "from": 9,
+   "to": 9,
+   "img": "em029-24",
+   "src": "images/em029-24.jpg",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "z": 1.3,
+   "ox": "50%",
+   "oy": "55%",
+   "labels": [
+    {
+     "p": 9,
+     "t": "OUR READING\nONE TEST, ONE WALL"
+    }
+   ],
+   "stamps": [
+    {
+     "p": 9,
+     "t": "DISPUTED",
+     "s": "which month",
+     "c": "orange"
+    }
+   ]
+  },
+  {
+   "from": 10,
+   "to": 10,
+   "end": true
+  }
+ ]
+}

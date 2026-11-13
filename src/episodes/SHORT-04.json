@@ -1,0 +1,129 @@
+{
+ "id": "SHORT-04",
+ "title": "Why Does Thunder Arrive Seconds Late?",
+ "voice": "am_liam",
+ "speed": 1,
+ "music": "em-curious",
+ "pronounce": {},
+ "audio": "public/audio/SHORT-04.wav",
+ "timing": "src/episodes/SHORT-04.timing.json",
+ "capStarts": {"0": [0, 0.92, 1.5]},
+ "parts": [
+  "You see the flash. Now count. One second. Five. Ten.",
+  "Only then does the thunder arrive.",
+  "Environment Canada says light travels three hundred thousand kilometers per second. Sound, about three tenths.",
+  "Our arithmetic: light is about a million times faster.",
+  "The National Weather Service says thunder takes about five seconds to travel a mile.",
+  "Our comparison: the delay is a tape measure.",
+  "Count the seconds, then divide by five for miles, or by three for kilometers.",
+  "Our arithmetic: ten seconds is about two miles.",
+  "Treat it as an estimate.",
+  "Sound moves faster in hot air and slower in cold air.",
+  "The full story is in the video linked below."
+ ],
+ "beats": [
+  {
+   "from": 0,
+   "to": 1,
+   "img": "em021-pond-storm",
+   "z": 1.75, "oy": "0%",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "labels": [
+    {
+     "p": 0,
+     "t": "COUNT FROM FLASH TO THUNDER"
+    },
+    {
+     "p": 1,
+     "t": "Flash first. Thunder later."
+    }
+   ]
+  },
+  {
+   "from": 2,
+   "to": 3,
+   "img": "em021-bolt-hills",
+   "tag": "Illustrative image",
+   "kb": "left",
+   "labels": [
+    {
+     "p": 2,
+     "t": "Light: 300,000 km/s\nSound: about 0.3 km/s",
+     "s": "Source: Environment Canada"
+    },
+    {
+     "p": 3,
+     "t": "Our arithmetic: about 1,000,000 times faster"
+    }
+   ]
+  },
+  {
+   "from": 4,
+   "to": 4,
+   "img": "em021-stopwatch",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "labels": [
+    {
+     "p": 4,
+     "t": "About 5 seconds per mile",
+     "s": "Source: National Weather Service"
+    }
+   ]
+  },
+  {
+   "from": 5,
+   "to": 6,
+   "img": "em021-tape-meadow",
+   "tag": "Illustrative image",
+   "kb": "right",
+   "labels": [
+    {
+     "p": 5,
+     "t": "Our comparison: a tape measure"
+    },
+    {
+     "p": 6,
+     "t": "÷ 5 = miles (NWS)\n÷ 3 = km (Env. Canada)"
+    }
+   ]
+  },
+  {
+   "from": 7,
+   "to": 7,
+   "img": "em021-village-circle",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "labels": [
+    {
+     "p": 7,
+     "t": "Our arithmetic: 10 seconds = about 2 miles"
+    }
+   ]
+  },
+  {
+   "from": 8,
+   "to": 9,
+   "img": "em021-thermometers",
+   "tag": "Illustrative image",
+   "kb": "left",
+   "labels": [
+    {
+     "p": 8,
+     "t": "Our reading: an estimate", "s": "Not an exact number"
+    },
+    {
+     "p": 9,
+     "t": "Hot air: faster\nCold air: slower",
+     "s": "Source: Environment Canada"
+    }
+   ]
+  },
+  {
+   "from": 10,
+   "to": 10,
+   "end": true
+  }
+ ]
+}

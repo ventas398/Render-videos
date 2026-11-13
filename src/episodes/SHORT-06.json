@@ -1,0 +1,205 @@
+{
+ "id": "SHORT-06",
+ "title": "Sweden Swapped Road Sides at 4:50 AM. How?",
+ "voice": "am_liam",
+ "speed": 1,
+ "music": "em-curious",
+ "audio": "public/audio/SHORT-06.wav",
+ "timing": "src/episodes/SHORT-06.timing.json",
+ "parts": [
+  "Sweden, nineteen sixty-seven. A whole country changes sides of the road.",
+  "It is Sunday, September third, at ten minutes to five in the morning.",
+  "The cars, buses and trucks still on the road come to a stop.",
+  "Then the drivers cross to the other side.",
+  "So why would Sweden do this?",
+  "In nineteen fifty-five, Sweden held a vote on the change.",
+  "Eighty-three percent said no.",
+  "Parliament approved the switch anyway, in May nineteen sixty-three.",
+  "Drivers crossed over, and waited ten minutes.",
+  "At five o'clock, traffic moved off again, slowly, on the right.",
+  "That day, one hundred fifty-seven accidents were reported, and few were serious.",
+  "The full story is in the video linked below."
+ ],
+ "beats": [
+  {
+   "from": 0,
+   "to": 0,
+   "img": "em023-clock-night",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "labels": [
+    {
+     "p": 0,
+     "t": "SWEDEN, 1967\nA WHOLE COUNTRY SWITCHES SIDES"
+    }
+   ]
+  },
+  {
+   "from": 1,
+   "to": 1,
+   "img": "em023-clock-night",
+   "tag": "Illustrative image",
+   "kb": "left",
+   "z": 1.7,
+   "ox": "28%",
+   "oy": "38%",
+   "labels": [
+    {
+     "p": 1,
+     "t": "SUNDAY 3 SEPT 1967\n04:50"
+    }
+   ]
+  },
+  {
+   "from": 2,
+   "to": 2,
+   "img": "em023-stop",
+   "tag": "AI illustration, not a portrait",
+   "kb": "in",
+   "z": 2.04,
+   "ox": "50%",
+   "oy": "55%",
+   "labels": [
+    {
+     "p": 2,
+     "t": "THE TRAFFIC STOPS"
+    }
+   ]
+  },
+  {
+   "from": 3,
+   "to": 3,
+   "img": "em023-lane-switch",
+   "tag": "AI illustration, not a portrait",
+   "kb": "right",
+   "z": 1.8,
+   "ox": "35%",
+   "oy": "55%",
+   "labels": [
+    {
+     "p": 3,
+     "t": "THEY CROSS TO THE OTHER SIDE"
+    }
+   ]
+  },
+  {
+   "from": 4,
+   "to": 4,
+   "img": "em023-stop",
+   "tag": "AI illustration, not a portrait",
+   "kb": "left",
+   "z": 2.2,
+   "ox": "65%",
+   "oy": "60%",
+   "labels": [
+    {
+     "p": 4,
+     "t": "WHY?"
+    }
+   ]
+  },
+  {
+   "from": 5,
+   "to": 5,
+   "img": "em023-ballot",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "z": 2.0,
+   "ox": "60%",
+   "oy": "45%",
+   "labels": [
+    {
+     "p": 5,
+     "t": "1955: A VOTE ON THE CHANGE",
+     "s": "Wikipedia, Popular Science"
+    }
+   ]
+  },
+  {
+   "from": 6,
+   "to": 6,
+   "img": "em023-ballot",
+   "tag": "Illustrative image",
+   "kb": "right",
+   "z": 2.3,
+   "ox": "55%",
+   "oy": "50%",
+   "labels": [
+    {
+     "p": 6,
+     "t": "83% SAID NO"
+    }
+   ]
+  },
+  {
+   "from": 7,
+   "to": 7,
+   "img": "em023-parliament",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "z": 2.0,
+   "ox": "58%",
+   "oy": "20%",
+   "labels": [
+    {
+     "p": 7,
+     "t": "MAY 1963: PARLIAMENT APPROVES THE SWITCH"
+    }
+   ]
+  },
+  {
+   "from": 8,
+   "to": 8,
+   "img": "em023-stop",
+   "tag": "AI illustration, not a portrait",
+   "kb": "left",
+   "z": 1.9,
+   "ox": "20%",
+   "oy": "55%",
+   "labels": [
+    {
+     "p": 8,
+     "t": "A 10-MINUTE WAIT"
+    }
+   ]
+  },
+  {
+   "from": 9,
+   "to": 9,
+   "img": "em023-lane-switch",
+   "tag": "AI illustration, not a portrait",
+   "kb": "right",
+   "z": 2.1,
+   "ox": "75%",
+   "oy": "45%",
+   "labels": [
+    {
+     "p": 9,
+     "t": "05:00: ON THE RIGHT, SLOWLY"
+    }
+   ]
+  },
+  {
+   "from": 10,
+   "to": 10,
+   "img": "em023-lane-switch",
+   "tag": "AI illustration, not a portrait",
+   "kb": "in",
+   "z": 2.4,
+   "ox": "40%",
+   "oy": "40%",
+   "labels": [
+    {
+     "p": 10,
+     "t": "157 ACCIDENTS REPORTED, FEW SERIOUS\nGains faded by 1969 (Wikipedia)",
+     "s": "Popular Science, Wikipedia"
+    }
+   ]
+  },
+  {
+   "from": 11,
+   "to": 11,
+   "end": true
+  }
+ ]
+}

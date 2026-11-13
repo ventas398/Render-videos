@@ -1,0 +1,98 @@
+{
+  "id": "EM-011",
+  "title": "Why Do Euro Banknotes Show Bridges That Do Not Exist?",
+  "voice": "am_liam",
+  "speed": 1,
+  "pronounce": {
+    "Spijkenisse": "spˈIkənˌɪsə",
+    "Kalina": "kəlˈinə",
+    "Euronews": "jˈʊɹOnˌuz",
+    "Louvre": "lˈuvɹə",
+    "Rialto": "ɹiˈæltoʊ",
+    "Romanesque": "ɹˌoʊmənˈɛsk",
+    "baroque": "bɚˈoʊk"
+  },
+  "audio": "public/audio/EM-011.wav",
+  "timing": "src/episodes/EM-011.timing.json",
+  "parts": [
+    "Did you turn the banknote over? There is a bridge on the back.",
+    "Every euro note has one, and every note has a different bridge.",
+    "Here is the strange part. The bank says the bridges are not real ones.",
+    "Yet one bridge magazine editor, according to a podcast, thought he recognized some of them.",
+    "So why are the bridges on euro banknotes not real?",
+    "Look at the front of a note first. There are windows and doorways.",
+    "The European Central Bank says they stand for openness and cooperation in Europe.",
+    "On the back, the bridges. The bank says they stand for communication, between the people of Europe, and between Europe and the rest of the world.",
+    "On the lower notes, each has its own architectural style. Classical on the five, Romanesque on the ten, Gothic on the twenty, Renaissance on the fifty, baroque on the hundred.",
+    "So the bridges give you a tour of European history. But the bank says none of those windows, doorways, or bridges is an actual existing monument.",
+    "Why not use real ones? Think about designing money for many countries at once.",
+    "Every country would want its own famous bridge on the note.",
+    "According to the podcast Ninety-Nine Percent Invisible, the contest rules barred national heroes, national symbols, and national monuments.",
+    "In nineteen ninety-six, a design by Robert Kalina, of the Austrian national bank, won. The winner was announced in December.",
+    "So the logic seems simple. If every bridge is invented, no country wins and no country loses.",
+    "But here is the twist. Wikipedia says the early designs showed real bridges, including the Rialto in Venice.",
+    "They were redrawn to look more generic.",
+    "The podcast adds a story. A bridge magazine editor, Russ Swan, looked at the finished notes, and thought he recognized real bridges behind them.",
+    "One looked like a bridge in northern France, which he had visited just weeks before.",
+    "Kalina says in the podcast: I thought the bridges were generic enough, but apparently not.",
+    "That story comes from one podcast, so take the details with a pinch of salt. The bank's own position is clear: the bridges are not real.",
+    "Now the best part. Someone decided to make them real.",
+    "A Dutch artist, Robin Stam, designed seven bridges in Spijkenisse, a town near Rotterdam. Each one is based on one of the seven bridges on the banknotes.",
+    "They are built in colored concrete, around a housing estate.",
+    "People can cross them on foot or by bike. Euronews says they are within walking distance of each other.",
+    "The sources disagree on when. Some say two thousand eleven. Others say two thousand thirteen.",
+    "So the invented bridges became real bridges. The money came first. The concrete came later.",
+    "The newer Europa banknotes kept the same idea: windows and doorways on the front, bridges on the back.",
+    "The bank says the portrait of Europa in them comes from a vase in the Louvre.",
+    "Now the bank is choosing a design for a future series. Two themes are on the shortlist: European culture, and rivers and birds.",
+    "It expects to decide around the end of two thousand twenty-six. After that, it will take several years before new notes reach your pocket, and your current notes keep their value.",
+    "Next time you hold a banknote, play a game. Check the number and guess the period.",
+    "Gothic on the twenty. Renaissance on the fifty. Then find the bridge on the back, and try to find its twin in real life.",
+    "You will probably not find an exact match. That is the idea.",
+    "So a euro banknote is a careful fiction. It holds a tour of European history, with no official address.",
+    "Now put it back in your wallet, and walk into a supermarket. Grab a shopping cart.",
+    "Why did shoppers once need convincing to use one?"
+  ],
+  "scenes": [
+    {
+      "id": "hook",
+      "fromPart": 0,
+      "toPart": 4
+    },
+    {
+      "id": "design",
+      "fromPart": 5,
+      "toPart": 9
+    },
+    {
+      "id": "rule",
+      "fromPart": 10,
+      "toPart": 14
+    },
+    {
+      "id": "twist",
+      "fromPart": 15,
+      "toPart": 20
+    },
+    {
+      "id": "real",
+      "fromPart": 21,
+      "toPart": 26
+    },
+    {
+      "id": "future",
+      "fromPart": 27,
+      "toPart": 30
+    },
+    {
+      "id": "game",
+      "fromPart": 31,
+      "toPart": 33
+    },
+    {
+      "id": "close",
+      "fromPart": 34,
+      "toPart": 36
+    }
+  ]
+}

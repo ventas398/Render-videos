@@ -1,0 +1,21 @@
+[
+  { "ep": "EM-003-codigo-de-barras", "photo": "cov003-barcode", "sub": "STRIPES ON EVERYTHING", "tag": "1974" },
+  { "ep": "EM-004-palomitas-cine", "photo": "em004-bucket", "sub": "WHERE CINEMAS MAKE MONEY" },
+  { "ep": "EM-005-semaforo-rojo", "photo": "cov005-lamp", "sub": "THE FIRST ONE EXPLODED", "tag": "1868" },
+  { "ep": "EM-006-palabra-OK", "photo": "cov006-ok", "sub": "TWO LETTERS, WHOLE WORLD" },
+  { "ep": "EM-007-precios-99", "photo": "em007-tag", "sub": "ONE CENT LESS", "tag": ".99" },
+  { "ep": "EM-008-maraton-26-2", "photo": "cov008-finish", "sub": "NOT A ROUND NUMBER", "tag": "1908" },
+  { "ep": "EM-009-fechas-comida", "photo": "cov009-fridge", "sub": "USE BY VS BEST BEFORE" },
+  { "ep": "EM-010-bolsillo-vaqueros", "photo": "em010-pocket", "sub": "THE TINY JEANS POCKET", "tag": "1873" },
+  { "ep": "EM-011-puentes-euro", "photo": "cov011-euro", "sub": "BRIDGES THAT DON'T EXIST" },
+  { "ep": "EM-012-carros-compra", "photo": "cov012-cart", "sub": "NOBODY WANTED THEM", "tag": "1937" },
+  { "ep": "EM-013-febrero-28-dias", "photo": "em013-calendar", "sub": "THE SHORTEST MONTH", "tag": "28" },
+  { "ep": "EM-014-tapa-boligrafo", "photo": "em013-pen", "sub": "A TINY LIFESAVING HOLE" },
+  { "ep": "EM-015-puertas-emergencia", "photo": "cov015-door", "sub": "THEY ALWAYS OPEN OUTWARD" },
+  { "ep": "EM-016-notas-adhesivas", "photo": "em016-monitor", "sub": "THE GLUE THAT FAILED" },
+  { "ep": "EM-017-luz-escalera", "photo": "em016-hallway", "sub": "LIGHTS THAT TURN OFF" },
+  { "ep": "EM-018-contador-gas", "photo": "cov018-meter", "sub": "COUNTING INVISIBLE GAS", "why": "HOW?" },
+  { "ep": "EM-019-central-telefonica", "photo": "cov019-switchboard", "sub": "WHO CONNECTED YOUR CALL?", "why": "HOW?" },
+  { "ep": "EM-020-insectos-agua", "photo": "cov020-strider", "sub": "WALKING ON WATER" },
+  { "ep": "EM-022-papel-a4", "photo": "em022-fold-hook", "sub": "FOLD IT, SAME SHAPE", "tag": "A4" }
+]

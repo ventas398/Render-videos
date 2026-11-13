@@ -1,0 +1,136 @@
+{
+  "id": "EM-044",
+  "title": "Did We Really Lose 297 Years? The Phantom Time Hypothesis",
+  "voice": "am_liam",
+  "speed": 1,
+  "audio": "public/audio/EM-044.wav",
+  "timing": "src/episodes/EM-044.timing.json",
+  "chapters": [
+    0,
+    6,
+    10,
+    14,
+    19,
+    22,
+    26,
+    30,
+    35,
+    39,
+    42,
+    46,
+    49
+  ],
+  "parts": [
+    "In the nineteen nineties, a German editor made a strange claim.",
+    "Cumplimiento de NO DECIR de `EM-044-FACTS.md`: la hipótesis NO se presenta como plausible ni como",
+    "Decisión propia, más allá del mínimo de FACTS: ni Otón III ni el Papa Silvestre II se nombran en ningún",
+    "Cierre (ch12): a diferencia de EM-031/EM-042/EM-043, este cierre NO deja la pregunta abierta como",
+    "Pendiente de diseñador/producción: crear `src\\episodes\\EM-044.json` a partir de estas 49 partes, generar",
+    "Pendiente humano (igual que deja FACTS): los artículos académicos alemanes originales (Fried, Schieffer,",
+    "Opciones para ajustar duración sin inventar, si hiciera falta alargar hacia los ~9 min de la puerta de",
+    "Música: ninguna decidida; si hace falta, solo CC0/CC BY, mismo criterio que el resto del canal.",
+    "And you will meet an even bigger version of the same idea, from a different author.",
+    "Welcome to The Everyday Mystery.",
+    "First, who made this claim, and when.",
+    "In nineteen ninety one, German editor Heribert Illig first proposed that centuries were missing from our calendar.",
+    "He popularized it further in nineteen ninety six, with a book published through his own small press.",
+    "He kept writing about it for years, through his own magazine. Documented.",
+    "Here is the actual claim.",
+    "Illig said two hundred ninety seven years, from the year six fourteen to nine eleven, were invented and inserted into our calendar.",
+    "Subtract that number from today, and by his logic we would be living closer to the year seventeen twenty nine.",
+    "That stretch covers the entire Carolingian period, including Charlemagne's famous coronation, in the year eight hundred.",
+    "This is what the theory claims, not what happened.",
+    "And here is who Illig blamed for it.",
+    "He accused two real historical figures, an emperor and a pope, of faking the calendar to place themselves symbolically at the year one thousand.",
+    "That is the accusation of the theory. It is not a historical fact about either man.",
+    "Illig built his case on a specific piece of math.",
+    "In fifteen eighty two, the Gregorian calendar reform corrected a drift of ten days.",
+    "By Illig's own count, starting from the year one, almost thirteen days should have piled up by then.",
+    "He read that three day gap as proof that nearly three hundred years never existed.",
+    "Here is where the whole theory breaks.",
+    "The Gregorian reform was never meant to fix the calendar back to the year one.",
+    "It was meant to return the calendar to where it stood at the Council of Nicaea, in the year three twenty five.",
+    "Count the drift from three twenty five instead, and the ten days correct themselves exactly. The theory's starting point was simply wrong.",
+    "And the math problem is not the only issue.",
+    "European writers before the year six hundred described solar eclipses, including one noted by the Roman author Pliny the Elder, in the year fifty nine.",
+    "Modern astronomical calculations place those eclipses on the exact same dates the old writers recorded.",
+    "Tree ring records from that period are also continuous, with no three hundred year gap anywhere.",
+    "Independent clocks in the sky and in the forest both agree: the centuries were never missing.",
+    "So how did historians respond?",
+    "The theory was rejected, essentially across the board, starting with a formal academic debate in nineteen ninety seven.",
+    "Even a researcher who once supported a related version of the idea walked away from it himself, in twenty eleven.",
+    "The rejection has held for nearly thirty years. Documented.",
+    "And if three hundred missing years sounds bold, it is not even the most extreme version.",
+    "A separate author, a Russian mathematician, claimed closer to one thousand years of history across multiple civilizations were fabricated.",
+    "Different author, different number, same rejected structure. The two theories should never be treated as one.",
+    "Let's count what we actually know.",
+    "Who proposed it, and when: documented.",
+    "The reference point that breaks the whole argument: documented.",
+    "The claim that any years actually went missing: a myth, not an open mystery.",
+    "So did we really lose two hundred ninety seven years?",
+    "No. We lost a correct reference point, in someone's math, back in the nineteen nineties.",
+    "It makes you wonder how a single wrong assumption can travel so much further than the truth that corrects it."
+  ],
+  "scenes": [
+    {
+      "id": "ch01",
+      "fromPart": 0,
+      "toPart": 5
+    },
+    {
+      "id": "ch02",
+      "fromPart": 6,
+      "toPart": 9
+    },
+    {
+      "id": "ch03",
+      "fromPart": 10,
+      "toPart": 13
+    },
+    {
+      "id": "ch04",
+      "fromPart": 14,
+      "toPart": 18
+    },
+    {
+      "id": "ch05",
+      "fromPart": 19,
+      "toPart": 21
+    },
+    {
+      "id": "ch06",
+      "fromPart": 22,
+      "toPart": 25
+    },
+    {
+      "id": "ch07",
+      "fromPart": 26,
+      "toPart": 29
+    },
+    {
+      "id": "ch08",
+      "fromPart": 30,
+      "toPart": 34
+    },
+    {
+      "id": "ch09",
+      "fromPart": 35,
+      "toPart": 38
+    },
+    {
+      "id": "ch10",
+      "fromPart": 39,
+      "toPart": 41
+    },
+    {
+      "id": "ch11",
+      "fromPart": 42,
+      "toPart": 45
+    },
+    {
+      "id": "ch12",
+      "fromPart": 46,
+      "toPart": 48
+    }
+  ]
+}

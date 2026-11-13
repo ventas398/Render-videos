@@ -1,0 +1,57 @@
+{
+  "id": "IDEA-74",
+  "title": "In 1969, the U.S. Army turned off one of the Niagara Falls",
+  "voice": "am_liam",
+  "speed": 1,
+  "music": "em-curious",
+  "words": true,
+  "audio": "public/audio/IDEA-74.wav",
+  "timing": "src/episodes/IDEA-74.timing.json",
+  "pads": { "0": 0.5, "1": 0.4, "6": 0.7, "10": 0.5, "11": 0.4, "13": 0.8, "15": 0.5 },
+  "pronounce": {
+    "Corps": "kˈɔɹ",
+    "Niagara": "naɪˈæɡɹə"
+  },
+  "parts": [
+    "In nineteen sixty-nine, the United States Army turned off one of the Niagara Falls. On purpose.",
+    "It was the American Falls.",
+    "The Corps had almost twenty-eight thousand tons of rock and earth dumped into the river.",
+    "The dam was six hundred feet long.",
+    "The water was sent over the Horseshoe Falls instead.",
+    "On June twelfth, the dam was finished. The American Falls dried up.",
+    "Why?",
+    "Major rockfalls, in nineteen thirty-one and nineteen fifty-four, had piled broken rock at the base.",
+    "The Army Corps wanted to study the cliff.",
+    "Crews drilled rock cores and wet the stone with sprinklers.",
+    "It stayed dry for more than five months.",
+    "On November twenty-fifth, the dam came out.",
+    "The water returned, and the falls went back to how they were.",
+    "The rock pile stayed.",
+    "The Corps concluded it was probably helping hold the cliff up.",
+    "Later, a commission from both countries chose to leave it alone.",
+    "Would you have left the rocks there?"
+  ],
+  "beats": [
+    { "from": 0, "to": 0, "img": "tt074-04", "tag": "Illustrative image", "kb": "in", "z": 1.04 },
+    { "from": 1, "to": 1, "img": "tt074-01", "tag": "Illustrative image", "kb": "in", "z": 1.04, "stamps": [{ "p": 1, "t": "DOCUMENTED", "s": "American Falls", "c": "teal", "y": 290 }] },
+    { "from": 2, "to": 2, "img": "tt074-02", "tag": "Illustrative image", "kb": "in", "z": 1.04, "labels": [{ "p": 2, "t": "ALMOST 28,000 TONS", "s": "of rock and earth" }] },
+    { "from": 3, "to": 4, "img": "tt074-03", "diagram": "dam", "tag": "Illustrative image · Simplified overlay", "kb": "still", "z": 1, "labels": [{ "p": 3, "t": "600 FEET LONG", "s": "the temporary dam" }, { "p": 4, "t": "WATER SENT TO THE HORSESHOE FALLS" }] },
+    { "from": 5, "to": 5, "img": "tt074-04", "tag": "Illustrative image", "kb": "left", "z": 1.3, "oy": "30%", "labels": [{ "p": 5, "t": "JUNE 12", "s": "the dam is finished" }] },
+    { "from": 6, "to": 6, "img": "tt074-05", "tag": "Illustrative image", "kb": "in", "z": 1.04, "labels": [{ "p": 6, "t": "WHY?" }] },
+    { "from": 7, "to": 7, "img": "tt074-06", "tag": "Illustrative image", "kb": "in", "z": 1.04, "labels": [{ "p": 7, "t": "1931 AND 1954", "s": "major rockfalls" }] },
+    { "from": 8, "to": 8, "img": "tt074-07", "tag": "Illustrative image", "kb": "right", "z": 1.15, "labels": [{ "p": 8, "t": "STUDY THE CLIFF" }] },
+    { "from": 9, "to": 9, "img": "tt074-08", "tag": "Illustrative image", "kb": "in", "z": 1.04, "labels": [{ "p": 9, "t": "ROCK CORES + SPRINKLERS" }] },
+    { "from": 10, "to": 10, "diagram": "calendar", "tag": "Simplified illustration" },
+    { "from": 11, "to": 11, "img": "tt074-09", "tag": "Illustrative image", "kb": "in", "z": 1.04, "labels": [{ "p": 11, "t": "NOVEMBER 25", "s": "the dam comes out" }] },
+    { "from": 12, "to": 12, "img": "tt074-10", "tag": "Illustrative image", "kb": "in", "z": 1.04, "labels": [{ "p": 12, "t": "THE WATER RETURNS" }] },
+    { "from": 13, "to": 13, "img": "tt074-06", "tag": "Illustrative image", "kb": "in", "z": 1.3, "oy": "80%", "labels": [{ "p": 13, "t": "LEFT IN PLACE", "s": "mapped, not removed" }] },
+    { "from": 14, "to": 14, "diagram": "cliff", "tag": "Simplified illustration", "stamps": [{ "p": 14, "t": "DOCUMENTED", "s": "medium confidence", "c": "teal", "y": 290 }] },
+    { "from": 15, "to": 15, "img": "tt074-11", "tag": "Illustrative image", "kb": "in", "z": 1.04, "labels": [{ "p": 15, "t": "LEAVE THE ROCK IN PLACE", "s": "International Joint Commission" }] },
+    { "from": 16, "to": 16, "img": "tt074-05", "tag": "Illustrative image", "kb": "still", "z": 1.2, "labels": [{ "p": 16, "t": "WOULD YOU HAVE LEFT THE ROCKS?" }] }
+  ],
+  "fin": {
+    "img": "tt074-10",
+    "big": "Illustrative images. Simplified diagrams.",
+    "small": "Sources: U.S. Army Corps of Engineers, Buffalo District (DVIDS); Niagara USA; Construction Equipment Guide; Slate; niagarafallsinfo.com"
+  }
+}

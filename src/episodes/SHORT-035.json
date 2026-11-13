@@ -1,0 +1,107 @@
+{
+  "id": "SHORT-035",
+  "title": "An 1891 Patent Ends the Toilet Roll War?",
+  "voice": "am_liam",
+  "speed": 1,
+  "music": "em-tension",
+  "pronounce": {
+    "Wheeler": "wˈilɚ"
+  },
+  "audio": "public/audio/SHORT-035.wav",
+  "timing": "src/episodes/SHORT-035.timing.json",
+  "parts": [
+    "People say an eighteen ninety-one patent settles the toilet paper war: over, not under.",
+    "The drawing shows one sheet hanging over the roll.",
+    "Case closed, people say.",
+    "So we read the patent. All of it.",
+    "Seth Wheeler patented it in Albany, New York, on December twenty-second, eighteen ninety-one.",
+    "Not one word about how to mount the roll.",
+    "It is about perforations: an angled cut, so each sheet tears off cleanly.",
+    "Wheeler had patented rolls and wall holders years before this one.",
+    "Our reading: to sell the cut, he had to show a sheet. Which way it hung was probably incidental.",
+    "The drawing shows over: documented.",
+    "The patent proves over: myth.",
+    "In twenty fifteen, a tweet about this patent made the news.",
+    "So is over correct? Nobody has shown it.",
+    "The full investigation is in the video linked below."
+  ],
+  "beats": [
+    {
+      "from": 0,
+      "to": 2,
+      "img": "em035-portada-A-over-under-v1",
+      "tag": "Illustrative image",
+      "kb": "in",
+      "labels": [
+        { "p": 0, "t": "AN 1891 PATENT" },
+        { "p": 1, "t": "THE PAPER HANGS OVER THE ROLL" }
+      ]
+    },
+    {
+      "from": 3,
+      "to": 3,
+      "img": "em035v2-02-drafting-desk-1891-v1",
+      "tag": "AI illustration, not a portrait",
+      "kb": "left",
+      "labels": [{ "p": 3, "t": "WE READ THE WHOLE PATENT" }]
+    },
+    {
+      "from": 4,
+      "to": 4,
+      "img": "em035-05-albany-street-1891-v1",
+      "tag": "Illustrative image",
+      "kb": "right",
+      "labels": [{ "p": 4, "t": "SETH WHEELER - ALBANY, NY", "s": "Patent granted 22 Dec 1891" }]
+    },
+    {
+      "from": 5,
+      "to": 6,
+      "img": "em035-06-paper-perforating-workshop-1885-v1",
+      "tag": "Illustrative image",
+      "kb": "in",
+      "labels": [
+        { "p": 5, "t": "HOW TO MOUNT THE ROLL:", "s": "Not one word" },
+        { "p": 6, "t": "IT IS ABOUT PERFORATIONS" }
+      ]
+    },
+    {
+      "from": 7,
+      "to": 8,
+      "img": "em035v2-16-old-holders-flatlay-v1",
+      "tag": "Illustrative image",
+      "kb": "left",
+      "labels": [
+        { "p": 7, "t": "WHEELER'S OLDER PATENTS", "s": "Rolls and wall holders, years before" },
+        { "p": 8, "t": "WHICH WAY IT HUNG: PROBABLY INCIDENTAL" }
+      ]
+    },
+    {
+      "from": 9,
+      "to": 10,
+      "img": "em035-portada-A-over-under-v1",
+      "tag": "Illustrative image",
+      "kb": "in",
+      "stamps": [
+        { "p": 9, "t": "DOCUMENTED", "s": "the drawing shows over", "c": "teal" },
+        { "p": 10, "t": "MYTH", "s": "the patent proves over", "c": "orange" }
+      ]
+    },
+    {
+      "from": 11,
+      "to": 11,
+      "img": "em035v2-03-newsroom-2015-v1",
+      "tag": "AI illustration, not a portrait",
+      "kb": "right",
+      "labels": [{ "p": 11, "t": "2015: A TWEET MADE THE NEWS" }]
+    },
+    {
+      "from": 12,
+      "to": 12,
+      "img": "em035-portada-B-hero-v1",
+      "tag": "Illustrative image",
+      "kb": "in",
+      "labels": [{ "p": 12, "t": "SO IS OVER CORRECT?", "s": "Nobody has shown it" }]
+    },
+    { "from": 13, "to": 13, "end": true }
+  ]
+}

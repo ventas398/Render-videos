@@ -1,0 +1,85 @@
+{
+  "id": "EM-022",
+  "title": "Why Is Printer Paper This Exact Shape? What We Know Today",
+  "voice": "am_liam",
+  "speed": 1,
+  "pronounce": {
+    "Lichtenberg": "lˈɪktənbˌɜɹɡ",
+    "Porstmann": "pˈɔɹstmɑn",
+    "ISO": "ˌaɪˌɛsˈO",
+    "A0": "ˈA zˈɪɹO",
+    "A3": "ˈA θɹˈi",
+    "A4": "ˈA fˈɔɹ",
+    "A5": "ˈA fˈIv"
+  },
+  "audio": "public/audio/EM-022.wav",
+  "timing": "src/episodes/EM-022.timing.json",
+  "parts": [
+    "That sheet of paper? Fold an A4 sheet in half, and the halves keep the shape of the whole.",
+    "Fold again, and it still works. That is the shape's rule.",
+    "So why is printer paper this exact shape?",
+    "Wikipedia says ISO paper sizes share one aspect ratio. It is the square root of two, about one point four one four to one.",
+    "Our arithmetic: a square's diagonal is the square root of two times its side. So a sheet's long side matches the diagonal of a square on its short side.",
+    "Wikipedia says that ratio is unique: cut or fold the sheet in half, and the halves keep the same aspect ratio.",
+    "It adds that each next size is nearly exactly half the area of the prior size.",
+    "Our reading: one shape, many sizes. Fold a sheet, and you get the next size down.",
+    "Wikipedia says A0 is defined to have an area of one square meter.",
+    "It lists A4 as two hundred ten by two hundred ninety-seven millimeters.",
+    "Our arithmetic: A4 is four folds below A0, so sixteen A4 sheets cover about one square meter.",
+    "A Cambridge University page says one sheet of common A4 weighs five grams.",
+    "Where did the shape come from? Wikipedia says it was first mentioned in a letter written on October twenty-fifth, seventeen eighty-six.",
+    "The writer was a German physics professor, Lichtenberg.",
+    "A Cambridge translation says he planned to cut ordinary writing paper to the shape he wanted.",
+    "Then he found, with pleasure, that the paper already had that shape.",
+    "He wrote that the shape appeared not to have emerged by accident.",
+    "Wikipedia says Walter Porstmann argued in nineteen eighteen for basing paper formats on area.",
+    "A German national standard followed in the early nineteen twenties, say Wikipedia and Cambridge.",
+    "In nineteen seventy-five the format became an international standard, I S O two sixteen.",
+    "The Cambridge page adds that it also became the official United Nations document format that year.",
+    "Its main advantage, Wikipedia says, is scaling.",
+    "A copier can be designed to reduce a page from A4 to A5, or enlarge it from A4 to A3.",
+    "And an A4 sheet folded in half makes a brochure with A5 pages.",
+    "Wikipedia says the standard is used around the world except in North America, the Philippines, and parts of Latin America. We found no source that explains why.",
+    "Our reading: the shape is not a fashion. It is a rule that keeps every fold the same shape.",
+    "Our reading: when you fold a sheet, you handle a shape that already appears in a letter from seventeen eighty-six.",
+    "Some rules take years to agree. Others change in a single morning, after years of planning.",
+    "In nineteen sixty-seven, a whole country swapped sides of the road. Why?"
+  ],
+  "scenes": [
+    {
+      "id": "hook",
+      "fromPart": 0,
+      "toPart": 2
+    },
+    {
+      "id": "ratio",
+      "fromPart": 3,
+      "toPart": 7
+    },
+    {
+      "id": "sizes",
+      "fromPart": 8,
+      "toPart": 11
+    },
+    {
+      "id": "letter",
+      "fromPart": 12,
+      "toPart": 16
+    },
+    {
+      "id": "standard",
+      "fromPart": 17,
+      "toPart": 20
+    },
+    {
+      "id": "use",
+      "fromPart": 21,
+      "toPart": 25
+    },
+    {
+      "id": "close",
+      "fromPart": 26,
+      "toPart": 28
+    }
+  ]
+}

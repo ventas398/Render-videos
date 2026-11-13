@@ -1,0 +1,146 @@
+{
+  "id": "EM-039",
+  "title": "Why Do You Forget Why You Walked Into a Room?",
+  "voice": "am_liam",
+  "speed": 1,
+  "pads": {
+    "25": 0.4,
+    "34": 0.4
+  },
+  "audio": "public/audio/EM-039.wav",
+  "timing": "src/episodes/EM-039.timing.json",
+  "chapters": [
+    0,
+    6,
+    7,
+    10,
+    13,
+    15,
+    18,
+    21,
+    25,
+    28,
+    30,
+    33,
+    35,
+    40,
+    43
+  ],
+  "parts": [
+    "You walk into the kitchen to get something.",
+    "The moment you cross that doorway, it is gone.",
+    "You have no idea what you came in for.",
+    "Walk back to the room where you first thought of it, and sometimes it comes right back.",
+    "A group of psychologists at a major university actually built this exact moment in a lab, more than a decade ago.",
+    "And a few years ago, a completely different team tried to repeat it — and in most of their tests, it did not happen the same way.",
+    "By the end of this video, you will know the original study behind this feeling, exactly how it was tested, and why a more recent, fully open replication could not reproduce it the same way — a real look at how science checks its own famous findings.",
+    "The research comes from Gabriel Radvansky and colleagues at the University of Notre Dame, who ran a set of memory experiments around two thousand ten and two thousand eleven.",
+    "Multiple independent sources confirm the study and its authors exist and that it became one of the most cited findings in this area of memory research.",
+    "Documented.",
+    "Here is how they tested it.",
+    "Participants moved through a virtual building with dozens of rooms, picking up an invisible object from one table and carrying it to another, where they swapped it for a new one.",
+    "Right after walking through a doorway into a new room — or after covering that same distance inside a single room — they were asked what object they were carrying.",
+    "The result: people were slower and less accurate right after crossing into a new room than after covering that exact same distance while staying inside one room.",
+    "Documented, according to the researcher's own account.",
+    "They also tested this away from a screen, with real tables and real objects hidden inside shoeboxes.",
+    "The effect held up there too.",
+    "Documented.",
+    "Here is the detail that made the finding stronger.",
+    "Walking back into the original room, after crossing several other doorways, did not bring the memory back.",
+    "That is important, because it argues against the simplest explanation — that you just remember things better in the room where you first thought of them.",
+    "So why would this happen at all?",
+    "The researchers proposed an idea: crossing a doorway acts like a boundary between two separate episodes in your mind.",
+    "Your brain files away what just happened and opens a new mental folder for the next room — and whatever was in the old folder becomes a little harder to reach.",
+    "This is presented by the researchers themselves as their explanation, not as a settled fact.",
+    "And here is where the story turns.",
+    "In two thousand twenty-one, a different research team published an open-access study testing this same idea, this time with four separate experiments: virtual reality without any extra task, virtual reality with a memory-loading task added, a passive video of someone walking down a hallway, and people actually walking down a real hallway wearing a headset.",
+    "Documented, read directly from the published paper.",
+    "Across those four experiments, the doorway effect, in its original form, simply did not show up — with one partial exception.",
+    "Documented, direct quote from the study's own conclusion.",
+    "That one exception came in the virtual reality experiment that added a mental workload.",
+    "There, crossing a doorway did lower memory sensitivity — but mainly because people made more false alarms, mistakenly saying an object matched when it did not, not because they actually forgot more.",
+    "The replication team themselves point out that this is a different pattern from the original forgetting effect, not quite the same phenomenon.",
+    "In their own words, close to the published text, their results \"cast doubt on the generalization and the robustness\" of the doorway effect when even small details of the experiment change.",
+    "Disputed.",
+    "So where does that leave us?",
+    "This is not a busted myth — the original study is real, from an identifiable academic team, and it inspired real follow-up research for over a decade.",
+    "But it is also not a closed, universal fact — a fully open replication, using four different methods, could not reproduce it the same way in most of its tests.",
+    "Some of that gap may come down to differences in how each study was designed, not simply that the effect does not exist.",
+    "This is what science actually looks like when it works: a striking finding, followed by someone else checking it carefully.",
+    "So the next time you walk into a room and completely forget why you are there, you are not necessarily losing your memory.",
+    "You might just be crossing one of these doorways science is still arguing about.",
+    "So, next time it happens — will you notice which room brings the thought back?"
+  ],
+  "scenes": [
+    {
+      "id": "ch01",
+      "fromPart": 0,
+      "toPart": 5
+    },
+    {
+      "id": "ch02",
+      "fromPart": 6,
+      "toPart": 6
+    },
+    {
+      "id": "ch03",
+      "fromPart": 7,
+      "toPart": 9
+    },
+    {
+      "id": "ch04",
+      "fromPart": 10,
+      "toPart": 12
+    },
+    {
+      "id": "ch05",
+      "fromPart": 13,
+      "toPart": 14
+    },
+    {
+      "id": "ch06",
+      "fromPart": 15,
+      "toPart": 17
+    },
+    {
+      "id": "ch07",
+      "fromPart": 18,
+      "toPart": 20
+    },
+    {
+      "id": "ch08",
+      "fromPart": 21,
+      "toPart": 24
+    },
+    {
+      "id": "ch09",
+      "fromPart": 25,
+      "toPart": 27
+    },
+    {
+      "id": "ch10",
+      "fromPart": 28,
+      "toPart": 29
+    },
+    {
+      "id": "ch11",
+      "fromPart": 30,
+      "toPart": 32
+    },
+    {
+      "id": "ch12",
+      "fromPart": 33,
+      "toPart": 34
+    },
+    {
+      "id": "ch13",
+      "fromPart": 35,
+      "toPart": 39
+    },
+    {
+      "id": "ch14",
+      "fromPart": 40,
+      "toPart": 42
+    }
+  ]
+}

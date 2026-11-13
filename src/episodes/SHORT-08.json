@@ -1,0 +1,137 @@
+{
+ "id": "SHORT-08",
+ "capMax": 32,
+ "title": "That Eye on the $1 Bill: What Is It Really?",
+ "voice": "am_liam",
+ "speed": 1,
+ "music": "em-tension",
+ "pronounce": {
+  "Du Simitière": "dˌu sɪmɪtjˈɛɹ"
+ },
+ "audio": "public/audio/SHORT-08.wav",
+ "timing": "src/episodes/SHORT-08.timing.json",
+ "parts": [
+  "Take a one-dollar bill out of your wallet.",
+  "Turn it over.",
+  "An eye floats above a pyramid.",
+  "People have said a secret brotherhood put it there.",
+  "The eye was not a Masonic invention: religious art used it for the Trinity.",
+  "The artist who proposed it for the seal, Du Simitière, was not a Mason.",
+  "Masonic handbooks show the eye as a standard symbol only in the seventeen nineties.",
+  "Years after the seal.",
+  "Among that first committee, only one is known to have been a Mason: Benjamin Franklin.",
+  "The design story is documented.",
+  "The idea that Masons created it is a myth.",
+  "The full story is in the video linked below."
+ ],
+ "beats": [
+  {
+   "from": 0,
+   "to": 1,
+   "img": "em025-wallet",
+   "tag": "Illustrative image",
+   "labels": [
+    {
+     "p": 0,
+     "t": "THE EYE ON THE DOLLAR"
+    }
+   ]
+  },
+  {
+   "from": 2,
+   "to": 3,
+   "img": "em025-bill-eye",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "labels": [
+    {
+     "p": 3,
+     "t": "A secret brotherhood?"
+    }
+   ]
+  },
+  {
+   "from": 4,
+   "to": 4,
+   "img": "em025-church-painting",
+   "tag": "AI illustration, not a portrait",
+   "kb": "left",
+   "labels": [
+    {
+     "p": 4,
+     "t": "THE EYE: NOT A MASONIC INVENTION",
+     "s": "Religious art: eye in a triangle = Trinity"
+    }
+   ]
+  },
+  {
+   "from": 5,
+   "to": 5,
+   "img": "em025-secretary-desk",
+   "tag": "AI illustration, not a portrait",
+   "kb": "right",
+   "labels": [
+    {
+     "p": 5,
+     "t": "Du Simitière: not a Mason"
+    }
+   ]
+  },
+  {
+   "from": 6,
+   "to": 7,
+   "img": "em025-masonic-manual",
+   "tag": "Illustrative image",
+   "labels": [
+    {
+     "p": 6,
+     "t": "Masonic handbooks: 1790s"
+    },
+    {
+     "p": 7,
+     "t": "Seal approved:\n20 June 1782"
+    }
+   ]
+  },
+  {
+   "from": 8,
+   "to": 8,
+   "img": "em025-philadelphia-1776-committee-room-v2",
+   "tag": "AI illustration, not a portrait",
+   "kb": "left",
+   "labels": [
+    {
+     "p": 8,
+     "t": "Only known Mason on the committee: Franklin"
+    }
+   ]
+  },
+  {
+   "from": 9,
+   "to": 10,
+   "img": "em025-stamp-desk",
+   "tag": "Illustrative image",
+   "kb": "right",
+   "stamps": [
+    {
+     "p": 9,
+     "t": "DOCUMENTED",
+     "s": "the design story",
+     "c": "teal"
+    },
+    {
+     "p": 10,
+     "t": "MYTH",
+     "s": "Masons created it",
+     "c": "orange"
+    }
+   ]
+  },
+  {
+   "from": 11,
+   "to": 11,
+   "end": true,
+   "tag": "Illustrative image"
+  }
+ ]
+}

@@ -1,0 +1,352 @@
+{
+  "id": "TT-02",
+  "title": "Why mosquitoes pick you and not your friend",
+  "voice": "am_liam",
+  "speed": 1,
+  "music": "em-curious",
+  "words": true,
+  "audio": "public/audio/TT-02.wav",
+  "timing": "src/episodes/TT-02.timing.json",
+  "parts": [
+    "Sixty-four people wore a nylon sleeve for six hours, just to find out why mosquitoes pick you.",
+    "Some were far more attractive than others.",
+    "And the favorites had something in common: much higher levels of fatty acids on their skin.",
+    "Even stranger, those levels stayed stable for a year or more.",
+    "But the researchers were careful. It's a link, not proof of cause.",
+    "Next clue: bacteria.",
+    "In a study of forty-eight men, the ones mosquitoes loved most had more bacteria on their skin, but fewer kinds.",
+    "Then there's family. Identical twins were more alike than non-identical twins in how attractive they were to mosquitoes.",
+    "It was a small pilot study, so it's a hint, not a verdict.",
+    "You've heard type O gets bitten most.",
+    "One lab study with tiger mosquitoes saw more landings on type O than on type A.",
+    "But its own authors said blood-group markers didn't explain the preference overall.",
+    "Scientists still debate it.",
+    "One more. In Burkina Faso, a study found a liter of beer made people more attractive to mosquitoes.",
+    "And nobody knows exactly why."
+  ],
+  "beats": [
+    {
+      "from": 0,
+      "to": 0,
+      "img": "tt02-sleeves",
+      "tag": "Illustrative image",
+      "kb": "in",
+      "z": 1.04,
+      "ox": "50%",
+      "oy": "70%"
+    },
+    {
+      "from": 1,
+      "to": 1,
+      "img": "tt02-choice",
+      "tag": "Illustrative image",
+      "kb": "in",
+      "z": 1.25,
+      "ox": "55%",
+      "oy": "55%",
+      "labels": [
+        {
+          "p": 1,
+          "t": "SOME FAR MORE ATTRACTIVE"
+        }
+      ]
+    },
+    {
+      "from": 2,
+      "to": 2,
+      "img": "tt02-fatty",
+      "tag": "Simplified illustration",
+      "kb": "right",
+      "z": 1.15,
+      "ox": "50%",
+      "oy": "62%",
+      "labels": [
+        {
+          "p": 2,
+          "t": "MORE FATTY ACIDS ON THE SKIN"
+        }
+      ]
+    },
+    {
+      "from": 3,
+      "to": 3,
+      "img": "tt02-calendar",
+      "tag": "Illustrative image",
+      "kb": "in",
+      "z": 1.04,
+      "ox": "50%",
+      "oy": "55%",
+      "labels": [
+        {
+          "p": 3,
+          "t": "STABLE FOR A YEAR OR MORE"
+        }
+      ]
+    },
+    {
+      "from": 4,
+      "to": 4,
+      "img": "tt02-fatty",
+      "tag": "Simplified illustration",
+      "kb": "left",
+      "z": 1.3,
+      "ox": "70%",
+      "oy": "62%",
+      "labels": [
+        {
+          "p": 4,
+          "t": "A LINK, NOT PROOF OF CAUSE"
+        }
+      ]
+    },
+    {
+      "from": 5,
+      "to": 5,
+      "img": "tt02-bacteria",
+      "tag": "Simplified illustration",
+      "kb": "in",
+      "z": 1.04,
+      "ox": "50%",
+      "oy": "60%",
+      "labels": [
+        {
+          "p": 5,
+          "t": "CLUE: BACTERIA"
+        },
+        {
+          "p": 6,
+          "t": "MORE BACTERIA, FEWER KINDS"
+        }
+      ]
+    },
+    {
+      "from": 7,
+      "to": 7,
+      "img": "tt02-twins",
+      "tag": "Illustrative image",
+      "kb": "left",
+      "z": 1.15,
+      "ox": "50%",
+      "oy": "60%",
+      "labels": [
+        {
+          "p": 7,
+          "t": "IDENTICAL TWINS: MORE ALIKE"
+        }
+      ]
+    },
+    {
+      "from": 8,
+      "to": 8,
+      "img": "tt02-twins",
+      "tag": "Illustrative image",
+      "kb": "in",
+      "z": 1.45,
+      "ox": "50%",
+      "oy": "22%",
+      "labels": [
+        {
+          "p": 8,
+          "t": "SMALL PILOT STUDY: A HINT"
+        }
+      ]
+    },
+    {
+      "from": 9,
+      "to": 9,
+      "img": "tt02-bloodtype",
+      "tag": "Illustrative image",
+      "kb": "still",
+      "z": 1.06,
+      "ox": "50%",
+      "oy": "60%",
+      "labels": [
+        {
+          "p": 9,
+          "t": "TYPE O GETS BITTEN MOST?"
+        }
+      ],
+      "marks": [
+        {
+          "t": "A",
+          "x": 171,
+          "y": 1010
+        },
+        {
+          "t": "O",
+          "x": 405,
+          "y": 1010,
+          "c": "#E56B0F"
+        },
+        {
+          "t": "B",
+          "x": 657,
+          "y": 1010
+        },
+        {
+          "t": "AB",
+          "x": 907,
+          "y": 1010
+        }
+      ]
+    },
+    {
+      "from": 10,
+      "to": 10,
+      "img": "tt02-bloodtype",
+      "tag": "Illustrative image",
+      "kb": "still",
+      "z": 1.06,
+      "ox": "50%",
+      "oy": "60%",
+      "labels": [
+        {
+          "p": 10,
+          "t": "TYPE O vs TYPE A",
+          "s": "one lab study, tiger mosquitoes"
+        }
+      ],
+      "marks": [
+        {
+          "t": "A",
+          "x": 171,
+          "y": 1010
+        },
+        {
+          "t": "O",
+          "x": 405,
+          "y": 1010,
+          "c": "#E56B0F"
+        },
+        {
+          "t": "B",
+          "x": 657,
+          "y": 1010
+        },
+        {
+          "t": "AB",
+          "x": 907,
+          "y": 1010
+        }
+      ]
+    },
+    {
+      "from": 11,
+      "to": 11,
+      "img": "tt02-bloodtype",
+      "tag": "Illustrative image",
+      "kb": "still",
+      "z": 1.06,
+      "ox": "50%",
+      "oy": "60%",
+      "labels": [
+        {
+          "p": 11,
+          "t": "AUTHORS: BLOOD GROUP DIDN'T EXPLAIN IT"
+        }
+      ],
+      "marks": [
+        {
+          "t": "A",
+          "x": 171,
+          "y": 1010
+        },
+        {
+          "t": "O",
+          "x": 405,
+          "y": 1010,
+          "c": "#E56B0F"
+        },
+        {
+          "t": "B",
+          "x": 657,
+          "y": 1010
+        },
+        {
+          "t": "AB",
+          "x": 907,
+          "y": 1010
+        }
+      ]
+    },
+    {
+      "from": 12,
+      "to": 12,
+      "img": "tt02-bloodtype",
+      "tag": "Illustrative image",
+      "kb": "still",
+      "z": 1.06,
+      "ox": "50%",
+      "oy": "60%",
+      "stamps": [
+        {
+          "p": 12,
+          "t": "DISPUTED",
+          "s": "blood type and bites",
+          "c": "orange"
+        }
+      ],
+      "marks": [
+        {
+          "t": "A",
+          "x": 171,
+          "y": 1010
+        },
+        {
+          "t": "O",
+          "x": 405,
+          "y": 1010,
+          "c": "#E56B0F"
+        },
+        {
+          "t": "B",
+          "x": 657,
+          "y": 1010
+        },
+        {
+          "t": "AB",
+          "x": 907,
+          "y": 1010
+        }
+      ]
+    },
+    {
+      "from": 13,
+      "to": 13,
+      "img": "tt02-beer",
+      "tag": "Illustrative image",
+      "kb": "in",
+      "z": 1.04,
+      "ox": "50%",
+      "oy": "60%",
+      "labels": [
+        {
+          "p": 13,
+          "t": "A LITER OF BEER",
+          "s": "Burkina Faso study"
+        }
+      ]
+    },
+    {
+      "from": 14,
+      "to": 14,
+      "img": "tt02-beer",
+      "tag": "Illustrative image",
+      "kb": "left",
+      "z": 1.4,
+      "ox": "60%",
+      "oy": "28%",
+      "labels": [
+        {
+          "p": 14,
+          "t": "NOBODY KNOWS EXACTLY WHY"
+        }
+      ]
+    }
+  ],
+  "fin": {
+    "img": "tt02-beer",
+    "big": "Illustrative image.",
+    "small": "Sources: Cell 2022; PLOS ONE 2011, 2015, 2010; J. Med. Entomol. 2004"
+  }
+}
