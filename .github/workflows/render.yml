@@ -31,7 +31,7 @@ jobs:
       - id: p
         name: Duracion y reparto en partes
         run: |
-          npx remotion compositions src/index.ts --quiet | tee comps.txt
+          npx remotion compositions src/index.ts | tee comps.txt
           TOTAL=$(awk -v id="$COMP" '$1==id {print $4}' comps.txt)
           test -n "$TOTAL" || { echo "no encuentro $COMP"; exit 1; }
           N=${{ inputs.chunks }}
