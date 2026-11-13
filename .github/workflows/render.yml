@@ -102,13 +102,26 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/download-artifact@v4
         with: { pattern: "part-*", path: parts, merge-multiple: true }
+      - name: ffmpeg (no viene en la imagen ubuntu-24.04)
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
       - name: Unir partes y poner el audio
         run: |
-          ls -l parts
-          for f in $(ls parts/part-*.mp4 | sort -V); do echo "file '$PWD/$f'"; done > list.txt
-          ffmpeg -y -f concat -safe 0 -i list.txt -c copy video.mp4
-          ffmpeg -y -i video.mp4 -i public/audio/$COMP.wav -map 0:v -map 1:a -c:v copy -c:a aac -b:a 192k -shortest $COMP.mp4
-          ffprobe -v error -show_entries format=duration:stream=codec_name -of default=nw=1 $COMP.mp4
+          set +e
+          {
+            ls -l parts
+            for f in $(ls parts/part-*.mp4 | sort -V); do echo "file '$PWD/$f'"; done > list.txt
+            cat list.txt
+            ffmpeg -y -v error -f concat -safe 0 -i list.txt -c copy video.mp4 || exit 1
+            ffmpeg -y -v error -i video.mp4 -i "public/audio/$COMP.wav" -map 0:v -map 1:a -c:v copy -c:a aac -b:a 192k -shortest "$COMP.mp4" || exit 1
+            ffprobe -v error -show_entries format=duration:stream=codec_name -of default=nw=1 "$COMP.mp4" || exit 1
+          } > join.log 2>&1
+          RC=$?
+          cat join.log
+          if [ $RC -ne 0 ]; then
+            echo "::error::join rc=$RC :: $(tr '\n' ' ' < join.log | tail -c 700)"
+            exit 1
+          fi
+          echo "::notice::join ok: $COMP.mp4 $(tr '\n' ' ' < join.log | tail -c 200)"
       - uses: actions/upload-artifact@v4
         with:
           name: ${{ needs.plan.outputs.comp }}
