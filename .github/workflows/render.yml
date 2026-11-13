@@ -96,6 +96,8 @@ jobs:
   join:
     needs: [plan, part]
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     env:
       COMP: ${{ needs.plan.outputs.comp }}
     steps:
@@ -127,3 +129,12 @@ jobs:
           name: ${{ needs.plan.outputs.comp }}
           path: ${{ needs.plan.outputs.comp }}.mp4
           retention-days: 7
+      # Un artefacto pide sesion para bajarlo; un fichero de Release se baja sin sesion.
+      - name: Publicar el MP4 como descarga directa
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG="video-$COMP-${GITHUB_RUN_ID}"
+          gh release create "$TAG" "$COMP.mp4" --title "$COMP" --notes "Render automatico de $COMP" >/dev/null
+          URL=$(gh release view "$TAG" --json assets --jq '.assets[0].url')
+          echo "::notice::descarga: $URL"
