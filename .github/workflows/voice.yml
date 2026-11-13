@@ -30,7 +30,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
-        with: { python-version: "3.12", cache: pip }
+        # sin 'cache: pip': pide un requirements.txt y aqui no lo hay
+        with: { python-version: "3.12" }
       - id: ep
         name: Que episodio
         run: |
