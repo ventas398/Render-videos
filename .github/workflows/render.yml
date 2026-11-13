@@ -148,7 +148,10 @@ jobs:
             for f in $(ls parts/part-*.mp4 | sort -V); do echo "file '$PWD/$f'"; done > list.txt
             cat list.txt
             ffmpeg -y -v error -f concat -safe 0 -i list.txt -c copy video.mp4 || exit 1
-            ffmpeg -y -v error -i video.mp4 -i "public/audio/$COMP.wav" -map 0:v -map 1:a -c:v copy -c:a aac -b:a 192k -shortest "$COMP.mp4" || exit 1
+            # El .m4a ya viene en aac (lo prepara scripts/sync_assets.mjs): se pega sin recodificar.
+            A="public/audio/$COMP.m4a"; AC="copy"
+            [ -f "$A" ] || { A="public/audio/$COMP.wav"; AC="aac"; }
+            ffmpeg -y -v error -i video.mp4 -i "$A" -map 0:v -map 1:a -c:v copy -c:a "$AC" -shortest "$COMP.mp4" || exit 1
             ffprobe -v error -show_entries format=duration:stream=codec_name -of default=nw=1 "$COMP.mp4" || exit 1
           } > join.log 2>&1
           RC=$?
