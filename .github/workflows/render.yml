@@ -9,9 +9,11 @@ on:
       chunks:
         description: "Parallel parts (machines)"
         default: "6"
-
-env:
-  COMP: ${{ inputs.composition }}
+  # Empujar una etiqueta render-<COMP> lanza el render sin tocar el navegador.
+  # Ejemplo: git tag render-SHORT-08 && git push origin render-SHORT-08
+  push:
+    tags:
+      - "render-*"
 
 jobs:
   plan:
@@ -19,6 +21,7 @@ jobs:
     outputs:
       matrix: ${{ steps.p.outputs.matrix }}
       total: ${{ steps.p.outputs.total }}
+      comp: ${{ steps.p.outputs.comp }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -31,10 +34,15 @@ jobs:
       - id: p
         name: Duracion y reparto en partes
         run: |
+          COMP="${{ inputs.composition }}"
+          test -n "$COMP" || COMP="${GITHUB_REF_NAME#render-}"
+          N="${{ inputs.chunks }}"
+          test -n "$N" || N=6
+          echo "composicion=$COMP partes=$N"
           npx remotion compositions src/index.ts | tee comps.txt
           TOTAL=$(awk -v id="$COMP" '$1==id {print $4}' comps.txt)
           test -n "$TOTAL" || { echo "no encuentro $COMP"; exit 1; }
-          N=${{ inputs.chunks }}
+          echo "comp=$COMP" >> "$GITHUB_OUTPUT"
           node -e '
             const total=+process.argv[1], n=+process.argv[2];
             const size=Math.ceil(total/n); const m=[];
@@ -45,6 +53,8 @@ jobs:
   part:
     needs: plan
     runs-on: ubuntu-latest
+    env:
+      COMP: ${{ needs.plan.outputs.comp }}
     strategy:
       fail-fast: false
       matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
@@ -76,6 +86,8 @@ jobs:
   join:
     needs: [plan, part]
     runs-on: ubuntu-latest
+    env:
+      COMP: ${{ needs.plan.outputs.comp }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/download-artifact@v4
@@ -89,6 +101,6 @@ jobs:
           ffprobe -v error -show_entries format=duration:stream=codec_name -of default=nw=1 $COMP.mp4
       - uses: actions/upload-artifact@v4
         with:
-          name: ${{ inputs.composition }}
-          path: ${{ inputs.composition }}.mp4
+          name: ${{ needs.plan.outputs.comp }}
+          path: ${{ needs.plan.outputs.comp }}.mp4
           retention-days: 7
