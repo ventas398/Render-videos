@@ -1,0 +1,98 @@
+name: voice
+
+# La voz Kokoro es CPU: no necesita el PC de Javier ni su memoria.
+# Lanzar: git tag voice-SHORT-08 && git push origin voice-SHORT-08
+# Reintento: voice-SHORT-08--2 (el doble guion es un contador y se ignora al leer el id)
+on:
+  workflow_dispatch:
+    inputs:
+      episode:
+        description: "Episodio (SHORT-08, EM-054...)"
+        default: "SHORT-08"
+      voice:
+        description: "Voz Kokoro (vacio = la del episodio)"
+        default: ""
+      speed:
+        description: "Velocidad (vacio = la del episodio)"
+        default: ""
+  push:
+    tags:
+      - "voice-*"
+
+jobs:
+  say:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    env:
+      HF_HOME: ${{ github.workspace }}/hf
+      HF_HUB_OFFLINE: "0"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12", cache: pip }
+      - id: ep
+        name: Que episodio
+        run: |
+          EP="${{ inputs.episode }}"
+          test -n "$EP" || EP="${GITHUB_REF_NAME#voice-}"
+          EP="${EP%%--*}"
+          test -f "src/episodes/$EP.json" || { echo "::error::no existe src/episodes/$EP.json"; exit 1; }
+          echo "ep=$EP" >> "$GITHUB_OUTPUT"
+      - name: espeak-ng (lo necesita Kokoro para los fonemas)
+        run: sudo apt-get install -y -qq espeak-ng || { sudo apt-get update -qq && sudo apt-get install -y -qq espeak-ng; }
+      # El modelo de voz (~330 MB) se guarda en cache: la primera vez se baja, las siguientes no.
+      - uses: actions/cache@v4
+        with:
+          path: hf
+          key: kokoro-82M-v1
+      - name: Instalar Kokoro (torch de CPU, sin CUDA: 10 veces mas ligero)
+        run: |
+          python -m pip install -q --upgrade pip
+          python -m pip install -q torch --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install -q kokoro soundfile numpy
+      - name: Narrar
+        run: |
+          # Vacias no se exportan: el script haria float("") y se caeria.
+          [ -n "${{ inputs.voice }}" ] && export KOKORO_VOICE="${{ inputs.voice }}" || true
+          [ -n "${{ inputs.speed }}" ] && export KOKORO_SPEED="${{ inputs.speed }}" || true
+          set +e
+          python scripts/kokoro_synth.py "src/episodes/${{ steps.ep.outputs.ep }}.json" > voz.log 2>&1
+          RC=$?
+          set -e
+          cat voz.log
+          # Los registros de un repo publico piden sesion; una anotacion se lee sin ella.
+          if [ $RC -ne 0 ]; then
+            echo "::error::voz rc=$RC :: $(tr '\n' ' ' < voz.log | tail -c 700)"
+            exit 1
+          fi
+          echo "::notice::voz ok: $(tr '\n' ' ' < voz.log | tail -c 200)"
+      - id: out
+        name: Recoger el WAV y el timing
+        run: |
+          EP="${{ steps.ep.outputs.ep }}"
+          mkdir -p voz
+          python - "$EP" <<'PY'
+          import json, os, shutil, sys
+          ep = json.load(open(f"src/episodes/{sys.argv[1]}.json", encoding="utf-8"))
+          for k in ("audio", "timing"):
+              p = ep.get(k)
+              if p and os.path.exists(p):
+                  shutil.copy(p, os.path.join("voz", os.path.basename(p)))
+                  print(k, p, os.path.getsize(p))
+          PY
+          ls -l voz
+      - uses: actions/upload-artifact@v4
+        with:
+          name: voz-${{ steps.ep.outputs.ep }}
+          path: voz
+          retention-days: 7
+      # Un artefacto pide sesion para bajarlo; un fichero de Release se baja sin sesion.
+      - name: Publicar la voz como descarga directa
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          EP="${{ steps.ep.outputs.ep }}"
+          TAG="voz-$EP-${GITHUB_RUN_ID}"
+          gh release create "$TAG" voz/* --title "voz $EP" --notes "Voz Kokoro de $EP (WAV + timing)" >/dev/null
+          echo "::notice::descarga: $(gh release view "$TAG" --json assets --jq '[.assets[].url]|join(" ")')"
