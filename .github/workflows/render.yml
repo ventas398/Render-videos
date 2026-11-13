@@ -119,7 +119,16 @@ jobs:
           START=$(date +%s)
           TARGET=src/index.ts
           [ -f bundle/index.html ] && TARGET=bundle
-          npx remotion render "$TARGET" "$COMP" out/part-${{ matrix.i }}.mp4 --frames=${{ matrix.a }}-${{ matrix.b }} --muted --codec=h264
+          set +e
+          npx remotion render "$TARGET" "$COMP" out/part-${{ matrix.i }}.mp4 --frames=${{ matrix.a }}-${{ matrix.b }} --muted --codec=h264 > r.log 2>&1
+          RC=$?
+          set -e
+          tail -40 r.log
+          # Los registros de un repo publico piden sesion; una anotacion se lee sin ella.
+          if [ $RC -ne 0 ]; then
+            echo "::error::parte ${{ matrix.i }} rc=$RC :: $(tr '\n' ' ' < r.log | tail -c 900)"
+            exit 1
+          fi
           echo "parte ${{ matrix.i }} ($TARGET): $(( $(date +%s) - START )) s"
       - uses: actions/upload-artifact@v4
         with:
