@@ -36,6 +36,7 @@ jobs:
         run: |
           COMP="${{ inputs.composition }}"
           test -n "$COMP" || COMP="${GITHUB_REF_NAME#render-}"
+          COMP="${COMP%%--*}"   # render-SHORT-08--2 = segundo intento de SHORT-08
           N="${{ inputs.chunks }}"
           test -n "$N" || N=6
           echo "composicion=$COMP partes=$N"
