@@ -160,7 +160,10 @@ jobs:
             # El .m4a ya viene en aac (lo prepara scripts/sync_assets.mjs): se pega sin recodificar.
             A="public/audio/$COMP.m4a"; AC="copy"
             [ -f "$A" ] || { A="public/audio/$COMP.wav"; AC="aac"; }
-            ffmpeg -y -v error -i video.mp4 -i "$A" -map 0:v -map 1:a -c:v copy -c:a "$AC" -shortest "$COMP.mp4" || exit 1
+            # SIN -shortest: la mezcla acaba antes que el video (la voz calla y la end card sigue en pantalla),
+            # y -shortest recortaba el video a la longitud del audio. EM-023 v3g perdio asi 1,83 s de los 3 s
+            # de end card (157,60 s de composicion -> 155,77 s de MP4). La longitud manda el video.
+            ffmpeg -y -v error -i video.mp4 -i "$A" -map 0:v -map 1:a -c:v copy -c:a "$AC" "$COMP.mp4" || exit 1
             ffprobe -v error -show_entries format=duration:stream=codec_name -of default=nw=1 "$COMP.mp4" || exit 1
           } > join.log 2>&1
           RC=$?

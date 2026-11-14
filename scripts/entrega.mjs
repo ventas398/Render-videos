@@ -19,7 +19,7 @@ const m = JSON.parse(p1.stderr.slice(p1.stderr.lastIndexOf("{"), p1.stderr.lastI
 // pero se queda corto de forma irregular (medido: -2,9 / -2,7 / -2,1 dBTP con el mismo TP=-3), y
 // encima el AAC anade unas decimas. 0,708 = -3,0 dBFS de pico de muestra, que tras el AAC deja
 // el pico real por debajo del -2,5 dBTP que pide calidad.
-const af = `loudnorm=${T}:measured_I=${m.input_i}:measured_TP=${m.input_tp}:measured_LRA=${m.input_lra}:measured_thresh=${m.input_thresh}:offset=${m.target_offset}:linear=true,alimiter=limit=${process.env.LIMM ?? "0.708"}:attack=5:release=60:level=disabled`;
+const af = `loudnorm=${T}:measured_I=${m.input_i}:measured_TP=${m.input_tp}:measured_LRA=${m.input_lra}:measured_thresh=${m.input_thresh}:offset=${m.target_offset}:linear=true,alimiter=limit=${process.env.LIMM ?? "0.708"}:attack=5:release=60:level=disabled,apad`; // apad: si la mezcla acaba antes que el video, se rellena con silencio en vez de recortar la imagen
 const master = `${comp}-master.mp4`;
 const p2 = run("ffmpeg", ["-y", "-i", src, "-c:v", "copy", "-af", af, "-c:a", "aac", "-ar", "48000", "-b:a", "192k", "-shortest", master]);
 if (p2.status !== 0) {
