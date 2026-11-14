@@ -199,7 +199,7 @@ const SHOTS: ShotDef[] = [
   { p: 15, img: "em025-masonic-manual", a: [0.3, 0.45, 1.15], b: [0.68, 0.5, 1.15], tr: "l", tag: "Illustrative image" },
   { p: 16, img: "em025-philadelphia-1776-committee-room-v2b", ar: 1376 / 768, a: [0.8, 0.5, 1.15], b: [0.5, 0.55, 1.35], tag: "AI illustration, not portraits · Simplified overlay", over: NoEye },
   { p: 18, img: "em025-masonic-manual", a: [0.5, 0.5, 1.0], b: [0.72, 0.45, 1.3], tag: "Illustrative image · Simplified overlay", over: ({ t }) => <Bar t={t} a={S(19)} b={S(20) - 0.3} end={S(20)} l0="1782" l1="1790s" fill={[0.35, 1]} /> },
-  { p: 20, img: "em025-wallet", a: [0.5, 0.5, 1.0], b: [0.5, 0.5, 1.4], tag: "Illustrative image" },
+  { p: 20, img: "em025-bill-eye", a: [0.5, 0.45, 1.0], b: [0.5, 0.3, 1.3], dim: 0.35, tag: "US $1 reverse · public domain" },
   { p: 21, img: "em025-president-desk", a: [0.5, 0.6, 1.0], b: [0.5, 0.6, 1.1], tr: "r", blur: [10, 6], dim: 0.45, tag: "Simplified illustration", over: Seals },
   { p: 22, img: "em025-president-desk", a: [0.45, 0.6, 1.0], b: [0.45, 0.6, 1.25], tag: "AI illustration, not a portrait" },
   { p: 23, img: "em025-president-desk", a: [0.45, 0.6, 1.25], b: [0.8, 0.4, 1.0], tag: "AI illustration, not a portrait" },
