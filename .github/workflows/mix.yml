@@ -1,0 +1,98 @@
+name: mix
+
+# Musica original + mezcla voz/musica con ducking (scripts/em_audio.py mix).
+# Va en la nube porque el PC de Javier se quedo sin scipy y la mezcla lo necesita.
+# Lanzar: git tag mix-EM-025 && git push origin mix-EM-025
+# Reintento: mix-EM-025--2 (el doble guion es un contador y se ignora al leer el id)
+#
+# OJO: la mezcla usa el timing de la voz, asi que se lanza DESPUES de voice.yml
+# y con el WAV de la voz ya en public/audio/<EP>.wav.
+on:
+  workflow_dispatch:
+    inputs:
+      episode:
+        description: "Episodio (EM-025, EM-029...)"
+        default: "EM-025"
+  push:
+    tags:
+      - "mix-*"
+
+jobs:
+  mezclar:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - id: ep
+        name: Que episodio
+        run: |
+          EP="${{ inputs.episode }}"
+          test -n "$EP" || EP="${GITHUB_REF_NAME#mix-}"
+          EP="${EP%%--*}"
+          test -f "src/episodes/$EP.json" || { echo "::error::no existe src/episodes/$EP.json"; exit 1; }
+          test -f "src/episodes/$EP.timing.json" || { echo "::error::falta el timing de la voz: lanza antes voice-$EP"; exit 1; }
+          echo "ep=$EP" >> "$GITHUB_OUTPUT"
+      # En el repo, public/audio/<EP>.wav es solo un marcador de 8 kHz para que git no engorde.
+      # La voz de verdad esta en la Release que dejo voice.yml: se baja aqui.
+      - name: Bajar la voz de verdad
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          EP="${{ steps.ep.outputs.ep }}"
+          TAG=$(gh release list --limit 60 --json tagName --jq \
+            "[.[].tagName | select(startswith(\"voz-$EP-\"))] | first")
+          test -n "$TAG" || { echo "::error::no hay ninguna Release voz-$EP-*: lanza antes voice-$EP"; exit 1; }
+          echo "::notice::voz tomada de $TAG"
+          gh release download "$TAG" --pattern "$EP.wav" --output "public/audio/$EP.wav" --clobber
+      - name: La voz tiene que cuadrar con el timing
+        run: |
+          EP="${{ steps.ep.outputs.ep }}"
+          python - "$EP" <<'PY'
+          import json, sys, wave
+          ep = sys.argv[1]
+          d = json.load(open(f"src/episodes/{ep}.json", encoding="utf-8"))
+          wav = d.get("audio") or f"public/audio/{ep}.wav"
+          with wave.open(wav, "rb") as w:
+              dur = w.getnframes() / w.getframerate()
+          fin = json.load(open(f"src/episodes/{ep}.timing.json"))["ends"][-1]
+          print(f"voz {dur:.1f} s | timing {fin:.1f} s")
+          # Si no cuadran, la voz del repo es de otra toma y la mezcla saldria desincronizada.
+          assert abs(dur - fin) < 1.5, f"la voz ({dur:.1f} s) no cuadra con el timing ({fin:.1f} s)"
+          PY
+      - name: Instalar numpy y scipy
+        run: |
+          python -m pip install -q --upgrade pip
+          python -m pip install -q numpy scipy
+      - name: Mezclar
+        run: |
+          EP="${{ steps.ep.outputs.ep }}"
+          set +e
+          python scripts/em_audio.py mix "src/episodes/$EP.json" > mezcla.log 2>&1
+          RC=$?
+          set -e
+          cat mezcla.log
+          # Los registros de un repo publico piden sesion; una anotacion se lee sin ella.
+          if [ $RC -ne 0 ]; then
+            echo "::error::mezcla rc=$RC :: $(tr '\n' ' ' < mezcla.log | tail -c 700)"
+            exit 1
+          fi
+      - id: out
+        name: Recoger la mezcla
+        run: |
+          EP="${{ steps.ep.outputs.ep }}"
+          mkdir -p mezcla
+          cp "public/audio/$EP-mix.wav" mezcla/
+          cp "public/audio/music/$EP-music.wav" mezcla/
+          [ -f "src/episodes/$EP.timing.mix.json" ] && cp "src/episodes/$EP.timing.mix.json" mezcla/ || true
+          ls -l mezcla
+      - name: Publicar la mezcla como descarga directa
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          EP="${{ steps.ep.outputs.ep }}"
+          TAG="mezcla-$EP-${GITHUB_RUN_ID}"
+          gh release create "$TAG" mezcla/* --title "mezcla $EP" --notes "Voz + musica con ducking de $EP" >/dev/null
+          echo "::notice::descarga: $(gh release view "$TAG" --json assets --jq '[.assets[].url]|join(" ")')"
