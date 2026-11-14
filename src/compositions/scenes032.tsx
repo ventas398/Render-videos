@@ -2,7 +2,7 @@
 import React from "react";
 import { teal, orange } from "./kit";
 import type { SceneProps } from "./scenes";
-import { FULL, Kin, LEFT, Pill, Pip, Reading } from "./scenes023";
+import { FULL, Kin, Pill, Pip, Reading } from "./scenes023";
 import { Stp } from "./scenes025";
 import { Cite, mkScene } from "./v2";
 
@@ -147,25 +147,26 @@ const ch05 = scene(33, "ch05", (P) => ({
 
 const ch06 = scene(41, "ch06", (P) => ({
   shots: [
-    { id: "stamp-desk", asp: 1, t: P(41), r: LEFT, f: [0.5, 0.5], mv: "in", tr: "cut" },
+    { id: "stamp-desk", asp: 1, t: P(41), r: FULL, f: [0.5, 0.62], mv: "in", tr: "cut" },
     { ...W("arena-tunnel"), t: P(42), r: FULL, f: [0.5, 0.5], mv: "in", tr: "page" },
-    { id: "stamp-desk", asp: 1, t: P(43), r: LEFT, f: [0.5, 0.5], mv: "in", tr: "fade" },
+    { id: "stamp-desk", asp: 1, t: P(43), r: FULL, f: [0.5, 0.62], mv: "pl", tr: "fade" },
+    { ...W("luxury-table"), t: P(45), r: FULL, f: [0.5, 0.5], mv: "in", tr: "page" },
     { ...W("ruins-dawn"), t: P(47), r: FULL, f: [0.5, 0.5], mv: "pl", tr: "zoom" },
   ],
   ov: (
     <>
-      <Kin x={1400} y={300} text="THE ANSWER" size={130} fill={teal} a={P(41, 0.2)} b={P(42)} rot={3} />
+      <Kin x={960} y={300} text="THE ANSWER" size={130} fill={teal} a={P(41, 0.2)} b={P(42)} rot={3} />
       <Kin x={960} y={190} text="A PASSAGE FOR CROWDS" size={120} fill={orange} a={P(42, 0.3)} b={P(43)} rot={-3} />
-      <Stp x={1400} y={300} k="M" size={80} a={P(43, 0.4)} b={P(44)} />
-      <Pill x={1400} y={520} text="THE ROOM FOR VOMITING:" size={38} color={teal} a={P(43, 0.4)} b={P(44)} />
-      <Pill x={1400} y={600} text="A MODERN MISTAKE" size={46} color={orange} a={P(43, 1.4)} b={P(44)} />
-      <Stp x={1400} y={300} k="D" size={80} a={P(44, 0.4)} b={P(45)} />
-      <Pill x={1400} y={520} text="ACCUSATIONS AT FEASTS" size={46} color={teal} a={P(44, 0.4)} b={P(45)} />
-      <Reading x={1400} y={170} a={P(45, 0.1)} b={P(46)} />
-      <Kin x={1400} y={330} text="WRITERS ATTACKED" size={90} fill={teal} a={P(45, 0.3)} b={P(46)} rot={-3} />
-      <Kin x={1400} y={450} text="GREED" size={150} fill={orange} a={P(45, 1.4)} b={P(46)} rot={3} />
-      <Kin x={1400} y={300} text="AN INSULT," size={110} fill={orange} a={P(46, 0.3)} b={P(47)} rot={-3} />
-      <Kin x={1400} y={430} text="NOT A FLOOR PLAN" size={90} fill={teal} a={P(46, 1.4)} b={P(47)} rot={3} />
+      <Stp x={960} y={300} k="M" size={80} a={P(43, 0.4)} b={P(44)} />
+      <Pill x={960} y={520} text="THE ROOM FOR VOMITING:" size={38} color={teal} a={P(43, 0.4)} b={P(44)} />
+      <Pill x={960} y={600} text="A MODERN MISTAKE" size={46} color={orange} a={P(43, 1.4)} b={P(44)} />
+      <Stp x={960} y={300} k="D" size={80} a={P(44, 0.4)} b={P(45)} />
+      <Pill x={960} y={520} text="ACCUSATIONS AT FEASTS" size={46} color={teal} a={P(44, 0.4)} b={P(45)} />
+      <Reading x={960} y={170} a={P(45, 0.1)} b={P(46)} />
+      <Kin x={960} y={330} text="WRITERS ATTACKED" size={90} fill={teal} a={P(45, 0.3)} b={P(46)} rot={-3} />
+      <Kin x={960} y={450} text="GREED" size={150} fill={orange} a={P(45, 1.4)} b={P(46)} rot={3} />
+      <Kin x={960} y={300} text="AN INSULT," size={110} fill={orange} a={P(46, 0.3)} b={P(47)} rot={-3} />
+      <Kin x={960} y={430} text="NOT A FLOOR PLAN" size={90} fill={teal} a={P(46, 1.4)} b={P(47)} rot={3} />
       <Kin x={960} y={190} text="A LAST QUESTION" size={140} fill={teal} a={P(47, 0.2)} b={P(48)} rot={-3} />
       <Kin x={960} y={190} text="WHAT ELSE DO WE REPEAT" size={100} fill={orange} a={P(48, 0.2)} rot={-3} />
       <Kin x={960} y={345} text="ABOUT THE ROMANS?" size={100} fill={teal} a={P(48, 0.8)} rot={3} />

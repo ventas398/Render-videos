@@ -647,11 +647,12 @@ const EndCard: React.FC<{ a: number }> = ({ a }) => {
   const tx = { textAnchor: "middle" as const, fontFamily: theme.font, fontWeight: 900 };
   return o > 0 ? (
     <g opacity={o}>
-      <rect width={1920} height={1080} fill={CARD} />
-      <text x={960} y={430} fontSize={88} fill={ink} {...tx}>THE MORNING AN ENTIRE COUNTRY</text>
-      <text x={960} y={540} fontSize={88} fill={ink} {...tx}>CHANGED SIDES OF THE ROAD</text>
+      <image href={staticFile("illustrations/em023-bug.png")} x={0} y={0} width={1920} height={1080} preserveAspectRatio="xMidYMid slice" />
+      <rect width={1920} height={1080} fill="#10151C" opacity={0.62} />
+      <text x={960} y={430} fontSize={88} fill="#FFFFFF" {...tx}>THE MORNING AN ENTIRE COUNTRY</text>
+      <text x={960} y={540} fontSize={88} fill="#FFFFFF" {...tx}>CHANGED SIDES OF THE ROAD</text>
       <rect x={860} y={600} width={200} height={8} fill={orange} />
-      <text x={960} y={690} fontSize={44} fill={teal} {...tx}>THE EVERYDAY MYSTERY</text>
+      <text x={960} y={690} fontSize={44} fill={CARD} {...tx}>THE EVERYDAY MYSTERY</text>
     </g>
   ) : null;
 };
