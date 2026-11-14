@@ -54,6 +54,7 @@ import { EM031, EM031_EPISODE } from "./compositions/EM031";
 import { EM005v2, EM005V2_EPISODE } from "./compositions/EM005v2";
 import { EM012v2, EM012V2_EPISODE } from "./compositions/EM012v2";
 import { SHORT_FRAMES, ShortVertical } from "./compositions/ShortVertical";
+import { Short08v2, SHORT08V2_FRAMES } from "./compositions/Short08v2";
 import { COVERS, SHORTS, ShortCover, ShortGeneric, shortFrames } from "./compositions/ShortGeneric";
 import { VIDEO } from "./themes/brand";
 import { AnimPilot } from "./compositions/Pilot";
@@ -287,6 +288,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition id="ThumbEM016" component={ThumbEM016} durationInFrames={1} fps={VIDEO.fps} width={1280} height={720} />
       {Object.entries(SHORTS).map(([id, p]) => <Composition key={id} id={id} component={ShortGeneric} defaultProps={p} durationInFrames={shortFrames(p.timing)} fps={VIDEO.fps} width={1080} height={1920} />)}
       {Object.keys(COVERS).map((id) => <Composition key={id + "-COVER"} id={id + "-COVER"} component={ShortCover} defaultProps={{ id }} durationInFrames={1} fps={VIDEO.fps} width={1080} height={1920} />)}
+      <Composition id="SHORT-08V2" component={Short08v2} durationInFrames={SHORT08V2_FRAMES} fps={VIDEO.fps} width={1080} height={1920} />
       <Composition id="EM-008-SHORT" component={ShortVertical} durationInFrames={SHORT_FRAMES} fps={VIDEO.fps} width={1080} height={1920} />
       <Composition id="ThumbEM007" component={ThumbEM007} durationInFrames={1} fps={VIDEO.fps} width={1280} height={720} />
       <Composition id="ThumbEM006" component={ThumbEM006} durationInFrames={1} fps={VIDEO.fps} width={1280} height={720} />
