@@ -2,6 +2,8 @@
  "id": "EM-025",
  "title": "Hidden in Plain Sight: Which Secret Symbols Are Real?",
  "voice": "am_liam",
+ "squeeze": true,
+ "gap": 0.18,
  "speed": 1,
  "pronounce": {
   "Du Simitière": "dˌu sɪmɪtjˈɛɹ",

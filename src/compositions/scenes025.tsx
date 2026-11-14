@@ -327,13 +327,15 @@ const sh = (id: string, t: number, o: Partial<Sh> = {}): Sh => ({
   ...o,
 });
 
-/** Ojo y piramide del billete (imagen em025-bill-eye): halo dorado pulsante, parallax del primer plano y anillos. */
+/** Ojo y piramide del billete (foto real del reverso del dolar, dominio publico):
+ *  halo pulsante sobre el ojo, parallax del primer plano y anillos.
+ *  y=0.34 es donde cae el ojo en el recorte real (antes 0.31, que era el de la imagen IA). */
 const BE = (S: number, a: number, e: number) =>
   has("bill-eye") ? (
     <>
       <Par pic="bill-eye" S={S} x={0.5} y={0.62} r={0.32} />
-      <Glow id={`be${a}`} x={S * 0.5} y={S * 0.31} r={S * 0.16} a={a} e={e} />
-      <Pr x={S * 0.5} y={S * 0.31} r={S * 0.17} a={a} e={e} />
+      <Glow id={`be${a}`} x={S * 0.5} y={S * 0.34} r={S * 0.16} a={a} e={e} />
+      <Pr x={S * 0.5} y={S * 0.34} r={S * 0.17} a={a} e={e} />
     </>
   ) : null;
 

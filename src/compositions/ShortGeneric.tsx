@@ -101,6 +101,7 @@ export const COVERS: Record<string, { img: string; src?: string; word: string; b
   "EM-052-CORTO": { img: "", src: "images/em052-art-rain.jpg", word: "COLOR?", band: "SAME PAINTING, 3 COLORS", tag: "Caillebotte, 1877 · color digitally altered", tint: "#D4121F", fx: 0.72 },
   "SHORT-053B": { img: "em053b-hallway", word: "WHY?", band: "BLAME THE MUSIC", tag: "Illustrative image", ws: 270, wx: 90 }, // v1.1: '?' mas pequeno y a la izquierda, el gato (dcha.) queda a la vista
   "SHORT-08": { img: "em025-stamp-desk", word: "MYTH?", band: "THE EYE ON THE DOLLAR", tag: "Illustrative image" },
+  "SHORT-08V2": { img: "em025-bill-eye", word: "WHO?", band: "PUT THIS EYE ON YOUR MONEY", tag: "US $1 reverse · public domain" },
   "SHORT-01": { img: "em010-pocket", word: "WHY?", band: "A POCKET INSIDE THE POCKET", tag: "Illustrative image", fx: 0.35 },
   "SHORT-02": { img: "em003-scan", word: "WHY?", band: "A BARCODE ON EVERYTHING", tag: "Illustrative image" },
   "SHORT-03": { img: "em004-depression", word: "WHY?", band: "POPCORN AT THE MOVIES", tag: "Illustrative image" },
@@ -164,7 +165,7 @@ const Caption: React.FC<{ text: string; frames: number }> = ({ text, frames }) =
 
 const POP = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
 /** Subtitulo palabra a palabra: grupo de <=3 palabras con la palabra que suena resaltada en amarillo. */
-const WordGroup: React.FC<{ ws: { w: string; f: number }[]; frames: number }> = ({ ws, frames }) => {
+export const WordGroup: React.FC<{ ws: { w: string; f: number }[]; frames: number }> = ({ ws, frames }) => {
   const f = useCurrentFrame();
   const act = ws.reduce((a, x, i) => (f >= x.f ? i : a), 0);
   const o = interpolate(f, [0, 2, frames - 2, frames], [0, 1, 1, 0], POP);
@@ -219,7 +220,8 @@ const PaperPanel: React.FC = () => (
 
 const LabelBox: React.FC<{ l: Label; frames: number }> = ({ l, frames }) => {
   const f = useCurrentFrame();
-  const o = interpolate(f, [0, 6, frames - 4, frames], [0, 1, 1, 0], clamp);
+  const fr = Math.max(frames, 12); // plano corto (<12 fotogramas): evita rango no creciente
+  const o = interpolate(f, [0, 6, fr - 4, fr], [0, 1, 1, 0], clamp);
   return (
     <div style={{ position: "absolute", left: 40, top: 270, maxWidth: 900, background: "rgba(247,243,234,0.96)", borderLeft: `16px solid ${theme.orange}`, padding: "18px 28px", borderRadius: 6, opacity: o, transform: `translateY(${(1 - o) * -24}px)`, fontFamily: theme.font, boxShadow: "0 8px 24px rgba(0,0,0,.25)" }}>
       <div style={{ fontSize: 60, fontWeight: 800, color: theme.ink, lineHeight: 1.12, whiteSpace: "pre-line", textWrap: "balance" }}>{l.t}</div>
@@ -284,7 +286,7 @@ const VeinLine: React.FC<{ variant: "line" | "nerve" | "break"; frames: number }
 };
 
 /** Grupos de <=3 palabras (corte tras puntuacion) con inicio en fotogramas desde los tiempos por palabra de Kokoro. */
-const wordGroups = (t: Timing) => {
+export const wordGroups = (t: Timing) => {
   const all = t.words!.flatMap((ws, i) => { const a = i ? t.ends[i - 1] : 0; return ws.map(([w, s, e], j) => ({ w, s: a + s, e: a + e, last: j === ws.length - 1 })); });
   const gs: (typeof all)[] = [];
   let cur: typeof all = [];
