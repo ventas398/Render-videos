@@ -170,10 +170,27 @@ jobs:
             exit 1
           fi
           echo "::notice::join ok: $COMP.mp4 $(tr '\n' ' ' < join.log | tail -c 200)"
+      # El master sale ya a -16 LUFS y con la copia ligera de movil y la portada hechas:
+      # lo que se le ensena a Javier no necesita pasar por el PC.
+      - name: Entrega lista (master normalizado + movil + portada)
+        run: |
+          set +e
+          node scripts/entrega.mjs "$COMP" "$COMP.mp4" > entrega.log 2>&1
+          RC=$?
+          set -e
+          cat entrega.log
+          if [ $RC -ne 0 ]; then
+            echo "::error::entrega rc=$RC :: $(tr '\n' ' ' < entrega.log | tail -c 700)"
+            exit 1
+          fi
+          ls -l "$COMP.mp4" "$COMP-movil.mp4" "$COMP-portada.png" 2>/dev/null || true
       - uses: actions/upload-artifact@v4
         with:
           name: ${{ needs.plan.outputs.comp }}
-          path: ${{ needs.plan.outputs.comp }}.mp4
+          path: |
+            ${{ needs.plan.outputs.comp }}.mp4
+            ${{ needs.plan.outputs.comp }}-movil.mp4
+            ${{ needs.plan.outputs.comp }}-portada.png
           retention-days: 7
       # Un artefacto pide sesion para bajarlo; un fichero de Release se baja sin sesion.
       - name: Publicar el MP4 como descarga directa
@@ -181,6 +198,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           TAG="video-$COMP-${GITHUB_RUN_ID}"
-          gh release create "$TAG" "$COMP.mp4" --title "$COMP" --notes "Render automatico de $COMP" >/dev/null
-          URL=$(gh release view "$TAG" --json assets --jq '.assets[0].url')
-          echo "::notice::descarga: $URL"
+          FILES="$COMP.mp4"
+          for f in "$COMP-movil.mp4" "$COMP-portada.png"; do [ -f "$f" ] && FILES="$FILES $f"; done
+          gh release create "$TAG" $FILES --title "$COMP" --notes "Render automatico de $COMP" >/dev/null
+          gh release view "$TAG" --json assets --jq '.assets[] | "::notice::descarga: \(.name) \(.size) bytes \(.url)"'
