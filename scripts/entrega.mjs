@@ -28,7 +28,8 @@ renameSync(master, `${comp}.mp4`); // el master normalizado sustituye al bruto
 // 2) Copia ligera de movil: lado largo 1280 (vale para vertical y horizontal), 24 fps, dos pasadas al tamano objetivo.
 const dur = parseFloat(run("ffprobe", ["-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", `${comp}.mp4`]).stdout);
 const abr = 96;
-const vkbps = Math.max(200, Math.floor((MB * 1e6 * 8) / dur / 1000 - abr - 4));
+// Techo de 1.400 kbps: con 720p basta para revisar y un corto de 45 s no ocupa 20 MB por el camino.
+const vkbps = Math.max(200, Math.min(1400, Math.floor((MB * 1e6 * 8) / dur / 1000 - abr - 4)));
 const vf = "scale=w=1280:h=1280:force_original_aspect_ratio=decrease:force_divisible_by=2:flags=lanczos,fps=24,format=yuv420p";
 const v = ["-vf", vf, "-c:v", "libx264", "-preset", "slow", "-b:v", `${vkbps}k`, "-maxrate", `${Math.round(vkbps * 1.5)}k`, "-bufsize", `${vkbps * 2}k`, "-pix_fmt", "yuv420p", "-passlogfile", "movil2p"];
 const nulo = process.platform === "win32" ? "NUL" : "/dev/null"; // la nube es Linux; en Windows se puede probar igual
