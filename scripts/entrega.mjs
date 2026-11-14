@@ -17,9 +17,10 @@ const p1 = run("ffmpeg", ["-i", src, "-vn", "-af", `loudnorm=${T}:print_format=j
 const m = JSON.parse(p1.stderr.slice(p1.stderr.lastIndexOf("{"), p1.stderr.lastIndexOf("}") + 1));
 // El limitador detras de loudnorm es lo unico que garantiza el pico: loudnorm apunta al objetivo
 // pero se queda corto de forma irregular (medido: -2,9 / -2,7 / -2,1 dBTP con el mismo TP=-3), y
-// encima el AAC anade unas decimas. 0,708 = -3,0 dBFS de pico de muestra, que tras el AAC deja
-// el pico real por debajo del -2,5 dBTP que pide calidad.
-const af = `loudnorm=${T}:measured_I=${m.input_i}:measured_TP=${m.input_tp}:measured_LRA=${m.input_lra}:measured_thresh=${m.input_thresh}:offset=${m.target_offset}:linear=true,alimiter=limit=${process.env.LIMM ?? "0.708"}:attack=5:release=60:level=disabled,apad`; // apad: si la mezcla acaba antes que el video, se rellena con silencio en vez de recortar la imagen
+// encima el AAC y los picos entre muestras anaden ~0,6 dB, no unas decimas: con 0,708 (-3,0 dBFS)
+// EM-023 v3h salio a -2,4 dBTP. 0,668 = -3,5 dBFS de pico de muestra, que deja el pico real en
+// -2,9 dBTP, por debajo del -2,5 que pide calidad, sin mover la sonoridad integrada.
+const af = `loudnorm=${T}:measured_I=${m.input_i}:measured_TP=${m.input_tp}:measured_LRA=${m.input_lra}:measured_thresh=${m.input_thresh}:offset=${m.target_offset}:linear=true,alimiter=limit=${process.env.LIMM ?? "0.668"}:attack=5:release=60:level=disabled,apad`; // apad: si la mezcla acaba antes que el video, se rellena con silencio en vez de recortar la imagen
 const master = `${comp}-master.mp4`;
 const p2 = run("ffmpeg", ["-y", "-i", src, "-c:v", "copy", "-af", af, "-c:a", "aac", "-ar", "48000", "-b:a", "192k", "-shortest", master]);
 if (p2.status !== 0) {
