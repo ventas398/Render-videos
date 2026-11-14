@@ -62,6 +62,10 @@ jobs:
           # Si no cuadran, la voz del repo es de otra toma y la mezcla saldria desincronizada.
           assert abs(dur - fin) < 1.5, f"la voz ({dur:.1f} s) no cuadra con el timing ({fin:.1f} s)"
           PY
+      # La maquina de GitHub no trae ffmpeg, y em_audio.py lo necesita para leer
+      # el clip de la obertura (public/audio/em025-flauta-magica.ogg).
+      - name: Instalar ffmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
       - name: Instalar numpy y scipy
         run: |
           python -m pip install -q --upgrade pip
