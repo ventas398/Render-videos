@@ -1,6 +1,6 @@
 // Entrega lista desde la nube: master normalizado + copia ligera de movil + portada.
 // Uso: node scripts/entrega.mjs <COMP> <entrada.mp4>
-// Salidas (en el directorio actual): <COMP>.mp4 (master -16 LUFS, pico -2 dBTP, video sin recodificar),
+// Salidas (en el directorio actual): <COMP>.mp4 (master -16 LUFS, pico <= -2,5 dBTP, video sin recodificar),
 //   <COMP>-movil.mp4 (<=MB MB, lado largo 1280, 24 fps, pico <= -2,5 dBTP tras AAC) y <COMP>-portada.png (fotograma 0).
 // Mismos criterios que scripts/normalize.mjs y scripts/movil.mjs del estudio, pero con ffmpeg de Linux.
 import { spawnSync } from "node:child_process";
@@ -15,14 +15,18 @@ const note = (s) => console.log(`::notice::${s}`);
 const T = "I=-16:TP=-3:LRA=7";
 const p1 = run("ffmpeg", ["-i", src, "-vn", "-af", `loudnorm=${T}:print_format=json`, "-f", "null", "-"]);
 const m = JSON.parse(p1.stderr.slice(p1.stderr.lastIndexOf("{"), p1.stderr.lastIndexOf("}") + 1));
-const af = `loudnorm=${T}:measured_I=${m.input_i}:measured_TP=${m.input_tp}:measured_LRA=${m.input_lra}:measured_thresh=${m.input_thresh}:offset=${m.target_offset}:linear=true`;
+// El limitador detras de loudnorm es lo unico que garantiza el pico: loudnorm apunta al objetivo
+// pero se queda corto de forma irregular (medido: -2,9 / -2,7 / -2,1 dBTP con el mismo TP=-3), y
+// encima el AAC anade unas decimas. 0,708 = -3,0 dBFS de pico de muestra, que tras el AAC deja
+// el pico real por debajo del -2,5 dBTP que pide calidad.
+const af = `loudnorm=${T}:measured_I=${m.input_i}:measured_TP=${m.input_tp}:measured_LRA=${m.input_lra}:measured_thresh=${m.input_thresh}:offset=${m.target_offset}:linear=true,alimiter=limit=${process.env.LIMM ?? "0.708"}:attack=5:release=60:level=disabled`;
 const master = `${comp}-master.mp4`;
 const p2 = run("ffmpeg", ["-y", "-i", src, "-c:v", "copy", "-af", af, "-c:a", "aac", "-ar", "48000", "-b:a", "192k", "-shortest", master]);
 if (p2.status !== 0) {
   console.log(`::error::entrega: loudnorm fallo :: ${p2.stderr.slice(-700).replace(/\n/g, " ")}`);
   process.exit(1);
 }
-note(`master ok: antes ${m.input_i} LUFS pico ${m.input_tp} dBTP -> -16 LUFS / -2 dBTP`);
+note(`master ok: antes ${m.input_i} LUFS pico ${m.input_tp} dBTP -> -16 LUFS / pico limitado a -3 dBFS`);
 renameSync(master, `${comp}.mp4`); // el master normalizado sustituye al bruto
 
 // 2) Copia ligera de movil: lado largo 1280 (vale para vertical y horizontal), 24 fps, dos pasadas al tamano objetivo.
