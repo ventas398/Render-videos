@@ -66,6 +66,8 @@ export const Sm: React.FC<{ a: number; b: number }> = ({ a, b }) => {
     </g>
   ) : null;
 };
+/** Credito del billete real (foto PD-USGov), en vez de "Illustrative image". */
+const BILL_CREDIT = "US $1 reverse - public domain";
 /** Rotulo "Illustrative image / recreation" sobre el de vector. */
 export const Lab: React.FC<{ text?: string; a: number; b: number; y?: number; x?: number }> = ({ text = "Illustrative image", a, b, y = 828, x = 1884 }) => {
   const t = useT();
@@ -390,8 +392,11 @@ const ch01 = scene(0, "ch01", (P) => ({
   ),
   top: (
     <>
-      <Sm a={P(2, 0.2)} b={P(4)} />
-      <Lab a={0} b={P(999)} />
+      <Lab a={0} b={P(1, 0.3)} />
+      <Lab text={BILL_CREDIT} a={P(1, 0.3)} b={P(5)} />
+      <Lab a={P(5)} b={P(9)} />
+      <Lab text={BILL_CREDIT} a={P(9)} b={P(10)} />
+      <Lab a={P(10)} b={P(999)} />
     </>
   ),
 }));
@@ -427,7 +432,12 @@ const ch02 = scene(14, "ch02", (P) => ({
       <Pill x={1400} y={250} text="OUR CONCLUSION, NOT A HISTORIAN'S" a={P(23, 0.6)} b={P(24)} size={30} color={teal} />
     </>
   ),
-  top: <Lab a={0} b={P(999)} />,
+  top: (
+    <>
+      <Lab a={0} b={P(24)} />
+      <Lab text={BILL_CREDIT} a={P(24)} b={P(999)} />
+    </>
+  ),
   ev: [thud(P(20, 0.3)), thud(P(21, 0.2)), thud(P(22, 0.2))],
 }));
 
@@ -602,10 +612,10 @@ const ch05 = scene(44, "ch05", (P) => ({
   ),
   top: (
     <>
-      <Lab a={0} b={P(999)} />
+      <Lab a={0} b={P(52)} />
+      <Lab text={BILL_CREDIT} a={P(52)} b={P(999)} />
       <Src text="FDR Presidential Library" a={P(45, 0.2)} b={P(52)} />
       <Src text="Wikipedia" a={P(52, 0.3)} b={P(55)} />
-      <Sm a={P(53, 0.3)} b={P(55)} />
     </>
   ),
   ev: [[P(53, 1.4), "swell", 0.4], thud(P(56, 0.3)), thud(P(57, 0.3))],

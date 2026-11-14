@@ -12,7 +12,7 @@ const run = (exe, args) => spawnSync(exe, ["-hide_banner", ...args], { encoding:
 const note = (s) => console.log(`::notice::${s}`);
 
 // 1) Master: loudnorm de dos pasadas a -16 LUFS con pico -2 dBTP (deja margen al AAC).
-const T = "I=-16:TP=-2:LRA=7";
+const T = "I=-16:TP=-3:LRA=7";
 const p1 = run("ffmpeg", ["-i", src, "-vn", "-af", `loudnorm=${T}:print_format=json`, "-f", "null", "-"]);
 const m = JSON.parse(p1.stderr.slice(p1.stderr.lastIndexOf("{"), p1.stderr.lastIndexOf("}") + 1));
 const af = `loudnorm=${T}:measured_I=${m.input_i}:measured_TP=${m.input_tp}:measured_LRA=${m.input_lra}:measured_thresh=${m.input_thresh}:offset=${m.target_offset}:linear=true`;

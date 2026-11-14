@@ -7,7 +7,7 @@ import { WordGroup, wordGroups } from "./ShortGeneric";
 import { theme, VIDEO } from "../themes/brand";
 
 const { fps } = VIDEO;
-const NAVY = "#0A1A4A", YEL = "#FFC400", INK = "#3B2A14";
+const NAVY = "#0A1A4A", YEL = "#FFC400", INK = "#F6E7BE";
 const IMP = "Impact, 'Arial Black', sans-serif";
 const T = timing as unknown as { ends: number[]; gap: number; words: [string, number, number][][] };
 const TAIL = 0.5, OV = 0.4, LEAD = 0.2;
@@ -97,7 +97,7 @@ const Sketch: Over = ({ t }) => {
   return (
     <svg viewBox="0 0 1080 1920" style={{ position: "absolute", inset: 0, opacity: interpolate(t, [S(7) - 0.1, S(7) + 0.3], [0, 1], C), transform: `scale(${sc})`, transformOrigin: "540px 780px" }}>
       <g transform="translate(0 70) rotate(-2.5 540 780)">
-        <rect x={150} y={330} width={780} height={900} rx={8} fill="#F2E8D0" stroke="#B8A67C" strokeWidth={4} style={{ filter: "drop-shadow(0 22px 30px rgba(0,0,0,.45))" }} />
+        <rect x={150} y={330} width={780} height={900} rx={8} fill="rgba(14,12,8,.5)" stroke="#F2E8D0" strokeWidth={4} style={{ filter: "drop-shadow(0 22px 30px rgba(0,0,0,.45))" }} />
         <circle cx={540} cy={800} r={420 * glow} fill={YEL} opacity={0.35 * Math.min(glow, 1)} style={{ filter: "blur(60px)" }} />
         <g fill="none" stroke={INK} strokeWidth={9} strokeLinecap="round" strokeLinejoin="round">
           <path pathLength={1} strokeDasharray={1} strokeDashoffset={1 - d(t0, 0.9)} d="M 540 450 L 300 1030 L 780 1030 Z" />
@@ -190,7 +190,7 @@ const SHOTS: ShotDef[] = [
   { p: 2, img: "em025-stamp-desk", a: [0.5, 0.55, 1.1], b: [0.66, 0.55, 1.25], tr: "r", tag: "Illustrative image" },
   { p: 3, img: "em025-philadelphia-1776-committee-room-v2", ar: 1376 / 768, a: [0.2, 0.45, 1.0], b: [0.74, 0.5, 1.3], tag: "AI illustration, not portraits" },
   { p: 6, img: "em025-secretary-desk", a: [0.45, 0.25, 1.0], b: [0.5, 0.68, 1.25], tr: "u", tag: "AI illustration, not a portrait" },
-  { p: 7, img: "em025-secretary-desk", a: [0.5, 0.6, 1.0], b: [0.5, 0.6, 1.2], blur: [16, 3], dim: 0.35, tag: "Simplified illustration", over: Sketch },
+  { p: 7, img: "em025-secretary-desk", a: [0.5, 0.6, 1.0], b: [0.5, 0.6, 1.2], blur: [8, 2], dim: 0.2, tag: "Simplified illustration", over: Sketch },
   { p: 9, img: "em025-church-painting", a: [0.55, 0.45, 1.15], b: [0.8, 0.15, 2.4], ease: "io", tag: "Illustrative image · Simplified eye overlay", imgOver: TrinityEye },
   { p: 10, img: "em025-philadelphia-1776-committee-room-v2", ar: 1376 / 768, a: [0.35, 0.7, 1.6], b: [0.8, 0.45, 1.6], tr: "l", tag: "AI illustration, not portraits · Simplified overlay", over: ({ t }) => <Bar t={t} a={S(11)} b={S(12) - 0.4} end={S(12)} l0="1776" l1="1782" fill={[0, 1]} /> },
   { p: 12, img: "em025-artist-draft", a: [0.55, 0.68, 1.0], b: [0.55, 0.66, 1.5], tag: "AI illustration, not portraits" },
@@ -200,7 +200,7 @@ const SHOTS: ShotDef[] = [
   { p: 16, img: "em025-philadelphia-1776-committee-room-v2b", ar: 1376 / 768, a: [0.8, 0.5, 1.15], b: [0.5, 0.55, 1.35], tag: "AI illustration, not portraits · Simplified overlay", over: NoEye },
   { p: 18, img: "em025-masonic-manual", a: [0.5, 0.5, 1.0], b: [0.72, 0.45, 1.3], tag: "Illustrative image · Simplified overlay", over: ({ t }) => <Bar t={t} a={S(19)} b={S(20) - 0.3} end={S(20)} l0="1782" l1="1790s" fill={[0.35, 1]} /> },
   { p: 20, img: "em025-wallet", a: [0.5, 0.5, 1.0], b: [0.5, 0.5, 1.4], tag: "Illustrative image" },
-  { p: 21, a: [0.5, 0.5, 1], b: [0.5, 0.5, 1], tr: "r", tag: "Simplified illustration", bg: () => <AbsoluteFill style={{ background: theme.bg, backgroundImage: "linear-gradient(rgba(20,33,61,.07) 1px, transparent 1px), linear-gradient(90deg, rgba(20,33,61,.07) 1px, transparent 1px)", backgroundSize: "60px 60px" }} />, over: Seals },
+  { p: 21, img: "em025-president-desk", a: [0.5, 0.6, 1.0], b: [0.5, 0.6, 1.1], tr: "r", blur: [10, 6], dim: 0.45, tag: "Simplified illustration", over: Seals },
   { p: 22, img: "em025-president-desk", a: [0.45, 0.6, 1.0], b: [0.45, 0.6, 1.25], tag: "AI illustration, not a portrait" },
   { p: 23, img: "em025-president-desk", a: [0.45, 0.6, 1.25], b: [0.8, 0.4, 1.0], tag: "AI illustration, not a portrait" },
   { p: 24, img: "em025-bill-eye", a: [0.5, 0.4, 1.0], b: [0.5, 0.4, 1.15], dim: 0.45, tag: "US $1 reverse · public domain · Simplified overlay", over: ({ t }) => <Bar t={t} a={S(24) + 0.3} b={S(24) + 2.3} end={S(25)} l0="1782" l1="1935" fill={[0, 1]} y={1100} /> },
