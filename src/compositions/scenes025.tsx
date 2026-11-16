@@ -309,7 +309,7 @@ const scene = (from: number, id: string, mk: (P: (n: number, o?: number) => numb
       <>
         <SvgFrame>
           <Cam dur={dur} z1={1.04} amt={0.6}>
-            <Shots id={id} list={shots} dur={dur} pfx="em025-" />
+            <Shots id={id} list={shots} dur={dur} pfx="em025-" src={(i) => (i === "sistine-real" ? staticFile("photos/em025-sistine-real.jpg") : staticFile(`illustrations/em025-${i}.png`))} />
           </Cam>
           <Cam dur={dur} z1={1.05} dx={-20} amt={1.3}>
             {ov}
@@ -631,6 +631,7 @@ const ch06 = scene(58, "ch06", (P) => ({
       tr: "cut",
       m: (S) => (has("ceiling") ? <Motes S={S} /> : null),
     }),
+    sh("sistine-real", P(60), { r: FULL, f: [0.5, 0.5], tr: "page" }),
     sh("creation-ai", P(61), {
       r: FULL,
       f: [0.68, 0.45],
@@ -691,7 +692,9 @@ const ch06 = scene(58, "ch06", (P) => ({
   ),
   top: (
     <>
-      <Lab text="Illustrative recreation" a={P(58)} b={P(999)} />
+      <Lab text="Illustrative recreation" a={P(58)} b={P(60)} />
+      <Lab text="Sistine Chapel ceiling, 1508-1512 - Wikimedia Commons, public domain" a={P(60)} b={P(61)} />
+      <Lab text="Illustrative recreation" a={P(61)} b={P(999)} />
       <Sm a={P(62, 0.5)} b={P(65)} />
       <Src text="JAMA, 1990" a={P(61, 0.2)} b={P(63)} />
       <Src text="Neurosurgery, 2010" a={P(63, 0.2)} b={P(65)} />
