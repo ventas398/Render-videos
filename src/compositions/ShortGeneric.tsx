@@ -45,6 +45,22 @@ import g74 from "../episodes/IDEA-74G.json";
 import tg74 from "../episodes/IDEA-74G.timing.json";
 import g73 from "../episodes/IDEA-73G.json";
 import tg73 from "../episodes/IDEA-73G.timing.json";
+import n11 from "../episodes/SHORT-11.json";
+import tn11 from "../episodes/SHORT-11.timing.json";
+import n12 from "../episodes/SHORT-12.json";
+import tn12 from "../episodes/SHORT-12.timing.json";
+import n13 from "../episodes/SHORT-13.json";
+import tn13 from "../episodes/SHORT-13.timing.json";
+import n14 from "../episodes/SHORT-14.json";
+import tn14 from "../episodes/SHORT-14.timing.json";
+import n15 from "../episodes/SHORT-15.json";
+import tn15 from "../episodes/SHORT-15.timing.json";
+import n16 from "../episodes/SHORT-16.json";
+import tn16 from "../episodes/SHORT-16.timing.json";
+import n17 from "../episodes/SHORT-17.json";
+import tn17 from "../episodes/SHORT-17.timing.json";
+import n18 from "../episodes/SHORT-18.json";
+import tn18 from "../episodes/SHORT-18.timing.json";
 import { TTDiagram, type TTKind } from "./ttDiagram";
 import { HookSceneView, type HookScene } from "./ttHook";
 import { MotionImage, type MotionDir } from "../components/MotionImage";
@@ -62,7 +78,7 @@ type Label = { p: number; t: string; s?: string };
 type Stamp = { p: number; t: string; s: string; c: "teal" | "orange"; y?: number };
 type Mark = { t: string; x: number; y: number; c?: string }; // letra rotulada sobre la imagen (px del vertical 1080x1920); sigue el zoom de la foto
 type Beat = { from: number; to: number; img?: string; src?: string; paper?: boolean; tint?: string; tag?: string; kb?: "in" | "left" | "right" | "still"; z?: number; ox?: string; oy?: string; pan?: [number, number]; labels?: Label[]; stamps?: Stamp[]; end?: boolean; vein?: "line" | "nerve" | "break"; credit?: { p: number; t: string }; diagram?: TTKind; marks?: Mark[] };
-export type ShortEp = { id: string; hookScene?: HookScene; capMax?: number; title: string; hook?: boolean; fin?: { img: string; big: string; small: string }; parts: string[]; beats: Beat[]; capStarts?: Record<string, number[]> };
+export type ShortEp = { id: string; hookScene?: HookScene; capMax?: number; title: string; hook?: boolean; fin?: { img: string; src?: string; big: string; small: string }; parts: string[]; beats: Beat[]; capStarts?: Record<string, number[]> };
 type Timing = { ends: number[]; gap?: number; solo?: Record<string, number>; words?: [string, number, number][][]; tail?: number }; // solo: segundos de musica sola al final de la parte (sin voz ni subtitulo)
 export type ShortProps = { ep: ShortEp; timing: Timing; mov?: boolean };
 
@@ -94,6 +110,15 @@ export const SHORTS: Record<string, ShortProps> = {
   "IDEA-75G": { ep: g75 as unknown as ShortEp, timing: { ...tg75, tail: 3.4 } as unknown as Timing },
   "IDEA-74G": { ep: g74 as unknown as ShortEp, timing: { ...tg74, tail: 3.4 } as unknown as Timing },
   "IDEA-73G": { ep: g73 as unknown as ShortEp, timing: { ...tg73, tail: 3.4 } as unknown as Timing },
+  // 8 Shorts nuevos 16/11/2026 (chat #25), mismo formato que TT-01 (gancho 3 s, subtitulos palabra a palabra, ficha final)
+  "SHORT-11": { ep: { ...n11, hook: true } as unknown as ShortEp, timing: { ...tn11, tail: 3.4 } as unknown as Timing },
+  "SHORT-12": { ep: { ...n12, hook: true } as unknown as ShortEp, timing: { ...tn12, tail: 3.4 } as unknown as Timing },
+  "SHORT-13": { ep: { ...n13, hook: true } as unknown as ShortEp, timing: { ...tn13, tail: 3.4 } as unknown as Timing },
+  "SHORT-14": { ep: { ...n14, hook: true } as unknown as ShortEp, timing: { ...tn14, tail: 3.4 } as unknown as Timing },
+  "SHORT-15": { ep: { ...n15, hook: true } as unknown as ShortEp, timing: { ...tn15, tail: 3.4 } as unknown as Timing },
+  "SHORT-16": { ep: { ...n16, hook: true } as unknown as ShortEp, timing: { ...tn16, tail: 3.4 } as unknown as Timing },
+  "SHORT-17": { ep: { ...n17, hook: true } as unknown as ShortEp, timing: { ...tn17, tail: 3.4 } as unknown as Timing },
+  "SHORT-18": { ep: { ...n18, hook: true } as unknown as ShortEp, timing: { ...tn18, tail: 3.4 } as unknown as Timing },
 };
 export const shortFrames = (t: Timing) => Math.ceil((t.ends[t.ends.length - 1] + (t.tail ?? TAIL)) * fps);
 
@@ -117,6 +142,14 @@ export const COVERS: Record<string, { img: string; src?: string; word: string; b
   "IDEA-75": { img: "tt075-01", word: "HOW LONG?", band: "A BILLION SECONDS", tag: "Illustrative image", fx: 0.5, ws: 190 },
   "IDEA-74": { img: "tt074-01", word: "WHY?", band: "THE ARMY TURNED OFF A WATERFALL", tag: "Illustrative image", fx: 0.5 },
   "IDEA-73": { img: "tt073-02", word: "HOW FAR?", band: "A FULL DAY OF LIGHT AWAY", tag: "Illustrative image", fx: 0.5 },
+  "SHORT-11": { img: "s11-cake", src: "images/s11-cake.jpg", word: "100?", band: "DOES THE US PAY YOU AT 100?", tag: "Illustrative image" },
+  "SHORT-12": { img: "s12-cap-macro", src: "images/s12-cap-macro.jpg", word: "WHY?", band: "THE HOLE IN THE PEN CAP", tag: "Illustrative image" },
+  "SHORT-13": { img: "s13-window-view", src: "images/s13-window-view.jpg", word: "WHY?", band: "THE HOLE IN THE PLANE WINDOW", tag: "Illustrative image" },
+  "SHORT-14": { img: "s14-baskets37", src: "images/s14-baskets37.jpg", word: "WHO?", band: "NOBODY WANTED THE SHOPPING CART", tag: "Illustrative image" },
+  "SHORT-15": { img: "s15-wall-of-notes", src: "images/s15-wall-of-notes.jpg", word: "WHY?", band: "THE GLUE THAT FAILED", tag: "Illustrative image" },
+  "SHORT-16": { img: "s16-boston39", src: "images/s16-boston39.jpg", word: "OK?", band: "WHAT THE LETTERS STAND FOR", tag: "Illustrative image" },
+  "SHORT-17": { img: "s17-tag", src: "images/s17-tag.jpg", word: "WHY?", band: "WHY EVERYTHING COSTS $9.99", tag: "Illustrative image" },
+  "SHORT-18": { img: "s18-road", src: "images/s18-road.jpg", word: "26.2?", band: "THE ODD MARATHON DISTANCE", tag: "Illustrative image" },
   "SHORT-035": { img: "em035-portada-A-over-under-v1", word: "OVER?", band: "THE 1891 PATENT EVERYONE CITES", tag: "Illustrative image" },
 };
 
@@ -186,11 +219,11 @@ const HookTitle: React.FC<{ text: string }> = ({ text }) => {
 };
 
 /** Pantalla final de la ficha: rotulo de imagen ilustrativa + fuentes. */
-const FinCard: React.FC<{ fin: { img: string; big: string; small: string }; frames: number }> = ({ fin, frames }) => {
+const FinCard: React.FC<{ fin: { img: string; src?: string; big: string; small: string }; frames: number }> = ({ fin, frames }) => {
   const f = useCurrentFrame();
   return (
     <AbsoluteFill style={{ opacity: interpolate(f, [0, 8], [0, 1], POP) }}>
-      <Photo img={fin.img} frames={frames} />
+      <Photo img={fin.img} src={fin.src} frames={frames} />
       <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(10,26,74,.8), rgba(10,26,74,.92))" }} />
       <AbsoluteFill style={{ alignItems: "center", justifyContent: "center", textAlign: "center", fontFamily: theme.font, padding: "0 70px 220px", gap: 50 }}>
         <div style={{ fontSize: 76, fontWeight: 800, color: "#fff", lineHeight: 1.15, textWrap: "balance" }}>{fin.big}</div>
