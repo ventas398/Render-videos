@@ -282,7 +282,7 @@ const StampBox: React.FC<{ s: Stamp; idx: number }> = ({ s, idx }) => {
   const o = interpolate(f, [0, 4], [0, 1], clamp);
   const col = s.c === "teal" ? theme.teal : theme.orange;
   return (
-    <div style={{ position: "absolute", left: 120, top: s.y ?? 420 + idx * 380, width: 840, textAlign: "center", opacity: o, transform: `rotate(${idx ? 4 : -5}deg) scale(${sc})`, border: `14px solid ${col}`, borderRadius: 18, background: "rgba(247,243,234,0.93)", padding: "14px 10px", color: col, fontFamily: IMPACT }}>
+    <div style={{ position: "absolute", left: 120, top: s.y ?? 560 + idx * 380, width: 840, textAlign: "center", opacity: o, transform: `rotate(${idx ? 4 : -5}deg) scale(${sc})`, border: `14px solid ${col}`, borderRadius: 18, background: "rgba(247,243,234,0.93)", padding: "14px 10px", color: col, fontFamily: IMPACT }}>
       <div style={{ fontSize: s.t.length > 6 ? 125 : 150, lineHeight: 1.05, letterSpacing: s.t.length > 6 ? 0 : 4 }}>{s.t}</div>
       <div style={{ fontFamily: theme.font, fontWeight: 800, fontSize: 52, color: theme.ink }}>{s.s}</div>
     </div>
