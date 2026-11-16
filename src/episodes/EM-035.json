@@ -2,6 +2,8 @@
   "id": "EM-035",
   "title": "Toilet Paper: Over or Under? The Answer Is Not in the Patent",
   "voice": "am_liam",
+  "squeeze": true,
+  "gap": 0.3,
   "speed": 1,
   "pronounce": {
     "Landers's": "lˈændɚzɪz",
@@ -15,15 +17,15 @@
     "Boulder": "bˈoʊldɚ"
   },
   "pads": {
-    "9": 0.8,
+    "9": 0.45,
     "32": 0.4,
-    "33": 0.8,
-    "52": 0.8,
-    "69": 0.8,
-    "94": 0.8,
+    "33": 0.45,
+    "52": 0.45,
+    "69": 0.45,
+    "94": 0.45,
     "101": 0.4,
-    "108": 0.8,
-    "117": 0.8,
+    "108": 0.45,
+    "117": 0.45,
     "138": 0.4
   },
   "audio": "public/audio/EM-035.wav",
