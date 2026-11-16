@@ -202,8 +202,10 @@ export const WordGroup: React.FC<{ ws: { w: string; f: number }[]; frames: numbe
   const f = useCurrentFrame();
   const act = ws.reduce((a, x, i) => (f >= x.f ? i : a), 0);
   const o = interpolate(f, [0, 2, frames - 2, frames], [0, 1, 1, 0], POP);
+  const longest = Math.max(...ws.map((x) => x.w.length));
+  const fs = Math.min(104, Math.floor(860 / (longest * 0.72))); // una palabra larga (HUNDREDTH-BIRTHDAY) nunca se sale del cuadro
   return (
-    <div style={{ position: "absolute", left: 60, right: 130, top: 1262, height: 300, display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center", fontFamily: theme.font, fontWeight: 900, fontSize: 104, lineHeight: 1.08, textTransform: "uppercase", textWrap: "balance", WebkitTextStroke: `9px ${NAVY}`, paintOrder: "stroke fill", textShadow: `0 6px 18px ${NAVY}`, opacity: o }}>
+    <div style={{ position: "absolute", left: 60, right: 130, top: 1262, height: 300, display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center", fontFamily: theme.font, fontWeight: 900, fontSize: fs, lineHeight: 1.08, textTransform: "uppercase", textWrap: "balance", WebkitTextStroke: `9px ${NAVY}`, paintOrder: "stroke fill", textShadow: `0 6px 18px ${NAVY}`, opacity: o }}>
       <div>{ws.map((x, i) => <span key={i} style={{ display: "inline-block", marginRight: i < ws.length - 1 ? 36 : 0, whiteSpace: "nowrap", color: i === act ? YEL : "#fff", transform: i === act ? `scale(${interpolate(f - x.f, [0, 3], [0.9, 1.08], POP)})` : "scale(1)" }}>{x.w}</span>)}</div>
     </div>
   );
