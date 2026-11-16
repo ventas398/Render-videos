@@ -1,0 +1,162 @@
+{
+ "id": "SHORT-13",
+ "title": "Why does an airplane window have a hole?",
+ "voice": "am_liam",
+ "speed": 1.03,
+ "music": "em-curious",
+ "words": true,
+ "audio": "public/audio/SHORT-13.wav",
+ "timing": "src/episodes/SHORT-13.timing.json",
+ "pronounce": {},
+ "fin": {
+  "img": "s13-hole-macro",
+  "src": "images/s13-hole-macro.jpg",
+  "big": "Illustrative images. Layer details simplified.",
+  "small": "Sources: ScienceAlert (quoting a GKN Aerospace engineer); Business Insider (quoting Boeing Commercial Airplanes)"
+ },
+ "parts": [
+  "Why does an airplane window have a tiny hole?",
+  "It is not a defect.",
+  "The window is not one piece of plastic.",
+  "It is a stack of three acrylic layers.",
+  "The inner one is a scratch pane. It protects. It is not structural.",
+  "The tiny hole is in the middle layer.",
+  "It lets cabin pressure reach the gap next to the outer layer.",
+  "So the pressure load falls on the outer layer.",
+  "If the outer one ever failed, the middle layer is the backup.",
+  "Engineers call that fail-safe design.",
+  "The hole also lets moisture out, according to Boeing.",
+  "That helps keep the window clear of fog and frost.",
+  "Sometimes a ring of frost shows around it.",
+  "A tiny hole with a quiet job."
+ ],
+ "beats": [
+  {
+   "from": 0,
+   "to": 1,
+   "img": "s13-window-view",
+   "src": "images/s13-window-view.jpg",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "z": 1.2,
+   "ox": "50%",
+   "oy": "50%",
+   "labels": [
+    {
+     "p": 0,
+     "t": "WHY IS THERE A HOLE\nIN THE WINDOW?"
+    }
+   ]
+  },
+  {
+   "from": 2,
+   "to": 3,
+   "img": "s13-cabin",
+   "src": "images/s13-cabin.jpg",
+   "tag": "Illustrative image",
+   "kb": "right",
+   "z": 1.4,
+   "ox": "50%",
+   "oy": "50%",
+   "labels": [
+    {
+     "p": 3,
+     "t": "3 LAYERS OF ACRYLIC"
+    }
+   ]
+  },
+  {
+   "from": 4,
+   "to": 4,
+   "img": "s13-finger",
+   "src": "images/s13-finger.jpg",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "z": 1.5,
+   "ox": "50%",
+   "oy": "50%",
+   "labels": [
+    {
+     "p": 4,
+     "t": "INNER LAYER: SCRATCH PANE"
+    }
+   ]
+  },
+  {
+   "from": 5,
+   "to": 7,
+   "img": "s13-hole-macro",
+   "src": "images/s13-hole-macro.jpg",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "z": 1.7,
+   "ox": "50%",
+   "oy": "50%",
+   "labels": [
+    {
+     "p": 5,
+     "t": "THE HOLE: IN THE MIDDLE LAYER"
+    },
+    {
+     "p": 7,
+     "t": "OUTER LAYER CARRIES THE PRESSURE",
+     "s": "GKN Aerospace engineer, via ScienceAlert"
+    }
+   ]
+  },
+  {
+   "from": 8,
+   "to": 9,
+   "img": "s13-window-view",
+   "src": "images/s13-window-view.jpg",
+   "tag": "Illustrative image",
+   "kb": "left",
+   "z": 1.7,
+   "ox": "50%",
+   "oy": "50%",
+   "labels": [
+    {
+     "p": 8,
+     "t": "MIDDLE LAYER = FAIL-SAFE BACKUP"
+    }
+   ],
+   "stamps": [
+    {
+     "p": 9,
+     "t": "DOCUMENTED",
+     "s": "fail-safe design",
+     "c": "teal"
+    }
+   ]
+  },
+  {
+   "from": 10,
+   "to": 12,
+   "img": "s13-frost",
+   "src": "images/s13-frost.jpg",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "z": 1.5,
+   "ox": "50%",
+   "oy": "50%",
+   "labels": [
+    {
+     "p": 10,
+     "t": "ALSO LETS MOISTURE OUT",
+     "s": "Boeing, via Business Insider"
+    }
+   ]
+  },
+  {
+   "from": 13,
+   "to": 13,
+   "img": "s13-cabin",
+   "src": "images/s13-cabin.jpg",
+   "tag": "Illustrative image",
+   "kb": "left",
+   "z": 1.6,
+   "ox": "50%",
+   "oy": "50%"
+  }
+ ]
+}

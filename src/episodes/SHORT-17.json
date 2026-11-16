@@ -1,0 +1,179 @@
+{
+ "id": "SHORT-17",
+ "title": "Why does everything cost $9.99?",
+ "voice": "am_liam",
+ "speed": 1.03,
+ "music": "em-curious",
+ "words": true,
+ "audio": "public/audio/SHORT-17.wav",
+ "timing": "src/episodes/SHORT-17.timing.json",
+ "pronounce": {
+  "Tomas": "tˈɑmɑʃ",
+  "Bata": "bˈɑtjə"
+ },
+ "fin": {
+  "img": "s17-tag",
+  "src": "images/s17-tag.jpg",
+  "big": "Illustrative images.",
+  "small": "Sources: Thomas & Morwitz (left-digit effect); Anderson & Simester (field experiments on 9-endings); NBER used-car odometer study; Wikipedia: Psychological pricing"
+ },
+ "parts": [
+  "Why does everything cost nine ninety-nine?",
+  "When we all know it really means ten.",
+  "Your brain reads a price from left to right.",
+  "It grabs the first digit before the rest.",
+  "So two ninety-nine feels like two-something. Three dollars feels like three.",
+  "Researchers call it the left-digit effect.",
+  "In three field experiments on real products, a nine ending raised demand every time.",
+  "It even works on numbers that are not prices.",
+  "In a study of more than twenty-two million used cars sold at auction,",
+  "cars just under eighty thousand miles sold for about two hundred ten dollars more than cars just over.",
+  "The story you have heard is about cash registers.",
+  "Round prices let a cashier skip the till.",
+  "It is a nice story. It has not been proven.",
+  "A Czech businessman, Tomas Bata, used nine endings widely from nineteen twenty.",
+  "People called it Bata's price.",
+  "Your defense: round every price up in your head.",
+  "Nine ninety-nine is ten."
+ ],
+ "beats": [
+  {
+   "from": 0,
+   "to": 1,
+   "img": "s17-tag",
+   "src": "images/s17-tag.jpg",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "z": 1.2,
+   "ox": "50%",
+   "oy": "50%",
+   "labels": [
+    {
+     "p": 0,
+     "t": "WHY EVERYTHING COSTS\n$9.99"
+    }
+   ]
+  },
+  {
+   "from": 2,
+   "to": 5,
+   "img": "s17-shopper",
+   "src": "images/s17-shopper.jpg",
+   "tag": "Illustrative image",
+   "kb": "right",
+   "z": 1.4,
+   "ox": "50%",
+   "oy": "50%",
+   "labels": [
+    {
+     "p": 5,
+     "t": "THE LEFT-DIGIT EFFECT",
+     "s": "Thomas & Morwitz"
+    }
+   ]
+  },
+  {
+   "from": 6,
+   "to": 6,
+   "img": "s17-shopper",
+   "src": "images/s17-shopper.jpg",
+   "tag": "Illustrative image",
+   "kb": "left",
+   "z": 1.7,
+   "ox": "50%",
+   "oy": "50%",
+   "labels": [
+    {
+     "p": 6,
+     "t": "3 FIELD EXPERIMENTS",
+     "s": "Anderson & Simester"
+    }
+   ],
+   "stamps": [
+    {
+     "p": 6,
+     "t": "DOCUMENTED",
+     "s": "nine ending raised demand",
+     "c": "teal"
+    }
+   ]
+  },
+  {
+   "from": 7,
+   "to": 9,
+   "img": "s17-odometer",
+   "src": "images/s17-odometer.jpg",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "z": 1.5,
+   "ox": "50%",
+   "oy": "50%",
+   "labels": [
+    {
+     "p": 9,
+     "t": "JUST UNDER 80,000 MILES:\nABOUT $210 MORE",
+     "s": "used-car auction study (NBER)"
+    }
+   ]
+  },
+  {
+   "from": 10,
+   "to": 12,
+   "img": "s17-register",
+   "src": "images/s17-register.jpg",
+   "tag": "Illustrative image",
+   "kb": "left",
+   "z": 1.4,
+   "ox": "50%",
+   "oy": "50%",
+   "labels": [
+    {
+     "p": 10,
+     "t": "THE CASH-REGISTER STORY"
+    }
+   ],
+   "stamps": [
+    {
+     "p": 12,
+     "t": "DISPUTED",
+     "s": "has not been proven",
+     "c": "orange"
+    }
+   ]
+  },
+  {
+   "from": 13,
+   "to": 14,
+   "img": "s17-tag",
+   "src": "images/s17-tag.jpg",
+   "tag": "Illustrative image",
+   "kb": "right",
+   "z": 1.8,
+   "ox": "50%",
+   "oy": "50%",
+   "labels": [
+    {
+     "p": 13,
+     "t": "1920: TOMAS BATA"
+    }
+   ]
+  },
+  {
+   "from": 15,
+   "to": 16,
+   "img": "s17-shopper",
+   "src": "images/s17-shopper.jpg",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "z": 1.8,
+   "ox": "50%",
+   "oy": "50%",
+   "labels": [
+    {
+     "p": 16,
+     "t": "$9.99 = $10"
+    }
+   ]
+  }
+ ]
+}

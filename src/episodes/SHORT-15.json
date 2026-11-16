@@ -1,0 +1,170 @@
+{
+ "id": "SHORT-15",
+ "title": "The sticky note began as a failure",
+ "voice": "am_liam",
+ "speed": 1.03,
+ "music": "em-curious",
+ "words": true,
+ "audio": "public/audio/SHORT-15.wav",
+ "timing": "src/episodes/SHORT-15.timing.json",
+ "pronounce": {
+  "3M": "θɹˈi ˈɛm",
+  "Boise": "bˈɔɪsi"
+ },
+ "fin": {
+  "img": "s15-notes-hand",
+  "src": "images/s15-notes-hand.jpg",
+  "big": "Illustrative images. No logos or brand colors shown.",
+  "small": "Sources: Wikipedia: Post-it Note, Spencer Silver, Arthur Fry (company account; the credit dispute is noted)"
+ },
+ "parts": [
+  "The sticky note began as a glue that failed.",
+  "Nineteen sixty-eight. A scientist at 3M, Spencer Silver, wanted a very strong adhesive.",
+  "Instead, he made a weak one.",
+  "It stuck. But it peeled off without tearing.",
+  "In Wikipedia's words, a solution without a problem.",
+  "For about five years, few people inside the company cared.",
+  "Then a colleague, Arthur Fry, sang in a church choir.",
+  "His paper bookmarks kept slipping out of his hymn book.",
+  "A gentle grip was exactly what he needed.",
+  "Nineteen seventy-seven. A test in several cities. Mixed results.",
+  "A year later: free samples in offices in Boise, Idaho.",
+  "About nine in ten people who tried them said they would buy.",
+  "In nineteen eighty, it went on sale across the United States.",
+  "Not everyone agrees on who deserves the credit.",
+  "A glue meant to be strong became famous for being weak."
+ ],
+ "beats": [
+  {
+   "from": 0,
+   "to": 0,
+   "img": "s15-wall-of-notes",
+   "src": "images/s15-wall-of-notes.jpg",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "z": 1.2,
+   "ox": "50%",
+   "oy": "50%",
+   "labels": [
+    {
+     "p": 0,
+     "t": "A GLUE THAT FAILED"
+    }
+   ]
+  },
+  {
+   "from": 1,
+   "to": 3,
+   "img": "s15-lab68",
+   "src": "images/s15-lab68.jpg",
+   "tag": "Illustrative image",
+   "kb": "right",
+   "z": 1.4,
+   "ox": "50%",
+   "oy": "50%",
+   "labels": [
+    {
+     "p": 1,
+     "t": "1968: SPENCER SILVER, 3M"
+    },
+    {
+     "p": 3,
+     "t": "WEAK. REUSABLE. NO TEARING."
+    }
+   ]
+  },
+  {
+   "from": 4,
+   "to": 5,
+   "img": "s15-lab68",
+   "src": "images/s15-lab68.jpg",
+   "tag": "Illustrative image",
+   "kb": "left",
+   "z": 1.9,
+   "ox": "50%",
+   "oy": "50%",
+   "labels": [
+    {
+     "p": 4,
+     "t": "\"A SOLUTION WITHOUT A PROBLEM\"",
+     "s": "Wikipedia"
+    }
+   ]
+  },
+  {
+   "from": 6,
+   "to": 8,
+   "img": "s15-hymnal",
+   "src": "images/s15-hymnal.jpg",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "z": 1.5,
+   "ox": "50%",
+   "oy": "50%",
+   "labels": [
+    {
+     "p": 6,
+     "t": "ARTHUR FRY: HYMN BOOK BOOKMARKS"
+    }
+   ]
+  },
+  {
+   "from": 9,
+   "to": 11,
+   "img": "s15-office78",
+   "src": "images/s15-office78.jpg",
+   "tag": "Illustrative image",
+   "kb": "left",
+   "z": 1.4,
+   "ox": "50%",
+   "oy": "50%",
+   "labels": [
+    {
+     "p": 9,
+     "t": "1977: MIXED TEST RESULTS"
+    },
+    {
+     "p": 10,
+     "t": "BOISE, 1978: ABOUT 9 IN 10 WOULD BUY",
+     "s": "Wikipedia"
+    }
+   ]
+  },
+  {
+   "from": 12,
+   "to": 13,
+   "img": "s15-notes-hand",
+   "src": "images/s15-notes-hand.jpg",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "z": 1.5,
+   "ox": "50%",
+   "oy": "50%",
+   "labels": [
+    {
+     "p": 12,
+     "t": "1980: ON SALE NATIONWIDE"
+    }
+   ],
+   "stamps": [
+    {
+     "p": 13,
+     "t": "DISPUTED",
+     "s": "who deserves the credit",
+     "c": "orange"
+    }
+   ]
+  },
+  {
+   "from": 14,
+   "to": 14,
+   "img": "s15-wall-of-notes",
+   "src": "images/s15-wall-of-notes.jpg",
+   "tag": "Illustrative image",
+   "kb": "right",
+   "z": 1.5,
+   "ox": "50%",
+   "oy": "50%"
+  }
+ ]
+}

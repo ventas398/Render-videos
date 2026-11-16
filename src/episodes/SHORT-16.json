@@ -1,0 +1,182 @@
+{
+ "id": "SHORT-16",
+ "title": "What do the letters OK stand for?",
+ "voice": "am_liam",
+ "speed": 1.03,
+ "music": "em-curious",
+ "words": true,
+ "audio": "public/audio/SHORT-16.wav",
+ "timing": "src/episodes/SHORT-16.timing.json",
+ "pronounce": {
+  "Choctaw": "ʧˈɑktˌɔ",
+  "Buren": "bjˈʊɹən",
+  "Kinderhook": "kˈɪndɚhˌʊk",
+  "Read": "ɹˈid"
+ },
+ "fin": {
+  "img": "s16-rally40",
+  "src": "images/s16-rally40.jpg",
+  "big": "Illustrative images. Not period photographs.",
+  "small": "Sources: Wikipedia: OK; Allen Walker Read, American Speech (1963-64); Boston Morning Post, 23 Mar 1839; Allan Metcalf, OK: The Improbable Story of America's Greatest Word"
+ },
+ "parts": [
+  "What do the letters O and K stand for?",
+  "The best documented answer is a joke from Boston.",
+  "In the late eighteen-thirties, newspaper writers misspelled phrases on purpose.",
+  "Then they shortened them to initials.",
+  "K.G. meant know go.",
+  "On March twenty-third, eighteen thirty-nine, the Boston Morning Post printed O.K.",
+  "It stood for oll korrect. A joke spelling of all correct.",
+  "That is the earliest printed example anyone has found.",
+  "Professor Allen Walker Read dug it up more than a century later.",
+  "Most of those silly abbreviations vanished.",
+  "OK survived because of an election.",
+  "Martin Van Buren, nickname Old Kinderhook, ran again in eighteen forty.",
+  "His supporters formed OK Clubs.",
+  "But this is the best documented explanation. Not the only one.",
+  "Some point to a Choctaw word. Others, to West Africa.",
+  "Scholars did not find a clear trail.",
+  "Almost two hundred years old, and you probably used it today."
+ ],
+ "beats": [
+  {
+   "from": 0,
+   "to": 1,
+   "img": "s16-boston39",
+   "src": "images/s16-boston39.jpg",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "z": 1.2,
+   "ox": "50%",
+   "oy": "50%",
+   "labels": [
+    {
+     "p": 0,
+     "t": "WHAT DO O AND K\nSTAND FOR?"
+    }
+   ]
+  },
+  {
+   "from": 2,
+   "to": 4,
+   "img": "s16-printer",
+   "src": "images/s16-printer.jpg",
+   "tag": "Illustrative image",
+   "kb": "right",
+   "z": 1.5,
+   "ox": "50%",
+   "oy": "50%",
+   "labels": [
+    {
+     "p": 4,
+     "t": "K.G. = \"KNOW GO\""
+    }
+   ]
+  },
+  {
+   "from": 5,
+   "to": 7,
+   "img": "s16-boston39",
+   "src": "images/s16-boston39.jpg",
+   "tag": "Illustrative image",
+   "kb": "left",
+   "z": 1.7,
+   "ox": "50%",
+   "oy": "50%",
+   "labels": [
+    {
+     "p": 5,
+     "t": "BOSTON, 23 MARCH 1839",
+     "s": "Boston Morning Post"
+    },
+    {
+     "p": 6,
+     "t": "O.K. = \"OLL KORRECT\""
+    }
+   ],
+   "stamps": [
+    {
+     "p": 7,
+     "t": "DOCUMENTED",
+     "s": "earliest printed example found",
+     "c": "teal"
+    }
+   ]
+  },
+  {
+   "from": 8,
+   "to": 9,
+   "img": "s16-printer",
+   "src": "images/s16-printer.jpg",
+   "tag": "Illustrative image",
+   "kb": "left",
+   "z": 1.8,
+   "ox": "50%",
+   "oy": "50%",
+   "labels": [
+    {
+     "p": 8,
+     "t": "ALLEN WALKER READ, COLUMBIA"
+    }
+   ]
+  },
+  {
+   "from": 10,
+   "to": 12,
+   "img": "s16-rally40",
+   "src": "images/s16-rally40.jpg",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "z": 1.4,
+   "ox": "50%",
+   "oy": "50%",
+   "labels": [
+    {
+     "p": 11,
+     "t": "1840: \"OLD KINDERHOOK\"",
+     "s": "Martin Van Buren"
+    },
+    {
+     "p": 12,
+     "t": "OK CLUBS"
+    }
+   ]
+  },
+  {
+   "from": 13,
+   "to": 15,
+   "img": "s16-boston39",
+   "src": "images/s16-boston39.jpg",
+   "tag": "Illustrative image",
+   "kb": "right",
+   "z": 1.9,
+   "ox": "50%",
+   "oy": "50%",
+   "labels": [
+    {
+     "p": 14,
+     "t": "OTHER THEORIES: CHOCTAW, WEST AFRICA"
+    }
+   ],
+   "stamps": [
+    {
+     "p": 13,
+     "t": "DISPUTED",
+     "s": "other origins",
+     "c": "orange"
+    }
+   ]
+  },
+  {
+   "from": 16,
+   "to": 16,
+   "img": "s16-phone",
+   "src": "images/s16-phone.jpg",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "z": 1.4,
+   "ox": "50%",
+   "oy": "50%"
+  }
+ ]
+}

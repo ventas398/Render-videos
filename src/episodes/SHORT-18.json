@@ -1,0 +1,187 @@
+{
+ "id": "SHORT-18",
+ "title": "Why is a marathon 26.2 miles?",
+ "voice": "am_liam",
+ "speed": 1.03,
+ "music": "em-curious",
+ "words": true,
+ "audio": "public/audio/SHORT-18.wav",
+ "timing": "src/episodes/SHORT-18.timing.json",
+ "pronounce": {
+  "Pietri": "pjˈɛtɹi",
+  "Dorando": "dɔɹˈændoʊ",
+  "Olympedia": "əlˌɪmpˈidiə"
+ },
+ "fin": {
+  "img": "s18-tape",
+  "src": "images/s18-tape.jpg",
+  "big": "Illustrative images, not period photographs.",
+  "small": "Sources: Olympedia; Wikipedia: Marathon, 1908 Summer Olympics marathon; World Athletics history (1921 standard)"
+ },
+ "parts": [
+  "Why is a marathon twenty-six point two miles?",
+  "It is such a strange number.",
+  "The first Olympic marathon, in eighteen ninety-six, ran about forty kilometers.",
+  "That is roughly twenty-five miles.",
+  "London, nineteen oh-eight.",
+  "The course began at Windsor Castle and finished at the stadium.",
+  "It came to twenty-six miles, plus three hundred eighty-five yards on the track.",
+  "The famous story says the start was set for a royal nursery window.",
+  "The records do not back that up.",
+  "Newspaper notices show the organizers asked permission to start at Windsor.",
+  "The royal family had not asked.",
+  "In the stadium, an Italian runner, Dorando Pietri, staggered in first.",
+  "Officials helped him. He was disqualified.",
+  "Johnny Hayes, of the United States, got the gold.",
+  "So was that distance chosen for a reason?",
+  "Olympedia calls it arbitrary.",
+  "In nineteen twenty-one, the athletics federation made it official.",
+  "Those last three hundred eighty-five yards are London's. Save some cheering for them."
+ ],
+ "beats": [
+  {
+   "from": 0,
+   "to": 3,
+   "img": "s18-road",
+   "src": "images/s18-road.jpg",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "z": 1.2,
+   "ox": "50%",
+   "oy": "50%",
+   "labels": [
+    {
+     "p": 0,
+     "t": "WHY 26.2 MILES?"
+    },
+    {
+     "p": 2,
+     "t": "1896: ABOUT 40 KM",
+     "s": "Olympic marathon, Athens"
+    }
+   ]
+  },
+  {
+   "from": 4,
+   "to": 6,
+   "img": "s18-windsor",
+   "src": "images/s18-windsor.jpg",
+   "tag": "Illustrative image",
+   "kb": "right",
+   "z": 1.4,
+   "ox": "50%",
+   "oy": "50%",
+   "labels": [
+    {
+     "p": 4,
+     "t": "LONDON, 1908"
+    },
+    {
+     "p": 6,
+     "t": "26 MILES + 385 YARDS = 42.195 KM"
+    }
+   ]
+  },
+  {
+   "from": 7,
+   "to": 8,
+   "img": "s18-stadium",
+   "src": "images/s18-stadium.jpg",
+   "tag": "Illustrative image",
+   "kb": "left",
+   "z": 1.5,
+   "ox": "50%",
+   "oy": "50%",
+   "stamps": [
+    {
+     "p": 8,
+     "t": "MYTH",
+     "s": "the royal nursery window",
+     "c": "orange"
+    }
+   ]
+  },
+  {
+   "from": 9,
+   "to": 10,
+   "img": "s18-windsor",
+   "src": "images/s18-windsor.jpg",
+   "tag": "Illustrative image",
+   "kb": "left",
+   "z": 1.8,
+   "ox": "50%",
+   "oy": "50%",
+   "labels": [
+    {
+     "p": 9,
+     "t": "WINDSOR: THE ORGANIZERS ASKED",
+     "s": "Olympedia"
+    }
+   ]
+  },
+  {
+   "from": 11,
+   "to": 13,
+   "img": "s18-collapse",
+   "src": "images/s18-collapse.jpg",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "z": 1.4,
+   "ox": "50%",
+   "oy": "50%",
+   "labels": [
+    {
+     "p": 11,
+     "t": "DORANDO PIETRI, 1908"
+    },
+    {
+     "p": 13,
+     "t": "GOLD: JOHNNY HAYES (USA)"
+    }
+   ],
+   "stamps": [
+    {
+     "p": 12,
+     "t": "DOCUMENTED",
+     "s": "disqualified",
+     "c": "teal"
+    }
+   ]
+  },
+  {
+   "from": 14,
+   "to": 15,
+   "img": "s18-stadium",
+   "src": "images/s18-stadium.jpg",
+   "tag": "Illustrative image",
+   "kb": "right",
+   "z": 1.7,
+   "ox": "50%",
+   "oy": "50%",
+   "labels": [
+    {
+     "p": 15,
+     "t": "\"ARBITRARY\"",
+     "s": "Olympedia"
+    }
+   ]
+  },
+  {
+   "from": 16,
+   "to": 17,
+   "img": "s18-tape",
+   "src": "images/s18-tape.jpg",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "z": 1.4,
+   "ox": "50%",
+   "oy": "50%",
+   "labels": [
+    {
+     "p": 16,
+     "t": "1921: MADE OFFICIAL"
+    }
+   ]
+  }
+ ]
+}

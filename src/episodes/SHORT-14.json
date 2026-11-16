@@ -1,0 +1,157 @@
+{
+ "id": "SHORT-14",
+ "title": "Nobody wanted the shopping cart",
+ "voice": "am_liam",
+ "speed": 1.03,
+ "music": "em-curious",
+ "words": true,
+ "audio": "public/audio/SHORT-14.wav",
+ "timing": "src/episodes/SHORT-14.timing.json",
+ "pronounce": {
+  "Sylvan": "sˈɪlvən",
+  "Orla": "ˈɔɹlə"
+ },
+ "fin": {
+  "img": "s14-nested",
+  "src": "images/s14-nested.jpg",
+  "big": "Illustrative images. Dates differ by source.",
+  "small": "Sources: NPR (29 Mar 2025); Wikipedia: Shopping cart, Sylvan Goldman; Metropolitan Library System of Oklahoma County; Google Patents US 2,479,530"
+ },
+ "parts": [
+  "The shopping cart is usually credited to a grocer in Oklahoma City.",
+  "Nineteen thirty-seven.",
+  "And at first, nobody wanted it.",
+  "Sylvan Goldman ran a chain of grocery stores.",
+  "According to NPR, he noticed shoppers stopped buying when their arms were full.",
+  "His fix: a folding frame holding two wire baskets.",
+  "He called his campaign the No Basket Carrying Plan.",
+  "Men thought it looked effeminate.",
+  "Women said it looked like pushing a baby carriage.",
+  "So he hired models to shop with the carts.",
+  "And greeters to show people how to use them.",
+  "In nineteen seventy-seven, he was asked if customers loved the cart.",
+  "His answer, as NPR reports it: No, no. That's a big lie.",
+  "Then it caught on.",
+  "A rival design nested one cart inside another.",
+  "Orla Watson filed it in nineteen forty-six. The patent came in nineteen forty-nine.",
+  "Sometimes you have to hire the crowd."
+ ],
+ "beats": [
+  {
+   "from": 0,
+   "to": 2,
+   "img": "s14-baskets37",
+   "src": "images/s14-baskets37.jpg",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "z": 1.2,
+   "ox": "50%",
+   "oy": "50%",
+   "labels": [
+    {
+     "p": 0,
+     "t": "OKLAHOMA CITY, 1937",
+     "s": "usually credited: Sylvan Goldman"
+    }
+   ]
+  },
+  {
+   "from": 3,
+   "to": 5,
+   "img": "s14-prototype",
+   "src": "images/s14-prototype.jpg",
+   "tag": "Illustrative image",
+   "kb": "right",
+   "z": 1.5,
+   "ox": "50%",
+   "oy": "50%"
+  },
+  {
+   "from": 6,
+   "to": 8,
+   "img": "s14-nobody",
+   "src": "images/s14-nobody.jpg",
+   "tag": "Illustrative image",
+   "kb": "left",
+   "z": 1.5,
+   "ox": "50%",
+   "oy": "50%",
+   "labels": [
+    {
+     "p": 6,
+     "t": "THE \"NO BASKET CARRYING PLAN\"",
+     "s": "Oklahoma News ad, 1937 (via Wikipedia)"
+    }
+   ]
+  },
+  {
+   "from": 9,
+   "to": 10,
+   "img": "s14-model",
+   "src": "images/s14-model.jpg",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "z": 1.5,
+   "ox": "50%",
+   "oy": "50%"
+  },
+  {
+   "from": 11,
+   "to": 12,
+   "img": "s14-nobody",
+   "src": "images/s14-nobody.jpg",
+   "tag": "Illustrative image",
+   "kb": "right",
+   "z": 1.8,
+   "ox": "50%",
+   "oy": "50%",
+   "labels": [
+    {
+     "p": 12,
+     "t": "\"NO, NO. THAT'S A BIG LIE.\"",
+     "s": "Goldman, 1977 (via NPR)"
+    }
+   ]
+  },
+  {
+   "from": 13,
+   "to": 13,
+   "img": "s14-model",
+   "src": "images/s14-model.jpg",
+   "tag": "Illustrative image",
+   "kb": "left",
+   "z": 1.7,
+   "ox": "50%",
+   "oy": "50%"
+  },
+  {
+   "from": 14,
+   "to": 15,
+   "img": "s14-nested",
+   "src": "images/s14-nested.jpg",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "z": 1.4,
+   "ox": "50%",
+   "oy": "50%",
+   "labels": [
+    {
+     "p": 15,
+     "t": "WATSON: NESTING CART",
+     "s": "US patent 2,479,530 (granted 1949)"
+    }
+   ]
+  },
+  {
+   "from": 16,
+   "to": 16,
+   "img": "s14-baskets37",
+   "src": "images/s14-baskets37.jpg",
+   "tag": "Illustrative image",
+   "kb": "right",
+   "z": 1.6,
+   "ox": "50%",
+   "oy": "50%"
+  }
+ ]
+}

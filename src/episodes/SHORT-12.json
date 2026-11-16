@@ -1,0 +1,185 @@
+{
+ "id": "SHORT-12",
+ "title": "Why does a pen cap have a hole?",
+ "voice": "am_liam",
+ "speed": 1.03,
+ "music": "em-curious",
+ "words": true,
+ "audio": "public/audio/SHORT-12.wav",
+ "timing": "src/episodes/SHORT-12.timing.json",
+ "pronounce": {
+  "Cristal": "kɹɪstˈɑl",
+  "Bic": "bˈɪk",
+  "asphyxiation": "æsfˌɪksiˈeɪʃən"
+ },
+ "fin": {
+  "img": "s12-cap-macro",
+  "src": "images/s12-cap-macro.jpg",
+  "big": "Illustrative images. No brand logos shown.",
+  "small": "Sources: Wikipedia, Bic Cristal (citing Fletcher 2006; BIC Australia FAQ); ScienceAlert; AFNOR listing of ISO 11540:2021 (title and scope only); SAGE Open Medical Case Reports (2024)"
+ },
+ "parts": [
+  "Why does a pen cap have a tiny hole?",
+  "It is not a mistake.",
+  "You might guess it is for the ink.",
+  "According to its maker, it is there for safety.",
+  "Children put things in their mouths. And a pen cap is small enough to fit.",
+  "A cap that gets inhaled can block the airway.",
+  "A twenty twenty-four case report described three children who inhaled pen caps.",
+  "Since nineteen ninety-one, the classic Bic Cristal cap has had a tiny hole.",
+  "The point is to reduce the risk of suffocation if the cap is inhaled.",
+  "Our reading: it is a tiny air path.",
+  "If the cap gets stuck, some air may still pass.",
+  "There is even an international standard on pen caps and asphyxiation. I S O eleven five forty.",
+  "We read only its title and scope.",
+  "The hole reduces the risk. It is not a promise.",
+  "Keep small caps away from little kids."
+ ],
+ "beats": [
+  {
+   "from": 0,
+   "to": 1,
+   "img": "s12-cap-macro",
+   "src": "images/s12-cap-macro.jpg",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "z": 1.2,
+   "ox": "50%",
+   "oy": "50%",
+   "labels": [
+    {
+     "p": 0,
+     "t": "WHY IS THERE A HOLE\nIN THE PEN CAP?"
+    }
+   ]
+  },
+  {
+   "from": 2,
+   "to": 3,
+   "img": "s12-cap-light",
+   "src": "images/s12-cap-light.jpg",
+   "tag": "Illustrative image",
+   "kb": "left",
+   "z": 1.5,
+   "ox": "50%",
+   "oy": "50%",
+   "labels": [
+    {
+     "p": 3,
+     "t": "THE MAKER SAYS: SAFETY"
+    }
+   ]
+  },
+  {
+   "from": 4,
+   "to": 5,
+   "img": "s12-cap-palm",
+   "src": "images/s12-cap-palm.jpg",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "z": 1.4,
+   "ox": "50%",
+   "oy": "50%"
+  },
+  {
+   "from": 6,
+   "to": 6,
+   "img": "s12-pens-cup",
+   "src": "images/s12-pens-cup.jpg",
+   "tag": "Illustrative image",
+   "kb": "right",
+   "z": 1.5,
+   "ox": "50%",
+   "oy": "50%",
+   "labels": [
+    {
+     "p": 6,
+     "t": "2024 CASE REPORT: 3 CHILDREN",
+     "s": "SAGE Open Medical Case Reports"
+    }
+   ],
+   "stamps": [
+    {
+     "p": 6,
+     "t": "DOCUMENTED",
+     "s": "case report",
+     "c": "teal"
+    }
+   ]
+  },
+  {
+   "from": 7,
+   "to": 8,
+   "img": "s12-cap-macro",
+   "src": "images/s12-cap-macro.jpg",
+   "tag": "Illustrative image",
+   "kb": "left",
+   "z": 1.8,
+   "ox": "50%",
+   "oy": "50%",
+   "labels": [
+    {
+     "p": 7,
+     "t": "SINCE 1991: A TINY HOLE",
+     "s": "Wikipedia, citing Fletcher (2006)"
+    },
+    {
+     "p": 8,
+     "t": "REDUCES THE RISK OF SUFFOCATION"
+    }
+   ]
+  },
+  {
+   "from": 9,
+   "to": 10,
+   "img": "s12-cap-light",
+   "src": "images/s12-cap-light.jpg",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "z": 1.6,
+   "ox": "50%",
+   "oy": "50%",
+   "labels": [
+    {
+     "p": 9,
+     "t": "OUR READING: AN INFERENCE"
+    }
+   ]
+  },
+  {
+   "from": 11,
+   "to": 12,
+   "img": "s12-writing",
+   "src": "images/s12-writing.jpg",
+   "tag": "Illustrative image",
+   "kb": "right",
+   "z": 1.4,
+   "ox": "50%",
+   "oy": "50%",
+   "labels": [
+    {
+     "p": 11,
+     "t": "ISO 11540:2021",
+     "s": "we read only the title and scope"
+    }
+   ]
+  },
+  {
+   "from": 13,
+   "to": 14,
+   "img": "s12-cap-palm",
+   "src": "images/s12-cap-palm.jpg",
+   "tag": "Illustrative image",
+   "kb": "left",
+   "z": 1.5,
+   "ox": "50%",
+   "oy": "50%",
+   "labels": [
+    {
+     "p": 13,
+     "t": "REDUCES THE RISK,\nNOT A GUARANTEE"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,161 @@
+{
+ "id": "SHORT-11",
+ "title": "Does the US pay you at 100?",
+ "voice": "am_liam",
+ "speed": 1.03,
+ "music": "em-curious",
+ "words": true,
+ "audio": "public/audio/SHORT-11.wav",
+ "timing": "src/episodes/SHORT-11.timing.json",
+ "pronounce": {
+  "Centenarians": "sˌɛntənˈɛɹiənz"
+ },
+ "fin": {
+  "img": "s11-irish-letter",
+  "src": "images/s11-irish-letter.jpg",
+  "big": "Illustrative images. Not an official document.",
+  "small": "Sources: whitehouse.gov/greetings; PolitiFact (21 Feb 2025); Marketplace (20 Feb 2025); Irish Dept. of Foreign Affairs (dfa.ie); Irish Times; IrishCentral (2024)"
+ },
+ "parts": [
+  "Does the United States pay you at one hundred?",
+  "No. Ireland does.",
+  "The federal government has no hundredth-birthday payment that we could find.",
+  "The closest thing is a White House greeting.",
+  "But it is not automatic. Someone has to request it.",
+  "In February twenty twenty-five, a viral chart suggested millions of people over one hundred were collecting Social Security.",
+  "Fact-checkers found no evidence of that.",
+  "Being in the database does not mean being paid.",
+  "Now, Ireland.",
+  "Since nineteen forty, Ireland has run a Centenarians' Bounty.",
+  "Today it is a letter signed by the President, plus two thousand five hundred and forty euros.",
+  "In America, you ask for a card.",
+  "In Ireland, they send the money."
+ ],
+ "beats": [
+  {
+   "from": 0,
+   "to": 1,
+   "img": "s11-cake",
+   "src": "images/s11-cake.jpg",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "z": 1.2,
+   "ox": "50%",
+   "oy": "50%",
+   "labels": [
+    {
+     "p": 0,
+     "t": "DOES THE US PAY\nYOU AT 100?"
+    }
+   ]
+  },
+  {
+   "from": 2,
+   "to": 2,
+   "img": "s11-mailbox",
+   "src": "images/s11-mailbox.jpg",
+   "tag": "Illustrative image",
+   "kb": "right",
+   "z": 1.4,
+   "ox": "50%",
+   "oy": "50%",
+   "labels": [
+    {
+     "p": 2,
+     "t": "NO FEDERAL PAYMENT AT 100 FOUND"
+    }
+   ]
+  },
+  {
+   "from": 3,
+   "to": 4,
+   "img": "s11-envelope",
+   "src": "images/s11-envelope.jpg",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "z": 1.5,
+   "ox": "50%",
+   "oy": "50%",
+   "labels": [
+    {
+     "p": 3,
+     "t": "WHITE HOUSE GREETING:\nONLY ON REQUEST",
+     "s": "whitehouse.gov/greetings"
+    }
+   ]
+  },
+  {
+   "from": 5,
+   "to": 7,
+   "img": "s11-records",
+   "src": "images/s11-records.jpg",
+   "tag": "Illustrative image",
+   "kb": "left",
+   "z": 1.5,
+   "ox": "50%",
+   "oy": "50%",
+   "labels": [
+    {
+     "p": 5,
+     "t": "VIRAL CHART, FEB 2025",
+     "s": "PolitiFact, 21 Feb 2025"
+    }
+   ],
+   "stamps": [
+    {
+     "p": 6,
+     "t": "MYTH",
+     "s": "millions of 100+ paid",
+     "c": "orange"
+    }
+   ]
+  },
+  {
+   "from": 8,
+   "to": 10,
+   "img": "s11-irish-letter",
+   "src": "images/s11-irish-letter.jpg",
+   "tag": "Illustrative image",
+   "kb": "in",
+   "z": 1.4,
+   "ox": "50%",
+   "oy": "50%",
+   "labels": [
+    {
+     "p": 9,
+     "t": "IRELAND: CENTENARIANS' BOUNTY\nSINCE 1940",
+     "s": "Irish government sources"
+    },
+    {
+     "p": 10,
+     "t": "€2,540 + THE PRESIDENT'S LETTER"
+    }
+   ],
+   "stamps": [
+    {
+     "p": 10,
+     "t": "DOCUMENTED",
+     "s": "Ireland pays",
+     "c": "teal"
+    }
+   ]
+  },
+  {
+   "from": 11,
+   "to": 12,
+   "img": "s11-cake",
+   "src": "images/s11-cake.jpg",
+   "tag": "Illustrative image",
+   "kb": "right",
+   "z": 1.6,
+   "ox": "50%",
+   "oy": "50%",
+   "labels": [
+    {
+     "p": 12,
+     "t": "IRELAND SENDS THE MONEY"
+    }
+   ]
+  }
+ ]
+}
