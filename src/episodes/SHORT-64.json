@@ -1,0 +1,52 @@
+{
+    "id":  "SHORT-64",
+    "title":  "Is That a Brain Behind God?",
+    "voice":  "am_liam",
+    "speed":  1.03,
+    "pronounce":  {},
+    "music":  "em-curious",
+    "words":  true,
+    "audio":  "public/audio/SHORT-64.wav",
+    "timing":  "src/episodes/SHORT-64.timing.json",
+    "fin":  {
+                "img":  "s64-ceiling-panel",
+                "src":  "images/s64-ceiling-panel.jpg",
+                "big":  "Illustrative images.",
+                "small":  "Sources: Meshberger, JAMA 264 (1990); Suk & Tamargo, Neurosurgery 66 (2010); Condivi, Vita di Michelagnolo Buonarroti (1553). Ceiling photo: Michelangelo, public domain. Simplified illustration."
+            },
+    "parts":  [
+                  "Look at the shape behind God, in Michelangelo's Creation of Adam.",
+                  "In nineteen ninety, a medical journal printed the idea that it is a human brain.",
+                  "The author, Meshberger, read it as God giving Adam intelligence, not only life.",
+                  "In twenty ten, two Johns Hopkins authors, Suk and Tamargo, went further.",
+                  "They saw a brain stem in God's neck, in another panel of the same ceiling.",
+                  "Could a painter know what a brain looks like?",
+                  "His biographer, Condivi, wrote that Michelangelo did so many dissections that he outdid the professionals.",
+                  "Here is the twist.",
+                  "Other authors looked at that same neck, and saw a goiter.",
+                  "Skeptics ask: are we just seeing the man in the moon?",
+                  "Our reading: the brain is a modern idea about the painting. It is not a documented fact.",
+                  "What else do people see on the dollar in your pocket? Full story linked below."
+              ],
+    "beats":  [
+                  { "from": 0, "to": 0, "img": "s64-ceiling-panel", "src": "images/s64-ceiling-panel.jpg", "tag": "Simplified illustration", "kb": "in", "z": 1, "ox": "50%", "oy": "40%",
+                    "labels": [ { "t": "ANATOMY CODE?", "p": 0 } ] },
+                  { "from": 1, "to": 2, "img": "s64-jama-1990", "src": "images/s64-jama-1990.jpg", "tag": "Meshberger, JAMA 264 (1990) · Simplified illustration", "kb": "right", "z": 1.1, "ox": "50%", "oy": "50%",
+                    "labels": [ { "t": "JAMA, 1990", "p": 1 }, { "t": "INTELLIGENCE, NOT ONLY LIFE", "p": 2 } ],
+                    "stamps": [ { "c": "teal", "t": "DOCUMENTED", "p": 1, "s": "The claim was published" } ] },
+                  { "from": 3, "to": 4, "img": "s64-neck-panel", "src": "images/s64-neck-panel.jpg", "tag": "Suk & Tamargo, Neurosurgery 66 (2010) · Simplified illustration", "kb": "in", "z": 1.2, "ox": "50%", "oy": "35%",
+                    "labels": [ { "t": "NEUROSURGERY, 2010", "p": 3 }, { "t": "A BRAIN STEM?", "p": 4 } ] },
+                  { "from": 5, "to": 5, "img": "em025-sistine-real", "src": "photos/em025-sistine-real.jpg", "tag": "Michelangelo, Sistine Chapel ceiling · public domain", "kb": "out", "z": 1.1, "ox": "50%", "oy": "50%",
+                    "labels": [ { "t": "COULD HE KNOW?", "p": 5 } ] },
+                  { "from": 6, "to": 6, "img": "s64-condivi-1553", "src": "images/s64-condivi-1553.jpg", "tag": "Condivi, Vita (1553) · Simplified illustration", "kb": "left", "z": 1.1, "ox": "50%", "oy": "50%",
+                    "labels": [ { "t": "CONDIVI, 1553", "p": 6 } ],
+                    "stamps": [ { "c": "teal", "t": "DOCUMENTED", "p": 6, "s": "One account: his biographer" } ] },
+                  { "from": 7, "to": 9, "img": "s64-neck-panel", "src": "images/s64-neck-panel.jpg", "tag": "Simplified illustration", "kb": "in", "z": 1.3, "ox": "50%", "oy": "35%",
+                    "labels": [ { "t": "THE TWIST", "p": 7 }, { "t": "GOITER?", "p": 8 }, { "t": "PATTERN OR PLAN?", "p": 9 } ] },
+                  { "from": 10, "to": 10, "img": "s64-ceiling-panel", "src": "images/s64-ceiling-panel.jpg", "tag": "Simplified illustration", "kb": "out", "z": 1.2, "ox": "50%", "oy": "40%",
+                    "labels": [ { "t": "OUR READING", "p": 10 } ],
+                    "stamps": [ { "c": "amber", "t": "DISPUTED", "p": 10, "s": "No source of the time mentions a brain" } ] },
+                  { "from": 11, "to": 11, "img": "s64-ceiling-panel", "src": "images/s64-ceiling-panel.jpg", "tag": "Simplified illustration", "kb": "in", "z": 1.2, "ox": "50%", "oy": "40%",
+                    "labels": [ { "t": "THE FULL STORY: VIDEO LINKED BELOW", "p": 11 } ] }
+              ]
+}
