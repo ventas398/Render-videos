@@ -1,0 +1,53 @@
+{
+    "id":  "SHORT-60",
+    "title":  "Why Doesn't Your Salt Need a Date?",
+    "voice":  "am_liam",
+    "speed":  1.03,
+    "pronounce":  {},
+    "music":  "em-curious",
+    "words":  true,
+    "audio":  "public/audio/SHORT-60.wav",
+    "timing":  "src/episodes/SHORT-60.timing.json",
+    "fin":  {
+                "img":  "s60-salt-gum",
+                "src":  "images/s60-salt-gum.jpg",
+                "big":  "Illustrative images.",
+                "small":  "Source: Regulation (EU) No 1169/2011, Annex X (EUR-Lex). Not legal or food safety advice."
+            },
+    "parts":  [
+                  "Your salt does not need a date. Neither does your chewing gum.",
+                  "In Europe, the food labelling law has a list of foods that can skip it.",
+                  "The list includes cooking salt, vinegar and solid sugar.",
+                  "Drinks with ten percent alcohol or more.",
+                  "Bread and pastries that are normally eaten within twenty-four hours.",
+                  "And fresh fruit and vegetables, if they have not been peeled or cut.",
+                  "That last part is the twist.",
+                  "A whole apple needs no date.",
+                  "Our reading: cut it, pack it, and it is off the list. Then the usual date rules apply.",
+                  "One warning. No date does not mean it never goes bad.",
+                  "It only means the law does not ask for one.",
+                  "So why does everything else carry two different dates?",
+                  "The full story is in the video linked below."
+              ],
+    "beats":  [
+                  { "from": 0, "to": 0, "img": "s60-salt-gum", "src": "images/s60-salt-gum.jpg", "tag": "Illustrative image", "kb": "in", "z": 1, "ox": "50%", "oy": "50%",
+                    "labels": [ { "t": "NO DATE NEEDED?", "p": 0 } ] },
+                  { "from": 1, "to": 1, "img": "s60-eu-regulation", "src": "images/s60-eu-regulation.jpg", "tag": "Regulation (EU) No 1169/2011", "kb": "left", "z": 1.1, "ox": "50%", "oy": "50%",
+                    "labels": [ { "t": "EU FOOD LABELLING LAW", "p": 1 } ],
+                    "stamps": [ { "c": "teal", "t": "DOCUMENTED", "p": 1, "s": "Reg. (EU) 1169/2011, Annex X" } ] },
+                  { "from": 2, "to": 3, "img": "s60-salt-vinegar-sugar", "src": "images/s60-salt-vinegar-sugar.jpg", "tag": "Illustrative image", "kb": "right", "z": 1.2, "ox": "50%", "oy": "50%",
+                    "labels": [ { "t": "SALT · VINEGAR · SUGAR", "p": 2 }, { "t": "10 % ALCOHOL OR MORE", "p": 3 } ] },
+                  { "from": 4, "to": 4, "img": "s60-bakery", "src": "images/s60-bakery.jpg", "tag": "Illustrative image", "kb": "in", "z": 1.2, "ox": "50%", "oy": "50%",
+                    "labels": [ { "t": "EATEN WITHIN 24 H", "p": 4 } ] },
+                  { "from": 5, "to": 7, "img": "s60-fruit-stall", "src": "images/s60-fruit-stall.jpg", "tag": "Illustrative image", "kb": "left", "z": 1.2, "ox": "50%", "oy": "50%",
+                    "labels": [ { "t": "NOT PEELED, NOT CUT", "p": 5 }, { "t": "THE TWIST", "p": 6 }, { "t": "WHOLE APPLE: NO DATE", "p": 7 } ] },
+                  { "from": 8, "to": 8, "img": "s60-cut-apple-tray", "src": "images/s60-cut-apple-tray.jpg", "tag": "Illustrative image", "kb": "in", "z": 1.2, "ox": "50%", "oy": "50%",
+                    "labels": [ { "t": "CUT AND PACKED: OFF THE LIST", "p": 8 } ],
+                    "stamps": [ { "c": "orange", "t": "OUR READING", "p": 8, "s": "Annex X: 'not peeled, cut or similarly treated'" } ] },
+                  { "from": 9, "to": 10, "img": "s60-eu-regulation", "src": "images/s60-eu-regulation.jpg", "tag": "Regulation (EU) No 1169/2011", "kb": "out", "z": 1.2, "ox": "50%", "oy": "50%",
+                    "labels": [ { "t": "NO DATE ≠ NEVER SPOILS", "p": 9 }, { "t": "THE LAW DOES NOT ASK", "p": 10 } ],
+                    "stamps": [ { "c": "teal", "t": "DOCUMENTED", "p": 10, "s": "Reg. (EU) 1169/2011, Annex X" } ] },
+                  { "from": 11, "to": 12, "img": "s60-two-dates", "src": "images/s60-two-dates.jpg", "tag": "Illustrative image", "kb": "in", "z": 1.2, "ox": "50%", "oy": "50%",
+                    "labels": [ { "t": "BEST BEFORE / USE BY", "p": 11 }, { "t": "THE FULL STORY: VIDEO LINKED BELOW", "p": 12 } ] }
+              ]
+}
