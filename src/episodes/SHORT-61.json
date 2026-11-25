@@ -1,0 +1,30 @@
+{
+    "id":  "SHORT-61",
+    "title":  "Why Is the Dollar Green?",
+    "voice":  "am_liam",
+    "speed":  1.03,
+    "pronounce":  {},
+    "music":  "em-curious",
+    "words":  true,
+    "audio":  "public/audio/SHORT-61.wav",
+    "timing":  "src/episodes/SHORT-61.timing.json",
+    "fin":  {
+                "big":  "Simplified illustrations.",
+                "small":  "Sources: Bank of Canada Museum (2019); U.S. Currency Education Program, History; U.S. BEP, Currency FAQs"
+            },
+    "parts":  [
+                  "The ink that may explain the green dollar was invented in Canada.",
+                  "In eighteen fifty-seven, a chemist in Quebec, Thomas Sterry Hunt, got a request.",
+                  "The president of a Montreal bank wanted an ink to stop forgers.",
+                  "Hunt made a green tint from chromium oxide.",
+                  "It was called Canada Bank Note Tint.",
+                  "Here is the twist.",
+                  "That summer, the bankers' group against forgery did not recommend it.",
+                  "Other chemists found ways to remove it.",
+                  "Four years later, U.S. printers used green anyway.",
+                  "The new notes had green backs. People called them greenbacks.",
+                  "The U.S. Bureau of Engraving later wrote that green ink was believed to beat forgers with cameras.",
+                  "But it also says no definite explanation can be made for the original choice.",
+                  "Our reading: the best clue to America's green is a Canadian lab."
+              ]
+}
