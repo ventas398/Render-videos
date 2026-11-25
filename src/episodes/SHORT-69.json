@@ -1,0 +1,34 @@
+{
+    "id":  "SHORT-69",
+    "title":  "Why Was Purple the Color of Kings?",
+    "voice":  "am_liam",
+    "speed":  1.03,
+    "pronounce":  {
+                      "quinine":  "kwˈaɪnaɪn",
+                      "mauve":  "mˈoʊv",
+                      "Perkin":  "pˈɜɹkɪn"
+                  },
+    "music":  "em-curious",
+    "words":  true,
+    "audio":  "public/audio/SHORT-69.wav",
+    "timing":  "src/episodes/SHORT-69.timing.json",
+    "fin":  {
+                "big":  "Simplified illustrations. Facts checked against museum sources.",
+                "small":  "Sources: Science History Institute, William Henry Perkin biography; Science and Industry Museum (UK), World's first synthetic dye"
+            },
+    "parts":  [
+                  "Purple was the color of emperors. Then a teenager brewed a new purple by mistake.",
+                  "Stay to hear what he was really trying to make.",
+                  "For centuries, the best purple came from sea snails.",
+                  "It took thousands, so emperors and the very rich wore it.",
+                  "In eighteen fifty six, an eighteen year old chemist ran a test over Easter.",
+                  "His name was William Perkin.",
+                  "He was not after a color. He wanted quinine, the malaria medicine from tree bark.",
+                  "The test failed and left a black mess. But that mess hid a surprise.",
+                  "He cleaned it with alcohol, and the liquid turned a deep purple.",
+                  "It dyed silk. He named the color mauve.",
+                  "It was the first synthetic dye to sell. A year later, he had a factory.",
+                  "Made from coal tar, not snails.",
+                  "Our reading: a failed cure made purple common. Follow for tomorrow's mystery."
+              ]
+}
