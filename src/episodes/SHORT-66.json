@@ -1,0 +1,30 @@
+{
+    "id":  "SHORT-66",
+    "title":  "Why Do Grapes Spark in a Microwave?",
+    "voice":  "am_liam",
+    "speed":  1.03,
+    "pronounce":  {},
+    "music":  "em-curious",
+    "words":  true,
+    "audio":  "public/audio/SHORT-66.wav",
+    "timing":  "src/episodes/SHORT-66.timing.json",
+    "fin":  {
+                "big":  "Simplified illustrations. Do not try this at home.",
+                "small":  "Source: Khattak, Bianucci & Slepkov, PNAS 116 (2019)"
+            },
+    "parts":  [
+                  "Cut a grape almost in half, put it in a microwave, and it can spark a tiny ball of plasma.",
+                  "Do not try this. Stay for the real reason: the famous one is wrong.",
+                  "The trick has been online for over twenty years.",
+                  "The famous story? The thin strip of skin joining the halves acts like a tiny antenna.",
+                  "In twenty nineteen, three physicists in Canada tested it.",
+                  "They used two whole grapes. No skin bridge. They still sparked.",
+                  "Then they swapped the grapes for beads of water gel. Same thing.",
+                  "Not the skin, then. The real culprit hides inside every grape.",
+                  "It is the water.",
+                  "A grape-sized ball of water traps the microwaves inside it.",
+                  "Put two together, and the energy piles up where they touch.",
+                  "That tiny hotspot is where the plasma is born.",
+                  "Follow for tomorrow's mystery: what recycling arrows really mean."
+              ]
+}
