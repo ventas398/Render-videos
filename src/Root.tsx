@@ -57,6 +57,7 @@ import { SHORT_FRAMES, ShortVertical } from "./compositions/ShortVertical";
 import { Short08v2, SHORT08V2_FRAMES } from "./compositions/Short08v2";
 import { COVERS, SHORTS, ShortCover, ShortGeneric, shortFrames } from "./compositions/ShortGeneric";
 import { VIDEO } from "./themes/brand";
+import { Short64A, SHORT64A } from "./compositions/Short64A";
 import { AnimPilot } from "./compositions/Pilot";
 import { BallPilot } from "./compositions/BallPilot";
 import { ColorPrototype, COLOR_PROTOTYPE_FRAMES } from "./compositions/ColorPrototype";
@@ -301,6 +302,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition id="ThumbEM002" component={ThumbEM002} durationInFrames={1} fps={VIDEO.fps} width={1280} height={720} />
       <Composition id="ChannelMockup" component={ChannelMockup} durationInFrames={1} fps={VIDEO.fps} width={1840} height={1080} />
       <Composition id="Pieces058" component={Pieces058} durationInFrames={PIECES058_FRAMES} fps={VIDEO.fps} width={VIDEO.width} height={VIDEO.height} />
+      <Composition id="SHORT-64A" component={Short64A} durationInFrames={Math.round(SHORT64A.seconds * SHORT64A.fps)} fps={SHORT64A.fps} width={1080} height={1920} />
     </>
   );
 };

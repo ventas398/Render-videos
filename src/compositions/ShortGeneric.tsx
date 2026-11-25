@@ -201,12 +201,13 @@ const POP = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
 export const WordGroup: React.FC<{ ws: { w: string; f: number }[]; frames: number }> = ({ ws, frames }) => {
   const f = useCurrentFrame();
   const act = ws.reduce((a, x, i) => (f >= x.f ? i : a), 0);
-  const o = interpolate(f, [0, 2, frames - 2, frames], [0, 1, 1, 0], POP);
+  const e = Math.min(2, Math.floor((frames - 1) / 2)); // grupos de <=4 fotogramas: rango siempre creciente
+  const o = e < 1 ? 1 : interpolate(f, [0, e, frames - e, frames], [0, 1, 1, 0], POP);
   const longest = Math.max(...ws.map((x) => x.w.length));
   const fs = Math.min(104, Math.floor(860 / (longest * 0.72))); // una palabra larga (HUNDREDTH-BIRTHDAY) nunca se sale del cuadro
   return (
     <div style={{ position: "absolute", left: 60, right: 130, top: 1262, height: 300, display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center", fontFamily: theme.font, fontWeight: 900, fontSize: fs, lineHeight: 1.08, textTransform: "uppercase", textWrap: "balance", WebkitTextStroke: `9px ${NAVY}`, paintOrder: "stroke fill", textShadow: `0 6px 18px ${NAVY}`, opacity: o }}>
-      <div>{ws.map((x, i) => <span key={i} style={{ display: "inline-block", marginRight: i < ws.length - 1 ? 36 : 0, whiteSpace: "nowrap", color: i === act ? YEL : "#fff", transform: i === act ? `scale(${interpolate(f - x.f, [0, 3], [0.9, 1.08], POP)})` : "scale(1)" }}>{x.w}</span>)}</div>
+      <div>{ws.map((x, i) => <span key={i} style={{ display: "inline-block", marginRight: i < ws.length - 1 ? 36 : 0, whiteSpace: "nowrap", color: i === act ? YEL : "#fff", transform: i === act ? `scale(${interpolate(f - x.f, [0, 3], [0.9, Math.min(1.08, 1 + 36 / (x.w.length * fs * 0.72))], POP)})` : "scale(1)" }}>{x.w}</span>)}</div>
     </div>
   );
 };
@@ -335,7 +336,22 @@ export const wordGroups = (t: Timing) => {
     const nxt = gs[k + 1]?.[0].s ?? Infinity;
     const to = Math.round(Math.min(nxt - 0.02, g[g.length - 1].e + 0.35) * fps);
     return { from, dur: Math.max(to - from, 6), ws: g.map((x) => ({ w: x.w, f: Math.round(x.s * fps) - from })) };
-  });
+  }).flatMap(twoLines);
+};
+// 17/11 (LOTE-HF): un grupo nunca pasa de 2 lineas. Misma cuenta de ancho que WordGroup (caja 890 px, 36 px entre palabras, 0,75 por margen).
+type WG = { from: number; dur: number; ws: { w: string; f: number }[] };
+const wgLines = (ws: { w: string }[]) => {
+  const fs = Math.min(104, Math.floor(860 / (Math.max(...ws.map((x) => x.w.length)) * 0.72)));
+  let n = 1, x = 0;
+  for (const { w } of ws) { const wd = w.length * fs * 0.75; if (x && x + 36 + wd > 890) { n++; x = wd; } else x += (x ? 36 : 0) + wd; }
+  return n;
+};
+const twoLines = (g: WG): WG[] => {
+  let k = g.ws.length;
+  while (k > 1 && wgLines(g.ws.slice(0, k)) > 2) k--;
+  if (k === g.ws.length) return [g];
+  const cut = g.ws[k].f - 1;
+  return [{ from: g.from, dur: cut, ws: g.ws.slice(0, k) }, ...twoLines({ from: g.from + cut, dur: g.dur - cut, ws: g.ws.slice(k).map((x) => ({ ...x, f: x.f - cut })) })];
 };
 
 const MOV_DIRS: MotionDir[] = ["left", "right", "up"];
