@@ -1,0 +1,31 @@
+{
+    "id":  "SHORT-73",
+    "title":  "Why Do We Clink Glasses Before Drinking?",
+    "voice":  "am_liam",
+    "speed":  1.03,
+    "pronounce":  {
+                      "Falstaff":  "fˈɔːlstæf"
+                  },
+    "music":  "em-curious",
+    "words":  true,
+    "audio":  "public/audio/SHORT-73.wav",
+    "timing":  "src/episodes/SHORT-73.timing.json",
+    "fin":  {
+                "big":  "Simplified illustrations. No theory of the clink is proven.",
+                "small":  "Sources: NPR, 'Why We Toast' (2012), quoting historian Paul Dickson; EHL Hospitality Insights, 'The origin of the toast'; Toastmaster magazine, 'A Historical Odyssey' (Dec 2018); Shakespeare, The Merry Wives of Windsor."
+            },
+    "parts":  [
+                  "Why do we clink glasses before we drink?",
+                  "Stay for the poison story, and why even a historian of toasts can't confirm it.",
+                  "Drinking to someone's health is ancient.",
+                  "One historian points to Homer, where Ulysses drinks to the health of Achilles.",
+                  "The word toast is stranger. People once dropped a piece of toasted bread into their wine.",
+                  "Shakespeare's Falstaff orders a quart of sack and says: put a toast in it.",
+                  "But the clink itself is much harder to explain than the drink.",
+                  "The famous answer: the clink splashed wine between cups, so nobody dared poison you.",
+                  "A hospitality school says there is no evidence for it.",
+                  "And that historian's research can't confirm it either.",
+                  "Other guesses: the ring scared off evil spirits, or it let your ears join in.",
+                  "Our reading: every answer is still a guess. Subscribe for the next one."
+              ]
+}
