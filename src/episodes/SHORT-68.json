@@ -1,0 +1,33 @@
+{
+    "id":  "SHORT-68",
+    "title":  "Does Hot Water Really Freeze Faster?",
+    "voice":  "am_liam",
+    "speed":  1.03,
+    "pronounce":  {
+                      "Mpemba":  "əmpˈɛmbə",
+                      "Erasto":  "ɛɹˈæstoʊ"
+                  },
+    "music":  "em-curious",
+    "words":  true,
+    "audio":  "public/audio/SHORT-68.wav",
+    "timing":  "src/episodes/SHORT-68.timing.json",
+    "fin":  {
+                "big":  "Simplified illustrations. The case is still disputed.",
+                "small":  "Sources: Burridge \u0026 Linden, Scientific Reports 6:37665 (2016); Jeng, American Journal of Physics 74:514 (2006); Mpemba \u0026 Osborne, Physics Education 4:172 (1969)"
+            },
+    "parts":  [
+                  "Hot water or cold water. Which one freezes first?",
+                  "Stay to the end. The answer may hide in one centimeter.",
+                  "In the nineteen sixties, a Tanzanian schoolboy was making ice cream.",
+                  "Short on freezer space, he put his mix in still boiling.",
+                  "A classmate\u0027s cooler mix went in too.",
+                  "Ninety minutes later, his had frozen. The other had not.",
+                  "His name: Erasto Mpemba. The puzzle is named after him.",
+                  "Aristotle wrote about it too. But the real twist is the thermometer.",
+                  "In twenty sixteen, two scientists in England tested water with great care.",
+                  "No evidence of a real head start for hot water.",
+                  "The catch? Misplace the thermometer by one centimeter, and the data can mimic the effect.",
+                  "Others say the real test is full freezing. The case stays open.",
+                  "Our reading: don\u0027t bet your ice cubes on it. Next: why purple was for kings."
+              ]
+}
