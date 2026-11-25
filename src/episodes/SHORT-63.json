@@ -1,0 +1,28 @@
+{
+    "id":  "SHORT-63",
+    "title":  "Who Is the Sell-By Date Really For?",
+    "voice":  "am_liam",
+    "speed":  1.03,
+    "pronounce":  {},
+    "music":  "em-curious",
+    "words":  true,
+    "audio":  "public/audio/SHORT-63.wav",
+    "timing":  "src/episodes/SHORT-63.timing.json",
+    "fin":  {
+                "big":  "Simplified illustrations. Not food safety advice.",
+                "small":  "Sources: UK government (Defra), press release, 15 Sep 2011; Food Standards Agency; Marks & Spencer history (company account, via MyLearning)"
+            },
+    "parts":  [
+                  "Sell by. Display until. Those dates are not really written for you.",
+                  "In twenty eleven, the British government said it in plain words.",
+                  "Sell-by and display-until labels are used for stock rotation.",
+                  "In other words, they help the shop sell the older packs first.",
+                  "And the government asked for them to be removed, to avoid shopper confusion.",
+                  "So which dates are meant for you?",
+                  "Use by, for food that could become unsafe after that date.",
+                  "And best before, which is about quality.",
+                  "But Marks and Spencer first used date codes in nineteen seventy, one account says, several years before they were compulsory.",
+                  "Our reading: the date started as a tool for the shop, and only later became a tool for you.",
+                  "So why does one tin carry a code no shopper can read? The full story is in the video linked below."
+              ]
+}
