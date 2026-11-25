@@ -1,0 +1,27 @@
+{
+    "id":  "SHORT-80",
+    "title":  "Why Do Golf Balls Have Dimples?",
+    "voice":  "am_liam",
+    "speed":  1.03,
+    "music":  "em-curious",
+    "words":  true,
+    "audio":  "public/audio/SHORT-80.wav",
+    "timing":  "src/episodes/SHORT-80.timing.json",
+    "fin":  {
+                "big":  "Illustrative images.",
+                "small":  "Sources: J. Choi, W.-P. Jeon, H. Choi, Physics of Fluids 18, 041702, 2006; N. Beratlis, E. Balaras and K. Squires, Journal of Fluid Mechanics 879, 2019; W. Taylor, US Patent 878,254, 1908; Wikipedia, 'Golf ball'."
+            },
+    "parts":  [
+                  "Little dents can cut a test ball's air drag in half. How can rough beat smooth?",
+                  "Stay for the odd thing dents do to air.",
+                  "In the eighteen hundreds, a new golf ball was molded from rubbery tree sap.",
+                  "The usual story: scuffed old balls flew more steadily than smooth new ones.",
+                  "So, the story goes, makers began marking new balls on purpose.",
+                  "But why would damage help?",
+                  "In 1906, English engineer William Taylor filed a US patent for shallow round hollows, evenly spread.",
+                  "Here is why. Dimples stir up the thin layer of air hugging the ball.",
+                  "Stirred air clings longer, so the wake behind shrinks, and so does drag.",
+                  "It's well established: on a sphere, dimples can cut drag by more than half, at certain speeds.",
+                  "So at those speeds, rough wins: the air holds on longer. Subscribe for the next one."
+              ]
+}

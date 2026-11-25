@@ -1,0 +1,28 @@
+{
+    "id":  "SHORT-75",
+    "title":  "How Does Your Phone Know Where You Are?",
+    "voice":  "am_liam",
+    "speed":  1.03,
+    "music":  "em-curious",
+    "words":  true,
+    "audio":  "public/audio/SHORT-75.wav",
+    "timing":  "src/episodes/SHORT-75.timing.json",
+    "fin":  {
+                "big":  "Simplified illustrations. Not to scale.",
+                "small":  "Sources: NASA, 'Global Positioning System (GPS)'; NASA Space Place, 'How Does GPS Work?'; N. Ashby, 'Relativity in the Global Positioning System', Living Reviews in Relativity (2003); N. Ashby, 'Relativity and the Global Positioning System', Physics Today 55(5), 2002."
+            },
+    "parts":  [
+                  "GPS satellites have no idea where your phone is.",
+                  "Stay for the clock trick, and why it takes four satellites.",
+                  "Over thirty GPS satellites circle Earth, about twenty thousand kilometers up.",
+                  "Each one broadcasts its position and the exact time.",
+                  "For GPS, your phone just listens, and times how late each signal arrives.",
+                  "But there is a catch: a clock.",
+                  "Those signals cover about three hundred meters in a millionth of a second.",
+                  "Your phone's clock is never quite in step with theirs.",
+                  "So it takes four satellites: three answers for where you are, one for the clock.",
+                  "Then comes Einstein. Up that high, clocks tick faster, mostly because gravity is weaker.",
+                  "Engineers slow them before launch. Skip that, and errors grow by kilometers a day.",
+                  "Our reading: your phone doesn't find you, it solves for you. Subscribe for the next one."
+              ]
+}

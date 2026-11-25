@@ -1,0 +1,28 @@
+{
+    "id":  "SHORT-74",
+    "title":  "Is Lip Balm Secretly Addictive?",
+    "voice":  "am_liam",
+    "speed":  1.03,
+    "music":  "em-curious",
+    "words":  true,
+    "audio":  "public/audio/SHORT-74.wav",
+    "timing":  "src/episodes/SHORT-74.timing.json",
+    "fin":  {
+                "big":  "Simplified illustrations. General information, not medical advice.",
+                "small":  "Sources: Cleveland Clinic, '7 Signs Your Lip Balm Use Is Just a Bad Habit' (Dr. Melissa Piliang); McGill Office for Science and Society, 'Is lip balm addictive?'; Museum of Hoaxes, 'Is Lip Balm Addictive?'."
+            },
+    "parts":  [
+                  "Does lip balm make you need more lip balm?",
+                  "Stay for the glass rumor, and what a dermatologist says really happens.",
+                  "Plenty of people feel hooked on it.",
+                  "So the rumors started.",
+                  "One old rumor says a balm is mixed with ground-up fiberglass, to irritate your lips.",
+                  "Another says it blocks moisture sensors in your lips.",
+                  "Neither is true. The real story is less dramatic, and a bit more annoying.",
+                  "A Cleveland Clinic dermatologist says ingredients like phenol, menthol and salicylic acid can make lips drier.",
+                  "So you apply more, and it becomes a vicious cycle.",
+                  "Is it addiction? Not in the physiological sense, she says. But it can be habit-forming.",
+                  "Licking your lips dries them out too, and a tasty balm makes that tempting.",
+                  "Our reading: a habit loop, not a trap. Subscribe for the next one."
+              ]
+}

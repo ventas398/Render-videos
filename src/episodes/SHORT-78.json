@@ -1,0 +1,27 @@
+{
+    "id":  "SHORT-78",
+    "title":  "Why Do Bottle Caps Have Teeth?",
+    "voice":  "am_liam",
+    "speed":  1.03,
+    "music":  "em-curious",
+    "words":  true,
+    "audio":  "public/audio/SHORT-78.wav",
+    "timing":  "src/episodes/SHORT-78.timing.json",
+    "fin":  {
+                "big":  "Illustrative images.",
+                "small":  "Sources: W. Painter, US Patent 468,258, 'Bottle-Sealing Device', 2 Feb 1892; Wikipedia, 'Bottle cap' (24 and 21 teeth)."
+            },
+    "parts":  [
+                  "Count the teeth on a metal bottle cap. The standard one has twenty-one.",
+                  "Stay to the end for what those teeth have to do with your bottle opener.",
+                  "In 1892, William Painter of Baltimore patented a metal cap for bottles.",
+                  "Glass necks back then were never quite the same width.",
+                  "So he folded the cap's edge into ridges, like a tiny accordion.",
+                  "His patent says the ridges let one cap fit bottles of different widths.",
+                  "But was it always twenty-one?",
+                  "No. His first caps had twenty-four. Today's standard is twenty-one.",
+                  "Why the change? We found no engineering test that settles it.",
+                  "And the opener? The same patent says each ridge leaves an edge for an opener to hook. He was planning it already.",
+                  "Our reading: those teeth aren't decoration. They hold the seal on and give your opener its grip. Subscribe for the next one."
+              ]
+}

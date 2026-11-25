@@ -1,0 +1,27 @@
+{
+    "id":  "SHORT-79",
+    "title":  "Why Did Soda Can Rings Disappear?",
+    "voice":  "am_liam",
+    "speed":  1.03,
+    "music":  "em-curious",
+    "words":  true,
+    "audio":  "public/audio/SHORT-79.wav",
+    "timing":  "src/episodes/SHORT-79.timing.json",
+    "fin":  {
+                "big":  "Illustrative images.",
+                "small":  "Sources: E. C. Fraze, US Patent 3,255,917, 1966; D. F. Cudzik / Reynolds Metals, US Patent 3,836,038 'Easy-open wall', 1974; Wikipedia, 'Drink can'."
+            },
+    "parts":  [
+                  "Old soda cans had a ring you pulled clean off. Today the tab stays on. Why?",
+                  "Stay to the end for the reason written in the patent itself.",
+                  "In 1963, Ermal Fraze of Ohio filed a patent: a tab riveted to a strip of the lid.",
+                  "You pulled, and the whole strip came off in your hand.",
+                  "Then that sharp little strip had to go somewhere.",
+                  "So why did the ring disappear?",
+                  "In 1972, Daniel Cudzik at Reynolds Metals filed a new design.",
+                  "You lift the tab, it pushes the panel inside, and nothing comes off the can.",
+                  "His patent says why: tossed strips were a litter problem, and barefoot people on beaches got serious cuts.",
+                  "Who had the idea first is still argued. This patent shows what it was meant to fix.",
+                  "Our reading: that tab is a safety fix you use every day. Subscribe for the next one."
+              ]
+}

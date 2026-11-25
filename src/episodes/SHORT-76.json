@@ -1,0 +1,27 @@
+{
+    "id":  "SHORT-76",
+    "title":  "What Is Hidden Inside Your Phone?",
+    "voice":  "am_liam",
+    "speed":  1.03,
+    "music":  "em-curious",
+    "words":  true,
+    "audio":  "public/audio/SHORT-76.wav",
+    "timing":  "src/episodes/SHORT-76.timing.json",
+    "fin":  {
+                "big":  "Simplified illustrations. Not to scale.",
+                "small":  "Sources: USGS, 'Ordinary Minerals Give Smartphones Extraordinary Capabilities' (2017); ITU and UNITAR, Global E-waste Monitor 2024."
+            },
+    "parts":  [
+                  "Your phone may hold a tiny piece of a mine in Congo.",
+                  "Stay for the numbers on how little old electronics give back.",
+                  "US government geologists listed the minerals behind a smartphone.",
+                  "Neodymium, a rare earth, goes into the magnets for the speaker and the buzz.",
+                  "Indium makes the touchscreen coating conduct. Gallium goes into some screen backlights.",
+                  "But two more ingredients take you across three continents.",
+                  "Lithium, often from Australia, Chile or Argentina. Tantalum, mostly from Congo, Rwanda and Brazil.",
+                  "Old shoebox phones used twenty-five to thirty elements. Today's, many more.",
+                  "In 2022, under a quarter of the world's electronic waste was documented as properly recycled.",
+                  "And recycled e-waste covers at most one percent of rare earth demand.",
+                  "Our reading: the old phone in your drawer is a tiny mine. Subscribe for the next one."
+              ]
+}

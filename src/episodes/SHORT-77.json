@@ -1,0 +1,27 @@
+{
+    "id":  "SHORT-77",
+    "title":  "Why Do Photos of You Look Wrong?",
+    "voice":  "am_liam",
+    "speed":  1.03,
+    "music":  "em-curious",
+    "words":  true,
+    "audio":  "public/audio/SHORT-77.wav",
+    "timing":  "src/episodes/SHORT-77.timing.json",
+    "fin":  {
+                "big":  "Illustrative images.",
+                "small":  "Sources: Mita, Dermer and Knight, J. Personality and Social Psychology 35(8), 1977; Amestoy et al., Frontiers in Psychology 1:39, 2010."
+            },
+    "parts":  [
+                  "The face you see in the mirror is not the face your friends see.",
+                  "Stay to the end for the numbers, and the leading idea behind them.",
+                  "A mirror flips you left to right.",
+                  "And no face is perfectly symmetrical, so the flipped one really looks different.",
+                  "In 1977, researchers tested which version of their own face people liked: normal or flipped.",
+                  "People tended to pick the flipped one. Their friends, the normal one.",
+                  "But why would your own friends disagree with you?",
+                  "In 2010, a team in Bordeaux tested it with thirty-eight adults. Seventy-one percent preferred their mirror face.",
+                  "And seventy-six percent preferred the normal photo of their friend.",
+                  "Leading idea: we prefer what we see most. You see your mirror face. They don't.",
+                  "Our reading: maybe that photo isn't wrong. It's just unfamiliar. Subscribe for the next one."
+              ]
+}
