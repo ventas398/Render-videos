@@ -1,0 +1,32 @@
+{
+    "id":  "SHORT-70",
+    "title":  "Why Does an Hour Have 60 Minutes?",
+    "voice":  "am_liam",
+    "speed":  1.03,
+    "pronounce":  {
+                      "Biruni":  "bɪɹˈuːni",
+                      "Sumer":  "sˈuːməɹ"
+                  },
+    "music":  "em-curious",
+    "words":  true,
+    "audio":  "public/audio/SHORT-70.wav",
+    "timing":  "src/episodes/SHORT-70.timing.json",
+    "fin":  {
+                "big":  "Simplified illustrations. Facts checked against published histories.",
+                "small":  "Sources: O. Neugebauer, The Exact Sciences in Antiquity (1969); al-Biruni, The Chronology of Ancient Nations (Sachau transl., 1879)"
+            },
+    "parts":  [
+                  "Why does an hour have sixty minutes, not a hundred? Blame people from four thousand years ago.",
+                  "Stay to hear what the word second really means.",
+                  "In ancient Sumer, in what is now Iraq, people counted in sixties.",
+                  "Babylon kept it for math and the stars.",
+                  "Why sixty? Nobody is sure. But sixty splits cleanly into halves, thirds, quarters, fifths and sixths.",
+                  "But here is the odd part. The first known split of the hour into sixty came much later.",
+                  "Around the year one thousand, the scholar al Biruni split hours into minutes and seconds.",
+                  "Then he kept going, into thirds and fourths.",
+                  "In Latin, a minute was the first small part.",
+                  "And a second was the second small part. That is the whole name.",
+                  "One historian credits a later scholar with making it a system.",
+                  "Our reading: your phone still counts time like Babylon. Subscribe for the next one."
+              ]
+}
