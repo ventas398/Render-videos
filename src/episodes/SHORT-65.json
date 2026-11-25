@@ -1,0 +1,30 @@
+{
+    "id":  "SHORT-65",
+    "title":  "Why Can You Feel Wet With No Water?",
+    "voice":  "am_liam",
+    "speed":  1.03,
+    "pronounce":  {},
+    "music":  "em-curious",
+    "words":  true,
+    "audio":  "public/audio/SHORT-65.wav",
+    "timing":  "src/episodes/SHORT-65.timing.json",
+    "fin":  {
+                "big":  "Simplified illustrations.",
+                "small":  "Sources: Filingeri et al., J Neurophysiol 112 (2014); Filingeri et al., J Appl Physiol 117 (2014)"
+            },
+    "parts":  [
+                  "Your skin has no sensor for wet. Not one.",
+                  "So how do you know your sock is wet? Stay for the dry test that fooled volunteers.",
+                  "Researchers at Loughborough University say your brain works it out.",
+                  "It mixes two signals: cold, and touch.",
+                  "Volunteers touched equal drops of water at different temperatures.",
+                  "Cold and wet felt the wettest. Warm and wet felt less wet.",
+                  "Same water. But the strangest test used no water at all.",
+                  "Just a dry probe, fifteen degrees Celsius colder than the skin.",
+                  "Nothing wet touched them. Some volunteers still felt wet.",
+                  "Dull the nerves for cold and touch, and the wet feeling fades.",
+                  "Their model: wet is not something your skin measures. It is your brain's best guess.",
+                  "So that damp feeling may just be a guess.",
+                  "Follow for tomorrow's mystery: why grapes spark in a microwave."
+              ]
+}
