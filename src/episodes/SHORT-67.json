@@ -1,0 +1,30 @@
+{
+    "id":  "SHORT-67",
+    "title":  "What Do Recycling Arrows Really Mean?",
+    "voice":  "am_liam",
+    "speed":  1.03,
+    "pronounce":  {},
+    "music":  "em-curious",
+    "words":  true,
+    "audio":  "public/audio/SHORT-67.wav",
+    "timing":  "src/episodes/SHORT-67.timing.json",
+    "fin":  {
+                "big":  "Simplified illustrations. Check your local recycling rules.",
+                "small":  "Sources: US EPA, Plastics: Material-Specific Data (2018 data); FTC Green Guides, 16 CFR 260.12"
+            },
+    "parts":  [
+                  "That little triangle of arrows does not mean it gets recycled.",
+                  "It is a code. Stay to see where it turns into a promise.",
+                  "The number inside just tells you which plastic it is.",
+                  "Like PET, the plastic of drink bottles.",
+                  "It began as an industry code.",
+                  "So how much plastic actually gets recycled in America?",
+                  "In twenty eighteen, the EPA counted just eight point seven percent.",
+                  "PET bottles and jars: about twenty-nine percent. But where the arrows sit changes everything.",
+                  "Put them on the front, near the brand, and that counts as a promise.",
+                  "A promise that you can recycle it.",
+                  "Unless sixty percent of buyers have somewhere to recycle it, the label is supposed to say so.",
+                  "Hidden on the bottom, it promises nothing.",
+                  "Check your town's list, not the arrows. Follow for tomorrow's mystery."
+              ]
+}
