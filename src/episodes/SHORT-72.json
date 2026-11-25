@@ -1,0 +1,30 @@
+{
+    "id":  "SHORT-72",
+    "title":  "Why Do Songs Get Stuck in Your Head?",
+    "voice":  "am_liam",
+    "speed":  1.03,
+    "pronounce":  {
+                  },
+    "music":  "em-curious",
+    "words":  true,
+    "audio":  "public/audio/SHORT-72.wav",
+    "timing":  "src/episodes/SHORT-72.timing.json",
+    "fin":  {
+                "big":  "Simplified illustrations. One gum study is not a proven cure.",
+                "small":  "Sources: Williamson et al., PLoS ONE (2014); Jakubowski et al., Psychology of Aesthetics, Creativity, and the Arts (2017); Beaman, Powell & Rapley, QJEP (2015); Beaman & Williams, British Journal of Psychology (2009), via BPS Research Digest."
+            },
+    "parts":  [
+                  "Why does a song get stuck in your head?",
+                  "Stay for the chewing gum trick, and why its scientist won't call it a cure.",
+                  "Scientists call it involuntary musical imagery. We call it an earworm.",
+                  "Researchers say most people get one at least once a week.",
+                  "The usual trigger is simple: a song you heard recently.",
+                  "The stickiest songs share a shape: a faster beat, a rise-and-fall tune, one surprising jump.",
+                  "But the most natural escape plan can backfire.",
+                  "In one study, thinking of another song to push it out made the first one worse.",
+                  "Now the gum. In a 2015 study, chewing gum cut those song thoughts by about a third.",
+                  "But it was one small test. Its lead scientist wants more research.",
+                  "Good news: most earworms feel neutral or pleasant, and usually fade within a day.",
+                  "A top fix people report? Listen to the whole song. Subscribe for the next one."
+              ]
+}
