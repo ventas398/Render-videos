@@ -12,7 +12,7 @@
                 "img":  "s64-ceiling-panel",
                 "src":  "images/s64-ceiling-panel.jpg",
                 "big":  "Illustrative images.",
-                "small":  "Sources: Meshberger, JAMA 264 (1990); Suk & Tamargo, Neurosurgery 66 (2010); Condivi, Vita di Michelagnolo Buonarroti (1553). Ceiling photo: Michelangelo, public domain. Simplified illustration."
+                "small":  "Sources: Meshberger, JAMA 264 (1990); Suk & Tamargo, Neurosurgery 66 (2010); Condivi, Vita di Michelagnolo Buonarroti (1553). Ceiling images: Michelangelo, Sistine Chapel ceiling - public domain. Simplified illustration."
             },
     "parts":  [
                   "Look at the shape behind God, in Michelangelo's Creation of Adam.",
@@ -22,11 +22,11 @@
                   "They saw a brain stem in God's neck, in another panel of the same ceiling.",
                   "Could a painter know what a brain looks like?",
                   "His biographer, Condivi, wrote that Michelangelo did so many dissections that he outdid the professionals.",
-                  "Here is the twist.",
-                  "Other authors looked at that same neck, and saw a goiter.",
+                  "But doctors saw something else in that same neck.",
+                  "Two doctors saw a goiter there instead.",
                   "Skeptics ask: are we just seeing the man in the moon?",
                   "Our reading: the brain is a modern idea about the painting. It is not a documented fact.",
-                  "What else do people see on the dollar in your pocket? Full story linked below."
+                  "Subscribe for the next one: why cold can feel wet."
               ],
     "beats":  [
                   { "from": 0, "to": 0, "img": "s64-ceiling-panel", "src": "images/s64-ceiling-panel.jpg", "tag": "Simplified illustration", "kb": "in", "z": 1, "ox": "50%", "oy": "40%",
@@ -47,6 +47,6 @@
                     "labels": [ { "t": "OUR READING", "p": 10 } ],
                     "stamps": [ { "c": "amber", "t": "DISPUTED", "p": 10, "s": "No source of the time mentions a brain" } ] },
                   { "from": 11, "to": 11, "img": "s64-ceiling-panel", "src": "images/s64-ceiling-panel.jpg", "tag": "Simplified illustration", "kb": "in", "z": 1.2, "ox": "50%", "oy": "40%",
-                    "labels": [ { "t": "THE FULL STORY: VIDEO LINKED BELOW", "p": 11 } ] }
+                    "labels": [] }
               ]
 }
