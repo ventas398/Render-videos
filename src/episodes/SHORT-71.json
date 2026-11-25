@@ -1,0 +1,30 @@
+{
+    "id":  "SHORT-71",
+    "title":  "Why Do Women's Shirts Button Left?",
+    "voice":  "am_liam",
+    "speed":  1.03,
+    "pronounce":  {
+                  },
+    "music":  "em-curious",
+    "words":  true,
+    "audio":  "public/audio/SHORT-71.wav",
+    "timing":  "src/episodes/SHORT-71.timing.json",
+    "fin":  {
+                "big":  "Simplified illustrations. Theories, not proof: no written reason from the time has been found.",
+                "small":  "Sources: J. Lee & C. Kobia, The Conversation (via PopSci); ScienceABC, Why Do Women's Clothes Have Buttons On The Left Side?"
+            },
+    "parts":  [
+                  "Why do women's shirts button on the opposite side from men's?",
+                  "Stay for the Napoleon story, and why even its tellers doubt it.",
+                  "It is not a rule. Just a habit of the clothing trade.",
+                  "The favorite theory: rich women in the eighteen hundreds were dressed by maids.",
+                  "For a right-handed maid facing her lady, that side was easier.",
+                  "Men dressed themselves, so their buttons suited their own right hand.",
+                  "But the men's side may hide a sharper reason.",
+                  "Men wore swords on the left. Some say coats opened so a right hand drawing the sword would not snag.",
+                  "The Napoleon tale says he flipped women's buttons to stop people copying his hand-in-coat pose.",
+                  "Even the people who tell it call it highly unlikely.",
+                  "Nobody has found a written reason from the time.",
+                  "Our reading: a woman's shirt may still remember the maid. Subscribe for the next one."
+              ]
+}
