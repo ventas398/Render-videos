@@ -63,6 +63,8 @@ import n18 from "../episodes/SHORT-18.json";
 import tn18 from "../episodes/SHORT-18.timing.json";
 import e43 from "../episodes/SHORT-43.json";
 import t43 from "../episodes/SHORT-43.timing.json";
+import e44 from "../episodes/SHORT-44.json";
+import t44 from "../episodes/SHORT-44.timing.json";
 import { TTDiagram, type TTKind } from "./ttDiagram";
 import { HookSceneView, type HookScene } from "./ttHook";
 import { MotionImage, type MotionDir } from "../components/MotionImage";
@@ -80,7 +82,7 @@ type Label = { p: number; t: string; s?: string };
 type Stamp = { p: number; t: string; s: string; c: "teal" | "orange"; y?: number };
 type Mark = { t: string; x: number; y: number; c?: string; s?: number; w?: number }; // s/w opcionales: tamano de letra y ancho de caja (SHORT-17 v4: precio en la etiqueta) // letra rotulada sobre la imagen (px del vertical 1080x1920); sigue el zoom de la foto
 type Beat = { from: number; to: number; img?: string; src?: string; paper?: boolean; tint?: string; tag?: string; kb?: "in" | "left" | "right" | "still"; z?: number; ox?: string; oy?: string; pan?: [number, number]; labels?: Label[]; stamps?: Stamp[]; end?: boolean; vein?: "line" | "nerve" | "break"; credit?: { p: number; t: string }; diagram?: TTKind; marks?: Mark[] };
-export type ShortEp = { id: string; hookScene?: HookScene; capMax?: number; title: string; hook?: boolean; fin?: { img: string; src?: string; big: string; small: string; z?: number; ox?: string; oy?: string }; parts: string[]; beats: Beat[]; capStarts?: Record<string, number[]> };
+export type ShortEp = { id: string; hookScene?: HookScene; capMax?: number; title: string; hook?: boolean; fin?: { img: string; src?: string; big: string; small: string; z?: number; ox?: string; oy?: string; at?: number }; parts: string[]; beats: Beat[]; capStarts?: Record<string, number[]> };
 type Timing = { ends: number[]; gap?: number; solo?: Record<string, number>; words?: [string, number, number][][]; tail?: number }; // solo: segundos de musica sola al final de la parte (sin voz ni subtitulo)
 export type ShortProps = { ep: ShortEp; timing: Timing; mov?: boolean; noSubs?: boolean }; // noSubs: solo para stills de portada
 
@@ -100,8 +102,31 @@ const f43: ShortEp = {
   }),
 };
 
+// SHORT-44F (26/11): fotos Flow sobre el JSON, voz y tiempos de SHORT-44. Un plano por frase (<= 6 s). Orden del jefe 13:27: ficha de fuentes bajo la ultima frase (fin.at) y <= 2,5 s de silencio (tail).
+const L44 = (e44.beats as unknown as Beat[]).flatMap((b) => b.labels ?? []);
+const S44 = (e44.beats as unknown as Beat[]).flatMap((b) => b.stamps ?? []);
+const Y44: Record<number, number> = { 1: 1000, 3: 1000, 4: 440, 5: 430, 7: 440 }; // sellos fuera del sujeto de cada foto
+const b44 = (p: number, name: string, o: Partial<Beat> = {}): Beat => ({ from: p, to: p, img: name, src: `images/${name}.jpg`, tag: "Illustrative image", labels: L44.filter((l) => l.p === p), stamps: S44.filter((s) => s.p === p).map((s) => ({ ...s, y: Y44[p] })), ...o });
+const f44: ShortEp = {
+  ...(e44 as unknown as ShortEp),
+  fin: { ...e44.fin, big: "Illustrative images.", img: "s44f-fridge-night", src: "images/s44f-fridge-night.jpg", at: 29.5 },
+  beats: [
+    b44(0, "s44f-pot-steam"),
+    b44(1, "s44f-icebox-1910s", { kb: "left", z: 1.12 }),
+    b44(2, "s44f-ice-delivery-1910s"),
+    b44(3, "s44f-fridge-1920s"),
+    b44(4, "s44f-two-rules"),
+    b44(5, "s44f-shallow-containers", { kb: "right", z: 1.12 }),
+    b44(6, "s44f-shallow-containers", { z: 1.35, ox: "45%", oy: "55%" }),
+    b44(7, "s44f-uk-cooling"),
+    b44(8, "s44f-uk-cooling", { z: 1.35, ox: "70%", oy: "72%" }),
+    b44(9, "s44f-fridge-night", { z: 1.3, ox: "66%", oy: "65%" }),
+  ],
+};
+
 export const SHORTS: Record<string, ShortProps> = {
   "SHORT-43F": { ep: f43, timing: { ...t43, tail: 4.2 } as unknown as Timing },
+  "SHORT-44F": { ep: f44, timing: { ...t44, tail: 2.2 } as unknown as Timing },
   "SHORT-08": { ep: e08 as unknown as ShortEp, timing: t08 },
   "SHORT-01": { ep: e01 as unknown as ShortEp, timing: t01 },
   "SHORT-02": { ep: e02 as unknown as ShortEp, timing: t02 },
@@ -252,6 +277,17 @@ const FinCard: React.FC<{ fin: NonNullable<ShortEp["fin"]>; frames: number }> = 
         <div style={{ fontSize: 42, fontWeight: 600, color: "#E8EEF9", lineHeight: 1.3, textWrap: "balance" }}>{fin.small}</div>
       </AbsoluteFill>
     </AbsoluteFill>
+  );
+};
+
+/** Ficha de fuentes sobre la foto mientras suena la ultima frase (fin.at): los subtitulos quedan debajo y a la vista. */
+const FinPanel: React.FC<{ fin: NonNullable<ShortEp["fin"]> }> = ({ fin }) => {
+  const f = useCurrentFrame();
+  return (
+    <div style={{ position: "absolute", left: 60, right: 60, top: 560, opacity: interpolate(f, [0, 8], [0, 1], POP), background: "rgba(10,26,74,.9)", borderRadius: 18, padding: "40px 44px", textAlign: "center", fontFamily: theme.font, textWrap: "balance" }}>
+      <div style={{ fontSize: 66, fontWeight: 800, color: "#fff", lineHeight: 1.15 }}>{fin.big}</div>
+      <div style={{ fontSize: 40, fontWeight: 600, color: "#E8EEF9", lineHeight: 1.3, marginTop: 28 }}>{fin.small}</div>
+    </div>
   );
 };
 
@@ -436,7 +472,8 @@ export const ShortGeneric: React.FC<ShortProps> = ({ ep, timing, mov, noSubs }) 
       <div style={{ position: "absolute", top: 100, left: 0, right: 0, textAlign: "center", fontFamily: theme.font, fontWeight: 800, fontSize: 40, letterSpacing: 8, color: "#fff" }}><span style={{ background: "rgba(10,26,74,.85)", padding: "6px 26px", borderRadius: 6 }}>THE EVERYDAY MYSTERY</span></div>
       {!noSubs && timing.words && wordGroups(timing).map((g, k) => <Sequence key={`w${k}`} from={g.from} durationInFrames={g.dur} name={`words-${k}`}><WordGroup ws={g.ws} frames={g.dur} /></Sequence>)}
       {ep.hook && <Sequence durationInFrames={fr(3.4)}><HookTitle text={ep.title} /></Sequence>}
-      {ep.fin && <Sequence from={fr(timing.ends[timing.ends.length - 1] + 0.2)} durationInFrames={total - fr(timing.ends[timing.ends.length - 1] + 0.2)}><FinCard fin={ep.fin} frames={total - fr(timing.ends[timing.ends.length - 1] + 0.2)} /></Sequence>}
+      {ep.fin?.at && <Sequence from={fr(ep.fin.at)} durationInFrames={total - fr(ep.fin.at)}><FinPanel fin={ep.fin} /></Sequence>}
+      {ep.fin && !ep.fin.at && <Sequence from={fr(timing.ends[timing.ends.length - 1] + 0.2)} durationInFrames={total - fr(timing.ends[timing.ends.length - 1] + 0.2)}><FinCard fin={ep.fin} frames={total - fr(timing.ends[timing.ends.length - 1] + 0.2)} /></Sequence>}
       {!timing.words && ep.parts.flatMap((text, i) => {
         const a = start(i);
         const bnd = speechEnd(i) + (i === ep.parts.length - 1 ? 0.5 : 0.1); // el ultimo subtitulo no se apaga antes de acabar la voz

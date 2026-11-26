@@ -1,0 +1,49 @@
+{
+    "id":  "SHORT-44",
+    "title":  "Can Hot Food Go Straight in the Fridge?",
+    "voice":  "am_liam",
+    "speed":  1.03,
+    "music":  "em-curious",
+    "words":  true,
+    "audio":  "public/audio/SHORT-44.wav",
+    "timing":  "src/episodes/SHORT-44.timing.json",
+    "fin":  {
+                "img":  "s44-fridge-night",
+                "src":  "images/s44-fridge-night.jpg",
+                "big":  "Simplified illustrations.",
+                "small":  "General guidance, not medical advice. Sources: NDSU Extension (FN1466); UK Food Standards Agency; A Moment of Science (Indiana Public Media); National Park Service"
+            },
+    "parts":  [
+                  "Hot leftovers? Grandma said let them cool first.",
+                  "That rule may come from the icebox. Hot food melted the ice.",
+                  "And ice was precious until the next delivery.",
+                  "Today, fridges make their own cold.",
+                  "So which rule is right?",
+                  "In the U.S., North Dakota State University says hot food can go straight in.",
+                  "Big pot of soup? Split it into shallow containers.",
+                  "But Britain's Food Standards Agency says: don't place hot or warm food in your fridge.",
+                  "Cool it first, then fridge it within two hours.",
+                  "Two rules, one thing in common: never leave it out overnight."
+              ],
+    "beats":  [
+                  { "from": 0, "to": 0, "img": "s44-pot-steam", "src": "images/s44-pot-steam.jpg", "tag": "Simplified illustration", "kb": "in", "z": 1, "ox": "50%", "oy": "50%",
+                    "labels": [ { "t": "LET IT COOL?", "p": 0 } ] },
+                  { "from": 1, "to": 2, "img": "s44-icebox-1910s", "src": "images/s44-icebox-1910s.jpg", "tag": "Simplified illustration", "kb": "left", "z": 1.2, "ox": "50%", "oy": "50%",
+                    "labels": [ { "t": "ICEBOX ERA", "p": 1 }, { "t": "ICE = PRECIOUS", "p": 2 } ],
+                    "stamps": [ { "c": "amber", "t": "DISPUTED", "p": 1, "s": "A Moment of Science" } ] },
+                  { "from": 3, "to": 3, "img": "s44-fridge-1927", "src": "images/s44-fridge-1927.jpg", "tag": "Simplified illustration", "kb": "out", "z": 1.2, "ox": "50%", "oy": "50%",
+                    "labels": [ { "t": "FRIDGES MAKE COLD", "p": 3 } ],
+                    "stamps": [ { "c": "teal", "t": "DOCUMENTED", "p": 3, "s": "National Park Service" } ] },
+                  { "from": 4, "to": 4, "img": "s44-two-rules-map", "src": "images/s44-two-rules-map.jpg", "tag": "Simplified illustration", "kb": "in", "z": 1.2, "ox": "50%", "oy": "50%",
+                    "labels": [ { "t": "TWO RULES", "p": 4 } ],
+                    "stamps": [ { "c": "amber", "t": "DISPUTED", "p": 4, "s": "NDSU · FSA" } ] },
+                  { "from": 5, "to": 6, "img": "s44-shallow-containers", "src": "images/s44-shallow-containers.jpg", "tag": "Simplified illustration", "kb": "right", "z": 1.2, "ox": "50%", "oy": "50%",
+                    "labels": [ { "t": "U.S.: STRAIGHT IN", "p": 5 }, { "t": "SHALLOW CONTAINERS", "p": 6 } ],
+                    "stamps": [ { "c": "teal", "t": "DOCUMENTED", "p": 5, "s": "NDSU Extension, 2025" } ] },
+                  { "from": 7, "to": 8, "img": "s44-uk-cooling", "src": "images/s44-uk-cooling.jpg", "tag": "Simplified illustration", "kb": "in", "z": 1.2, "ox": "50%", "oy": "50%",
+                    "labels": [ { "t": "U.K.: COOL FIRST", "p": 7 }, { "t": "WITHIN 2 HOURS", "p": 8 } ],
+                    "stamps": [ { "c": "teal", "t": "DOCUMENTED", "p": 7, "s": "Food Standards Agency" } ] },
+                  { "from": 9, "to": 9, "img": "s44-fridge-night", "src": "images/s44-fridge-night.jpg", "tag": "Simplified illustration", "kb": "in", "z": 1.2, "ox": "50%", "oy": "50%",
+                    "labels": [ { "t": "NEVER OVERNIGHT", "p": 9 } ] }
+              ]
+}
