@@ -1,0 +1,27 @@
+{
+    "id":  "SHORT-81",
+    "title":  "Does Your Champagne Glass Matter?",
+    "voice":  "am_liam",
+    "speed":  1.03,
+    "music":  "em-curious",
+    "words":  true,
+    "audio":  "public/audio/SHORT-81.wav",
+    "timing":  "src/episodes/SHORT-81.timing.json",
+    "fin":  {
+                "big":  "Illustrative images.",
+                "small":  "Sources: G. Liger-Belair and others, PLOS ONE 7(2): e30628, 2012; Château de Rambouillet, 'Vivre à l'Antique au XVIIIe siècle'; C. Makris, Apollo Magazine, 2022."
+            },
+    "parts":  [
+                  "In a lab test, one champagne glass had two to three times more gas at its rim.",
+                  "Which one? Stay, because more is not always better.",
+                  "First, the wide one, the coupe. Legend says it was molded on Marie Antoinette's breast.",
+                  "The same story follows other famous women.",
+                  "For the queen's glass, we found no evidence.",
+                  "Her royal dairy did get a breast-shaped porcelain bowl. A bowl, not a champagne glass.",
+                  "So does the shape of a glass really change anything?",
+                  "A 2012 French study poured equal amounts of champagne into a coupe and a tall flute.",
+                  "For fifteen minutes, the flute had about two to three times more gas near its rim than the coupe.",
+                  "Why? The same amount of gas escapes through a narrower surface, so it crowds together.",
+                  "The catch: that crowded gas can sting your nose. Subscribe for the next one."
+              ]
+}
