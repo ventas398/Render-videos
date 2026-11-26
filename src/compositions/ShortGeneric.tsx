@@ -126,7 +126,7 @@ const f44: ShortEp = {
 
 export const SHORTS: Record<string, ShortProps> = {
   "SHORT-43F": { ep: f43, timing: { ...t43, tail: 4.2 } as unknown as Timing },
-  "SHORT-44F": { ep: f44, timing: { ...t44, tail: 2.2 } as unknown as Timing },
+  "SHORT-44F": { ep: f44, timing: { ...t44, tail: 1.8 } as unknown as Timing }, // 1.8: la voz se oye hasta 30,9 s; quedan 2,4 s mudos
   "SHORT-08": { ep: e08 as unknown as ShortEp, timing: t08 },
   "SHORT-01": { ep: e01 as unknown as ShortEp, timing: t01 },
   "SHORT-02": { ep: e02 as unknown as ShortEp, timing: t02 },
