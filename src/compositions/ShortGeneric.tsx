@@ -91,7 +91,7 @@ const f43: ShortEp = {
   beats: (e43.beats as unknown as Beat[]).flatMap((b) => {
     const y: Record<number, number> = { 3: 440, 6: 430, 7: 960 }; // sellos fuera del sujeto de la foto (pila, movil, icono de bateria)
     const stamps = b.stamps?.map((s) => ({ ...s, y: y[s.p] }));
-    const base: Beat = { ...b, stamps, img: b.img!.replace("s43-", "s43f-"), src: b.src!.replace("s43-", "s43f-"), tag: "Illustrative image", z: 1.04 };
+    const base: Beat = { ...b, stamps, img: b.img!.replace("s43-", "s43f-"), src: b.src!.replace("s43-", "s43f-"), tag: "Illustrative image", z: b.kb === "left" || b.kb === "right" ? 1.12 : 1.04 }; // el paneo mueve 50 px: con menos de 1,12 asoma el fondo por la derecha
     if (b.from === b.to) return [base];
     const part = (last: boolean): Beat => ({ ...base, labels: b.labels?.filter((l) => (l.p >= b.to) === last), stamps: stamps?.filter((s) => (s.p >= b.to) === last) });
     return [{ ...part(false), to: b.to - 1 }, { ...part(true), from: b.to, z: 1.25 }];
