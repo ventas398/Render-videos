@@ -80,21 +80,23 @@ type Label = { p: number; t: string; s?: string };
 type Stamp = { p: number; t: string; s: string; c: "teal" | "orange"; y?: number };
 type Mark = { t: string; x: number; y: number; c?: string; s?: number; w?: number }; // s/w opcionales: tamano de letra y ancho de caja (SHORT-17 v4: precio en la etiqueta) // letra rotulada sobre la imagen (px del vertical 1080x1920); sigue el zoom de la foto
 type Beat = { from: number; to: number; img?: string; src?: string; paper?: boolean; tint?: string; tag?: string; kb?: "in" | "left" | "right" | "still"; z?: number; ox?: string; oy?: string; pan?: [number, number]; labels?: Label[]; stamps?: Stamp[]; end?: boolean; vein?: "line" | "nerve" | "break"; credit?: { p: number; t: string }; diagram?: TTKind; marks?: Mark[] };
-export type ShortEp = { id: string; hookScene?: HookScene; capMax?: number; title: string; hook?: boolean; fin?: { img: string; src?: string; big: string; small: string }; parts: string[]; beats: Beat[]; capStarts?: Record<string, number[]> };
+export type ShortEp = { id: string; hookScene?: HookScene; capMax?: number; title: string; hook?: boolean; fin?: { img: string; src?: string; big: string; small: string; z?: number; ox?: string; oy?: string }; parts: string[]; beats: Beat[]; capStarts?: Record<string, number[]> };
 type Timing = { ends: number[]; gap?: number; solo?: Record<string, number>; words?: [string, number, number][][]; tail?: number }; // solo: segundos de musica sola al final de la parte (sin voz ni subtitulo)
 export type ShortProps = { ep: ShortEp; timing: Timing; mov?: boolean; noSubs?: boolean }; // noSubs: solo para stills de portada
 
 // SHORT-43F (26/11): version con fotos Flow. Mismo JSON, voz y tiempos que SHORT-43; cambian imagenes, rotulo de esquina y ficha. Los planos de varias frases se parten en la ultima (<= 6 s, reencuadre).
 const f43: ShortEp = {
   ...(e43 as unknown as ShortEp),
-  fin: { ...e43.fin, img: "s43f-bedside-cool", src: "images/s43f-bedside-cool.jpg", big: "Illustrative images." },
+  fin: { ...e43.fin, img: "s43f-bedside-charge", src: "images/s43f-bedside-charge.jpg", big: "Illustrative images.", z: 1.35, ox: "50%", oy: "76%" },
   beats: (e43.beats as unknown as Beat[]).flatMap((b) => {
     const y: Record<number, number> = { 3: 440, 6: 430, 7: 960 }; // sellos fuera del sujeto de la foto (pila, movil, icono de bateria)
     const stamps = b.stamps?.map((s) => ({ ...s, y: y[s.p] }));
     const base: Beat = { ...b, stamps, img: b.img!.replace("s43-", "s43f-"), src: b.src!.replace("s43-", "s43f-"), tag: "Illustrative image", z: b.kb === "left" || b.kb === "right" ? 1.12 : 1.04 }; // el paneo mueve 50 px: con menos de 1,12 asoma el fondo por la derecha
+    // v1.2 (LOTE-NL): plano 9 con el cable puesto, reencuadrado; parte 8 con la bateria al 80 % pintada en una copia de la foto
+    if (b.from === 9) return [{ ...base, img: "s43f-bedside-charge", src: "images/s43f-bedside-charge.jpg", z: 1.35, ox: "50%", oy: "76%" }];
     if (b.from === b.to) return [base];
     const part = (last: boolean): Beat => ({ ...base, labels: b.labels?.filter((l) => (l.p >= b.to) === last), stamps: stamps?.filter((s) => (s.p >= b.to) === last) });
-    return [{ ...part(false), to: b.to - 1 }, { ...part(true), from: b.to, z: 1.25 }];
+    return [{ ...part(false), to: b.to - 1 }, { ...part(true), from: b.to, z: 1.25, ...(b.to === 8 && { img: "s43f-settings-generic-80", src: "images/s43f-settings-generic-80.jpg" }) }];
   }),
 };
 
@@ -168,7 +170,6 @@ export const COVERS: Record<string, { img: string; src?: string; word: string; b
   "SHORT-17": { img: "s17-tag", src: "images/s17-tag.jpg", word: "WHY $9.99?", ws: 170, band: "THE LEFT-DIGIT EFFECT", tag: "Illustrative image", mark: { t: "$9.99", x: 556, y: 782, s: 260, w: 820, c: "#C8102E" } }, // v4 (LOTE-IW): precio en la etiqueta + titulo
   "SHORT-18": { img: "s18-road", src: "images/s18-road.jpg", word: "26.2?", band: "THE ODD MARATHON DISTANCE", tag: "Illustrative image" },
   "SHORT-035": { img: "em035-portada-A-over-under-v1", word: "OVER?", band: "THE 1891 PATENT EVERYONE CITES", tag: "Illustrative image" },
-  "SHORT-43F": { img: "s43f-bedside-charge", src: "images/s43f-bedside-charge.jpg", word: "100%", band: "ALL NIGHT?", tag: "Illustrative image" },
 };
 
 const clamp = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
@@ -240,11 +241,11 @@ const HookTitle: React.FC<{ text: string }> = ({ text }) => {
 };
 
 /** Pantalla final de la ficha: rotulo de imagen ilustrativa + fuentes. */
-const FinCard: React.FC<{ fin: { img: string; src?: string; big: string; small: string }; frames: number }> = ({ fin, frames }) => {
+const FinCard: React.FC<{ fin: NonNullable<ShortEp["fin"]>; frames: number }> = ({ fin, frames }) => {
   const f = useCurrentFrame();
   return (
     <AbsoluteFill style={{ opacity: interpolate(f, [0, 8], [0, 1], POP) }}>
-      <Photo img={fin.img} src={fin.src} frames={frames} />
+      <Photo img={fin.img} src={fin.src} frames={frames} z={fin.z} ox={fin.ox} oy={fin.oy} />
       <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(10,26,74,.8), rgba(10,26,74,.92))" }} />
       <AbsoluteFill style={{ alignItems: "center", justifyContent: "center", textAlign: "center", fontFamily: theme.font, padding: "0 70px 220px", gap: 50 }}>
         <div style={{ fontSize: 76, fontWeight: 800, color: "#fff", lineHeight: 1.15, textWrap: "balance" }}>{fin.big}</div>
