@@ -1,0 +1,50 @@
+{
+    "id":  "SHORT-43",
+    "title":  "Should You Charge Your Phone Overnight?",
+    "voice":  "am_liam",
+    "speed":  1.03,
+    "music":  "em-curious",
+    "words":  true,
+    "audio":  "public/audio/SHORT-43.wav",
+    "timing":  "src/episodes/SHORT-43.timing.json",
+    "fin":  {
+                "img":  "s43-bedside-cool",
+                "src":  "images/s43-bedside-cool.jpg",
+                "big":  "Simplified illustrations.",
+                "small":  "Sources: Battery University (BU-808); Apple Support (Optimized Battery Charging)"
+            },
+    "parts":  [
+                  "Charging your phone all night? It won't overcharge.",
+                  "Battery University: a lithium-ion charger turns off the current when it's full.",
+                  "The fear comes from older nickel-cadmium batteries and their famous \"memory.\"",
+                  "Lithium-ion has no memory.",
+                  "But there is a catch.",
+                  "Sitting at 100 percent for hours can wear a battery more than normal use.",
+                  "Worst case: full and hot.",
+                  "That's why your iPhone can wait to finish charging until just before you unplug.",
+                  "Newer iPhones even let you stop at 80 percent.",
+                  "So charge overnight. Just don't let it cook under your pillow."
+              ],
+    "beats":  [
+                  { "from": 0, "to": 0, "img": "s43-bedside-charge", "src": "images/s43-bedside-charge.jpg", "tag": "Simplified illustration", "kb": "in", "z": 1, "ox": "50%", "oy": "50%",
+                    "labels": [ { "t": "OVERCHARGE?", "p": 0 } ],
+                    "stamps": [ { "c": "red", "t": "MYTH", "p": 0, "s": "Battery University" } ] },
+                  { "from": 1, "to": 1, "img": "s43-charger-cutoff", "src": "images/s43-charger-cutoff.jpg", "tag": "Simplified illustration", "kb": "out", "z": 1.2, "ox": "50%", "oy": "50%",
+                    "labels": [ { "t": "FULL = CURRENT OFF", "p": 1 } ],
+                    "stamps": [ { "c": "teal", "t": "DOCUMENTED", "p": 1, "s": "Battery University" } ] },
+                  { "from": 2, "to": 2, "img": "s43-nicd-90s", "src": "images/s43-nicd-90s.jpg", "tag": "Simplified illustration", "kb": "left", "z": 1.2, "ox": "50%", "oy": "50%",
+                    "labels": [ { "t": "NiCd \"MEMORY\"", "p": 2 } ],
+                    "stamps": [ { "c": "teal", "t": "DOCUMENTED", "p": 2, "s": "Battery University" } ] },
+                  { "from": 3, "to": 3, "img": "s43-li-ion-cell", "src": "images/s43-li-ion-cell.jpg", "tag": "Simplified illustration", "kb": "in", "z": 1.2, "ox": "50%", "oy": "50%",
+                    "labels": [ { "t": "NO MEMORY", "p": 3 } ],
+                    "stamps": [ { "c": "teal", "t": "DOCUMENTED", "p": 3, "s": "Battery University" } ] },
+                  { "from": 4, "to": 6, "img": "s43-full-hot", "src": "images/s43-full-hot.jpg", "tag": "Simplified illustration", "kb": "right", "z": 1.2, "ox": "50%", "oy": "50%",
+                    "labels": [ { "t": "THE CATCH", "p": 4 }, { "t": "100% FOR HOURS", "p": 5 }, { "t": "FULL + HOT", "p": 6 } ],
+                    "stamps": [ { "c": "teal", "t": "DOCUMENTED", "p": 6, "s": "Battery University" } ] },
+                  { "from": 7, "to": 8, "img": "s43-settings-generic", "src": "images/s43-settings-generic.jpg", "tag": "Simplified illustration", "kb": "in", "z": 1.2, "ox": "50%", "oy": "50%",
+                    "labels": [ { "t": "WAITS TO FINISH", "p": 7 }, { "t": "80% LIMIT", "p": 8 } ],
+                    "stamps": [ { "c": "teal", "t": "DOCUMENTED", "p": 7, "s": "Apple Support, 2025" } ] },
+                  { "from": 9, "to": 9, "img": "s43-bedside-cool", "src": "images/s43-bedside-cool.jpg", "tag": "Simplified illustration", "kb": "in", "z": 1.2, "ox": "50%", "oy": "50%",
+                    "labels": [ { "t": "CHARGE · KEEP IT COOL", "p": 9 } ] }
+              ]
+}

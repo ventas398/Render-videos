@@ -61,6 +61,8 @@ import n17 from "../episodes/SHORT-17.json";
 import tn17 from "../episodes/SHORT-17.timing.json";
 import n18 from "../episodes/SHORT-18.json";
 import tn18 from "../episodes/SHORT-18.timing.json";
+import e43 from "../episodes/SHORT-43.json";
+import t43 from "../episodes/SHORT-43.timing.json";
 import { TTDiagram, type TTKind } from "./ttDiagram";
 import { HookSceneView, type HookScene } from "./ttHook";
 import { MotionImage, type MotionDir } from "../components/MotionImage";
@@ -76,13 +78,28 @@ const WIN = { top: 0, h: 1920 }; // imagen a sangre en todo el vertical (regla J
 
 type Label = { p: number; t: string; s?: string };
 type Stamp = { p: number; t: string; s: string; c: "teal" | "orange"; y?: number };
-type Mark = { t: string; x: number; y: number; c?: string }; // letra rotulada sobre la imagen (px del vertical 1080x1920); sigue el zoom de la foto
+type Mark = { t: string; x: number; y: number; c?: string; s?: number; w?: number }; // s/w opcionales: tamano de letra y ancho de caja (SHORT-17 v4: precio en la etiqueta) // letra rotulada sobre la imagen (px del vertical 1080x1920); sigue el zoom de la foto
 type Beat = { from: number; to: number; img?: string; src?: string; paper?: boolean; tint?: string; tag?: string; kb?: "in" | "left" | "right" | "still"; z?: number; ox?: string; oy?: string; pan?: [number, number]; labels?: Label[]; stamps?: Stamp[]; end?: boolean; vein?: "line" | "nerve" | "break"; credit?: { p: number; t: string }; diagram?: TTKind; marks?: Mark[] };
 export type ShortEp = { id: string; hookScene?: HookScene; capMax?: number; title: string; hook?: boolean; fin?: { img: string; src?: string; big: string; small: string }; parts: string[]; beats: Beat[]; capStarts?: Record<string, number[]> };
 type Timing = { ends: number[]; gap?: number; solo?: Record<string, number>; words?: [string, number, number][][]; tail?: number }; // solo: segundos de musica sola al final de la parte (sin voz ni subtitulo)
-export type ShortProps = { ep: ShortEp; timing: Timing; mov?: boolean };
+export type ShortProps = { ep: ShortEp; timing: Timing; mov?: boolean; noSubs?: boolean }; // noSubs: solo para stills de portada
+
+// SHORT-43F (26/11): version con fotos Flow. Mismo JSON, voz y tiempos que SHORT-43; cambian imagenes, rotulo de esquina y ficha. Los planos de varias frases se parten en la ultima (<= 6 s, reencuadre).
+const f43: ShortEp = {
+  ...(e43 as unknown as ShortEp),
+  fin: { ...e43.fin, img: "s43f-bedside-cool", src: "images/s43f-bedside-cool.jpg", big: "Illustrative images." },
+  beats: (e43.beats as unknown as Beat[]).flatMap((b) => {
+    const y: Record<number, number> = { 3: 440, 6: 430, 7: 960 }; // sellos fuera del sujeto de la foto (pila, movil, icono de bateria)
+    const stamps = b.stamps?.map((s) => ({ ...s, y: y[s.p] }));
+    const base: Beat = { ...b, stamps, img: b.img!.replace("s43-", "s43f-"), src: b.src!.replace("s43-", "s43f-"), tag: "Illustrative image", z: 1.04 };
+    if (b.from === b.to) return [base];
+    const part = (last: boolean): Beat => ({ ...base, labels: b.labels?.filter((l) => (l.p >= b.to) === last), stamps: stamps?.filter((s) => (s.p >= b.to) === last) });
+    return [{ ...part(false), to: b.to - 1 }, { ...part(true), from: b.to, z: 1.25 }];
+  }),
+};
 
 export const SHORTS: Record<string, ShortProps> = {
+  "SHORT-43F": { ep: f43, timing: { ...t43, tail: 4.2 } as unknown as Timing },
   "SHORT-08": { ep: e08 as unknown as ShortEp, timing: t08 },
   "SHORT-01": { ep: e01 as unknown as ShortEp, timing: t01 },
   "SHORT-02": { ep: e02 as unknown as ShortEp, timing: t02 },
@@ -111,18 +128,18 @@ export const SHORTS: Record<string, ShortProps> = {
   "IDEA-74G": { ep: g74 as unknown as ShortEp, timing: { ...tg74, tail: 3.4 } as unknown as Timing },
   "IDEA-73G": { ep: g73 as unknown as ShortEp, timing: { ...tg73, tail: 3.4 } as unknown as Timing },
   // 8 Shorts nuevos 16/11/2026 (chat #25), mismo formato que TT-01 (gancho 3 s, subtitulos palabra a palabra, ficha final)
-  "SHORT-11": { ep: { ...n11, hook: true } as unknown as ShortEp, timing: { ...tn11, tail: 3.4 } as unknown as Timing },
-  "SHORT-12": { ep: { ...n12, hook: true } as unknown as ShortEp, timing: { ...tn12, tail: 3.4 } as unknown as Timing },
-  "SHORT-13": { ep: { ...n13, hook: true } as unknown as ShortEp, timing: { ...tn13, tail: 3.4 } as unknown as Timing },
-  "SHORT-14": { ep: { ...n14, hook: true } as unknown as ShortEp, timing: { ...tn14, tail: 3.4 } as unknown as Timing },
-  "SHORT-15": { ep: { ...n15, hook: true } as unknown as ShortEp, timing: { ...tn15, tail: 3.4 } as unknown as Timing },
-  "SHORT-16": { ep: { ...n16, hook: true } as unknown as ShortEp, timing: { ...tn16, tail: 3.4 } as unknown as Timing },
-  "SHORT-17": { ep: { ...n17, hook: true } as unknown as ShortEp, timing: { ...tn17, tail: 3.4 } as unknown as Timing },
-  "SHORT-18": { ep: { ...n18, hook: true } as unknown as ShortEp, timing: { ...tn18, tail: 3.4 } as unknown as Timing },
+  "SHORT-11": { ep: { ...n11, hook: true } as unknown as ShortEp, timing: { ...tn11, tail: 4.2 } as unknown as Timing }, // v2 (LOTE-HK): pausas <= 0,3 s en el wav, planos <= 6 s (from fraccionario en parte 5), ficha final 4,0 s
+  "SHORT-12": { ep: { ...n12, hook: true } as unknown as ShortEp, timing: { ...tn12, tail: 4.2 } as unknown as Timing }, // v2 (LOTE-HB): pausas <= 0,3 s en el wav, ficha final 4,0 s
+  "SHORT-13": { ep: { ...n13, hook: true } as unknown as ShortEp, timing: { ...tn13, tail: 4.2 } as unknown as Timing }, // v2 (LOTE-HD): pausas <= 0,3 s en el wav, diagrama 3 capas, ficha final 4,0 s
+  "SHORT-14": { ep: { ...n14, hook: true } as unknown as ShortEp, timing: { ...tn14, tail: 4.2 } as unknown as Timing }, // v2 (LOTE-HE): pausas <= 0,3 s en el wav, planos <= 6 s, carro en el gancho, ficha final 4,0 s
+  "SHORT-15": { ep: { ...n15, hook: true } as unknown as ShortEp, timing: { ...tn15, tail: 4.2 } as unknown as Timing }, // v2 (LOTE-HH): pausas <= 0,3 s en el wav, planos <= 6 s, 'AI illustration, not a portrait' en Silver/Fry, ficha final >= 4,0 s
+  "SHORT-16": { ep: { ...n16, hook: true } as unknown as ShortEp, timing: { ...tn16, tail: 4.2 } as unknown as Timing }, // v2 (LOTE-HI): pausas <= 0,3 s en el wav, planos <= 6 s, 'AI illustration, not a portrait' en Read, creditos solo fuentes abiertas, ficha final >= 4,0 s
+  "SHORT-17": { ep: { ...n17, hook: true } as unknown as ShortEp, timing: { ...tn17, tail: 4.2 } as unknown as Timing }, // v4 (LOTE-IW): pausas <= 0,3 s (tighten.py), $9.99 en la etiqueta, reencuadres >= 15 %, ficha final >= 4,0 s
+  "SHORT-18": { ep: { ...n18, hook: true } as unknown as ShortEp, timing: { ...tn18, tail: 4.2 } as unknown as Timing },
 };
 export const shortFrames = (t: Timing) => Math.ceil((t.ends[t.ends.length - 1] + (t.tail ?? TAIL)) * fps);
 
-export const COVERS: Record<string, { img: string; src?: string; word: string; band: string; tag?: string; fx?: number; tint?: string; ws?: number; wx?: number }> = {
+export const COVERS: Record<string, { img: string; src?: string; word: string; band: string; tag?: string; fx?: number; tint?: string; ws?: number; wx?: number; mark?: Mark }> = {
   "EM-052-CORTO": { img: "", src: "images/em052-art-rain.jpg", word: "COLOR?", band: "SAME PAINTING, 3 COLORS", tag: "Caillebotte, 1877 · color digitally altered", tint: "#D4121F", fx: 0.72 },
   "SHORT-053B": { img: "em053b-hallway", word: "WHY?", band: "BLAME THE MUSIC", tag: "Illustrative image", ws: 270, wx: 90 }, // v1.1: '?' mas pequeno y a la izquierda, el gato (dcha.) queda a la vista
   "SHORT-08": { img: "em025-stamp-desk", word: "MYTH?", band: "THE EYE ON THE DOLLAR", tag: "Illustrative image" },
@@ -133,7 +150,7 @@ export const COVERS: Record<string, { img: string; src?: string; word: string; b
   "SHORT-04": { img: "em021-stopwatch", word: "HOW FAR?", band: "COUNT THE THUNDER", tag: "Illustrative image", fx: 0.5 },
   "SHORT-05": { img: "em022-fold-hook", word: "WHY?", band: "THE SHAPE OF A4 PAPER", tag: "Illustrative image" },
   "SHORT-06": { img: "em023-clock-night", word: "WHY?", band: "SWEDEN SWITCHES SIDES", tag: "Illustrative image" },
-  "SHORT-07": { img: "em029-24", src: "images/em029-24.jpg", word: "WHY?", band: "POMPEII'S DISPUTED DAY", tag: "Illustrative image" },
+  "SHORT-07": { img: "em029-24", src: "images/em029-24.jpg", word: "WHEN?", band: "POMPEII'S DISPUTED DAY", tag: "Illustrative image" },
   "SHORT-09": { img: "em026-hand-heart-v", src: "images/em026-hand-heart-v.png", word: "MYTH?", band: "THE RING FINGER'S VEIN", tag: "AI illustration, not a portrait" },
   "SHORT-10": { img: "em031-zoo-winter-v", src: "images/em031-zoo-winter-v.png", word: "MYTH?", band: "PARIS EATS ITS ZOO, 1870", tag: "Illustrative image" },
   "TT-01": { img: "tt01-hands", word: "WHY?", band: "WRINKLES COME FROM NERVES", tag: "Illustrative image", fx: 0.5 },
@@ -142,15 +159,16 @@ export const COVERS: Record<string, { img: string; src?: string; word: string; b
   "IDEA-75": { img: "tt075-01", word: "HOW LONG?", band: "A BILLION SECONDS", tag: "Illustrative image", fx: 0.5, ws: 190 },
   "IDEA-74": { img: "tt074-01", word: "WHY?", band: "THE ARMY TURNED OFF A WATERFALL", tag: "Illustrative image", fx: 0.5 },
   "IDEA-73": { img: "tt073-02", word: "HOW FAR?", band: "A FULL DAY OF LIGHT AWAY", tag: "Illustrative image", fx: 0.5 },
-  "SHORT-11": { img: "s11-cake", src: "images/s11-cake.jpg", word: "100?", band: "DOES THE US PAY YOU AT 100?", tag: "Illustrative image" },
+  "SHORT-11": { img: "s11-cake", src: "images/s11-cake.jpg", word: "100?", band: "IRELAND PAYS", tag: "Illustrative image" },
   "SHORT-12": { img: "s12-cap-macro", src: "images/s12-cap-macro.jpg", word: "WHY?", band: "THE HOLE IN THE PEN CAP", tag: "Illustrative image" },
-  "SHORT-13": { img: "s13-window-view", src: "images/s13-window-view.jpg", word: "WHY?", band: "THE HOLE IN THE PLANE WINDOW", tag: "Illustrative image" },
-  "SHORT-14": { img: "s14-baskets37", src: "images/s14-baskets37.jpg", word: "WHO?", band: "NOBODY WANTED THE SHOPPING CART", tag: "Illustrative image" },
+  "SHORT-13": { img: "s13-hole-macro", src: "images/s13-hole-macro.jpg", word: "WHY?", band: "THE HOLE IN THE PLANE WINDOW", tag: "Illustrative image" },
+  "SHORT-14": { img: "s14-prototype", src: "images/s14-prototype.jpg", word: "WHO?", band: "NOBODY WANTED THE SHOPPING CART", tag: "AI illustration, not a portrait", fx: 0.6 }, // v2 (LOTE-HE): carro de 1937 en la portada
   "SHORT-15": { img: "s15-wall-of-notes", src: "images/s15-wall-of-notes.jpg", word: "WHY?", band: "THE GLUE THAT FAILED", tag: "Illustrative image" },
   "SHORT-16": { img: "s16-boston39", src: "images/s16-boston39.jpg", word: "OK?", band: "WHAT THE LETTERS STAND FOR", tag: "Illustrative image" },
-  "SHORT-17": { img: "s17-tag", src: "images/s17-tag.jpg", word: "WHY?", band: "WHY EVERYTHING COSTS $9.99", tag: "Illustrative image" },
+  "SHORT-17": { img: "s17-tag", src: "images/s17-tag.jpg", word: "WHY $9.99?", ws: 170, band: "THE LEFT-DIGIT EFFECT", tag: "Illustrative image", mark: { t: "$9.99", x: 556, y: 782, s: 260, w: 820, c: "#C8102E" } }, // v4 (LOTE-IW): precio en la etiqueta + titulo
   "SHORT-18": { img: "s18-road", src: "images/s18-road.jpg", word: "26.2?", band: "THE ODD MARATHON DISTANCE", tag: "Illustrative image" },
   "SHORT-035": { img: "em035-portada-A-over-under-v1", word: "OVER?", band: "THE 1891 PATENT EVERYONE CITES", tag: "Illustrative image" },
+  "SHORT-43F": { img: "s43f-bedside-charge", src: "images/s43f-bedside-charge.jpg", word: "100%", band: "ALL NIGHT?", tag: "Illustrative image" },
 };
 
 const clamp = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
@@ -236,6 +254,11 @@ const FinCard: React.FC<{ fin: { img: string; src?: string; big: string; small: 
   );
 };
 
+const MarkText: React.FC<{ m: Mark }> = ({ m }) => {
+  const s = m.s ?? 150, w = m.w ?? 240;
+  return <div style={{ position: "absolute", left: m.x - w / 2, width: w, top: m.y - s * 0.53, textAlign: "center", fontFamily: IMPACT, fontSize: s, lineHeight: `${Math.round(s * 1.07)}px`, color: m.c ?? NAVY, whiteSpace: "nowrap" }}>{m.t}</div>;
+};
+
 const Photo: React.FC<{ img?: string; src?: string; frames: number; kb?: string; z?: number; ox?: string; oy?: string; pan?: [number, number]; marks?: Mark[] }> = ({ img, src, frames, kb = "in", z = 1.04, ox = "50%", oy = "50%", pan, marks }) => {
   const f = useCurrentFrame();
   const k = interpolate(f, [0, frames], [0, 1], clamp);
@@ -244,7 +267,7 @@ const Photo: React.FC<{ img?: string; src?: string; frames: number; kb?: string;
   return (
     <div style={{ position: "absolute", left: 0, top: 0, width: 1080, height: WIN.h, transformOrigin: `${ox} ${oy}`, transform: `translateX(${dx}px) scale(${sc})` }}>
       <Img src={staticFile(src ?? `illustrations/${img}.png`)} style={{ position: "absolute", left: 0, top: 0, width: 1080, height: WIN.h, objectFit: "cover", objectPosition: pan ? `${pan[0] + (pan[1] - pan[0]) * k}% 50%` : undefined }} />
-      {marks?.map((m, i) => <div key={i} style={{ position: "absolute", left: m.x - 120, width: 240, top: m.y - 80, textAlign: "center", fontFamily: IMPACT, fontSize: 150, lineHeight: "160px", color: m.c ?? NAVY }}>{m.t}</div>)}
+      {marks?.map((m, i) => <MarkText key={i} m={m} />)}
     </div>
   );
 };
@@ -300,14 +323,14 @@ const EndCard: React.FC<{ title: string; img?: string; src?: string; frames: num
       <AbsoluteFill style={{ alignItems: "center", justifyContent: "center", textAlign: "center", fontFamily: theme.font, padding: "0 60px 330px" }}>
         <div style={{ background: theme.orange, color: "#fff", fontWeight: 800, fontSize: 54, letterSpacing: 6, padding: "10px 36px", borderRadius: 60 }}>THE FULL STORY</div>
         <div style={{ fontSize: 84, fontWeight: 800, color: "#fff", lineHeight: 1.12, marginTop: 50, textShadow: `0 4px 14px ${NAVY}` }}>{title}</div>
-        <div style={{ fontSize: 120, color: YEL, marginTop: 40, transform: `translateY(${bob}px)` }}>▼</div>
+        <div style={{ fontSize: 120, color: YEL, marginTop: 40, transform: `translateY(${bob}px)` }}>{"▼"}</div>
         <div style={{ fontSize: 56, fontWeight: 700, color: "#fff" }}>Video linked below</div>
       </AbsoluteFill>
     </AbsoluteFill>
   );
 };
 
-/** Vector simplificado (plano del diseñador, no viene en la foto): linea del anular al pecho, SHORT-09. */
+/** Vector simplificado (plano del disenador, no viene en la foto): linea del anular al pecho, SHORT-09. */
 const VeinLine: React.FC<{ variant: "line" | "nerve" | "break"; frames: number }> = ({ variant, frames }) => {
   const f = useCurrentFrame();
   const drawEnd = Math.min(18, frames);
@@ -356,8 +379,9 @@ const twoLines = (g: WG): WG[] => {
 
 const MOV_DIRS: MotionDir[] = ["left", "right", "up"];
 
-export const ShortGeneric: React.FC<ShortProps> = ({ ep, timing, mov }) => {
-  const start = (i: number) => (i === 0 ? 0 : timing.ends[i - 1]);
+export const ShortGeneric: React.FC<ShortProps> = ({ ep, timing, mov, noSubs }) => {
+  const start0 = (i: number) => (i === 0 ? 0 : timing.ends[i - 1]);
+  const start = (i: number) => { const k = Math.floor(i); return start0(k) + (i - k) * (timing.ends[k] - start0(k)); }; // from fraccionario (p. ej. 5.5) = plano partido dentro de una frase larga
   const solo = (i: number) => timing.solo?.[String(i)] ?? 0;
   const speechEnd = (i: number) => timing.ends[i] - solo(i) - (timing.gap ?? GAP);
   const total = shortFrames(timing);
@@ -409,7 +433,7 @@ export const ShortGeneric: React.FC<ShortProps> = ({ ep, timing, mov }) => {
         return <Sequence key={`cr-${c!.p}`} from={c0} durationInFrames={Math.max(c1 - c0, 1)}><CreditBox text={c!.t} frames={Math.max(c1 - c0, 1)} /></Sequence>;
       })}
       <div style={{ position: "absolute", top: 100, left: 0, right: 0, textAlign: "center", fontFamily: theme.font, fontWeight: 800, fontSize: 40, letterSpacing: 8, color: "#fff" }}><span style={{ background: "rgba(10,26,74,.85)", padding: "6px 26px", borderRadius: 6 }}>THE EVERYDAY MYSTERY</span></div>
-      {timing.words && wordGroups(timing).map((g, k) => <Sequence key={`w${k}`} from={g.from} durationInFrames={g.dur} name={`words-${k}`}><WordGroup ws={g.ws} frames={g.dur} /></Sequence>)}
+      {!noSubs && timing.words && wordGroups(timing).map((g, k) => <Sequence key={`w${k}`} from={g.from} durationInFrames={g.dur} name={`words-${k}`}><WordGroup ws={g.ws} frames={g.dur} /></Sequence>)}
       {ep.hook && <Sequence durationInFrames={fr(3.4)}><HookTitle text={ep.title} /></Sequence>}
       {ep.fin && <Sequence from={fr(timing.ends[timing.ends.length - 1] + 0.2)} durationInFrames={total - fr(timing.ends[timing.ends.length - 1] + 0.2)}><FinCard fin={ep.fin} frames={total - fr(timing.ends[timing.ends.length - 1] + 0.2)} /></Sequence>}
       {!timing.words && ep.parts.flatMap((text, i) => {
@@ -460,6 +484,7 @@ export const ShortCover: React.FC<{ id: string }> = ({ id }) => {
       <div style={{ position: "absolute", left: 0, top: 0, width: 1080, height: 1500, overflow: "hidden" }}>
         <Img src={staticFile(c.src ?? `illustrations/${c.img}.png`)} style={{ position: "absolute", left: -(c.fx ?? 0.5) * 420, top: 0, width: 1500, height: 1500, objectFit: "cover" }} />
         {c.tint && <div style={{ position: "absolute", inset: 0, background: c.tint, mixBlendMode: "color" }} />}
+        {c.mark && <MarkText m={c.mark} />}
       </div>
       <AbsoluteFill style={{ background: `linear-gradient(180deg, rgba(10,26,74,.75) 0%, rgba(10,26,74,0) 28%, rgba(10,26,74,0) 55%, ${NAVY} 82%)` }} />
       <div style={{ position: "absolute", top: 90, left: 0, right: 0, textAlign: "center", fontFamily: theme.font, fontWeight: 800, fontSize: 38, letterSpacing: 8, color: "#fff" }}>THE EVERYDAY MYSTERY</div>
